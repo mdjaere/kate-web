@@ -13,7 +13,7 @@ const paintings = [
 ];
 
 const paintingsList = paintings.map(item => (
-  <div key={item.src}>
+  <div className="image" key={item.src}>
     <img src={item.src} />
     <p> {item.text}</p>
   </div>
