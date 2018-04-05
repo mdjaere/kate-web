@@ -69,12 +69,18 @@ const paintings = [
   { src: img31, text: " 'The Sinking World' 2010: Unbuilding project" }
 ];
 
-const paintingList = paintings.map(item => (
-  <div className="imageBox" key={item.src}>
-    <img className="painting" src={item.src} />
-    <br />
-    <span className="imageText"> {item.text}</span>
-  </div>
-));
+const PaintingList = props => {
+  return (
+    <div className="imagesContainer">
+      {paintings.map(item => (
+        <div className="imageBox" key={item.src}>
+          <img className="painting" src={item.src} />
+          <br />
+          <span className="imageText"> {item.text}</span>
+        </div>
+      ))}
+    </div>
+  );
+};
 
-export default paintingList
+export default PaintingList;
