@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const menu = ({ activePage, changePage }) => {
   const isMainActive = activePage == "Main";
@@ -8,21 +9,15 @@ const menu = ({ activePage, changePage }) => {
     <div>
       <ul className="menulist">
         <li className={["menuitem", isMainActive ? "active" : ""].join(" ")}>
-          <a href="#" onClick={() => changePage("Main")}>
-            Main
-          </a>
+          <Link to="/">Main</Link>
         </li>
       </ul>
       <ul className="menulist">
         <li className={["menuitem", isInfoActive ? "active" : ""].join(" ")}>
-          <a href="#" onClick={() => changePage("Info")}>
-            Info
-          </a>
+          <Link to="/info">Info</Link>
         </li>
         <li className={["menuitem", isContactActive ? "active" : ""].join(" ")}>
-          <a href="#" onClick={() => changePage("Contact")}>
-            Contact
-          </a>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </div>
