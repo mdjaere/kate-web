@@ -17,7 +17,7 @@ class App extends React.Component {
         <div>
           <div className="leftPanel">
             <div className="header">Kate Warner</div>
-            <Menu activePage={this.state.activePage} />
+            <Menu/>
             <p>copyright 2018</p>
           </div>
           <div className="rightPanel">

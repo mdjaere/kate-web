@@ -1,22 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const menu = ({ activePage, changePage }) => {
-  const isMainActive = activePage == "Main";
-  const isContactActive = activePage == "Contact";
-  const isInfoActive = activePage == "Info";
+const menu = (props) => {
   return (
     <div>
       <ul className="menulist">
-        <li className={["menuitem", isMainActive ? "active" : ""].join(" ")}>
+        <li className="menuitem">
           <Link to="/">Main</Link>
         </li>
       </ul>
       <ul className="menulist">
-        <li className={["menuitem", isInfoActive ? "active" : ""].join(" ")}>
+        <li className="menuitem">
           <Link to="/info">Info</Link>
         </li>
-        <li className={["menuitem", isContactActive ? "active" : ""].join(" ")}>
+        <li className="menuitem">
           <Link to="/contact">Contact</Link>
         </li>
       </ul>
