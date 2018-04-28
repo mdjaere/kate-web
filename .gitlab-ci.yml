@@ -2,9 +2,15 @@ image: node:9
 
 stages:
     - ver
+    - build
     
 testing:
     stage: ver
     script:
         - node --version
         - whoami
+        
+build:
+    stage: build
+    script:
+        - npm build
