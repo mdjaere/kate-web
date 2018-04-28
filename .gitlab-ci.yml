@@ -1,0 +1,3 @@
+test_script:
+    - npm --version
+    - echo "This is a test of gitlab CI"
