@@ -1,5 +1,9 @@
 FROM node:9
-ADD * /app/
+
+ADD src /app/src
+ADD .babelrc /app
+ADD package.json /app
+ADD webpack.config.js /app
 
 WORKDIR /app
 
