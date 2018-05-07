@@ -1,5 +1,4 @@
-FROM nginx:alpine
-RUN yarn
-RUN yarn run build
-COPY default.conf /etc/nginx/conf.d/default.conf
-ADD dist/* /usr/share/nginx/html/
+FROM node:9
+RUN npm ci
+RUN npm run build
+RUN echo "Reached this step"
