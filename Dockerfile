@@ -14,4 +14,4 @@ RUN npm run build
 
 EXPOSE 8080
 
-ENTRYPOINT ["npm", "run", "serves"]
+ENTRYPOINT ["npm", "run", "serve"]
