@@ -9,4 +9,7 @@ WORKDIR /app
 
 RUN npm install
 RUN npm run build
-RUN echo "Reached this step"
+
+EXPOSE 8080
+
+ENTRYPOINT ["npm", "run", "serves"]
