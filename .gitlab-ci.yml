@@ -1,17 +1,31 @@
-image: node:9
+image: docker:git
+services:
+  - docker:dind
 
 stages:
-    - ver
-    - build
-    
-testing:
-    stage: ver
-    script:
-        - node --version
-        - whoami
-        
+- build
+- deploy
+
+cache:
+  paths:
+  - node_modules/
+
 build:
-    stage: build
-    script:
-        - npm install
-        - npm run build
+  image: docker:dind
+  stage: build
+  before_script:
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
+  script:
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME .
+    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
+  only:
+    - master
+
+# requires RANCHER_ACCESS_KEY, RANCHER_SECRET_KEY and to be present in gitlab project secret variables.
+deploy:
+  stage: deploy
+  image: cdrx/rancher-gitlab-deploy
+  script:
+    - upgrade --environment rakettlab --service $CI_COMMIT_REF_NAME --stack kateweb --new-image $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME --start-before-stopping --wait-for-upgrade-to-finish
+  only:
+    - master, dev
