@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "node server.js",
+    "serve": "node server.js"
   },
   "author": "Kate Warner",
   "license": "ISC",
