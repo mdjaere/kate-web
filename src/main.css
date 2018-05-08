@@ -53,8 +53,8 @@ a:hover {
 
 .painting{
   width: 100%;
-  max-width: 800px;
-  height: auto;
+  max-height: 100%;
+  width: auto;
 }
 
 .imageText{
