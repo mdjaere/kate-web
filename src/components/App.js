@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import PaintingList from "./PaintingList";
+import Paintings from "./Paintings";
 import Menu from "./Menu";
 import Info from "./Info";
 import Contact from "./Contact";
@@ -21,7 +21,7 @@ class App extends React.Component {
             <p>copyright 2018</p>
           </div>
           <div className="contentPanel">
-            <Route exact path="/" component={PaintingList} />
+            <Route exact path="/" component={Paintings} />
             <Route path="/info" component={Info} />
             <Route path="/contact" component={Contact} />
           </div>

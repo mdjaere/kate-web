@@ -43,17 +43,21 @@ a:hover {
   height: 100%;
 }
 
-.imagesContainer{
+/* .imagesContainer{
     background-color: #292525;
+} */
+
+.imagesContainer{
+    background-color: #fff;
 }
 
 .imageBox {
-  margin: 9px 0 32px 0;
+  margin: 9px 20px 32px 0px;
 }
 
 .painting{
-  max-height: 100%;
-  width: 95%;
+  height: auto;
+  width: 100%;
 }
 
 .imageText{
