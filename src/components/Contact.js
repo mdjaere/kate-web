@@ -1,5 +1,5 @@
 import React from "react";
-import bgImg from "./assets/7_background.jpg";
+import bgImg from "../assets/7_background.jpg";
 
 const Contact = () => (
   <div>

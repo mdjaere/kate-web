@@ -26,7 +26,7 @@ a:hover {
   font-size: 1.8em;
 }
 
-.leftPanel {
+.menuPanel {
   position: fixed;
   width: 205px;
   left: 0;
@@ -35,7 +35,7 @@ a:hover {
   padding: 5px;
 }
 
-.rightPanel {
+.contentPanel {
   position: absolute;
   left: 215px;
   right: 0;

@@ -15,12 +15,12 @@ class App extends React.Component {
     return (
       <Router>
         <div>
-          <div className="leftPanel">
+          <div className="menuPanel">
             <div className="header">Kate Warner</div>
             <Menu/>
             <p>copyright 2018</p>
           </div>
-          <div className="rightPanel">
+          <div className="contentPanel">
             <Route exact path="/" component={PaintingList} />
             <Route path="/info" component={Info} />
             <Route path="/contact" component={Contact} />
