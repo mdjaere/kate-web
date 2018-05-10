@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styled, { css } from "styled-components";
 
 const style = {
   menulist: {
@@ -12,20 +13,33 @@ const style = {
   }
 };
 
+const MenuContainer = styled.ul`
+  list-style: none;
+  padding: 0;
+`;
+
+const MenuItem = styled.li`
+  ${props =>
+    props.active &&
+    css`
+      font-weight: bold;
+    `};
+`;
+
 const menu = props => {
   return (
     <div>
-      <ul style={style.menulist}>
-        <li style={style.menuitem}>
+      <MenuContainer>
+        <MenuItem active>
           <Link to="/">Main</Link>
-        </li>
-        <li style={style.menuitem}>
+        </MenuItem>
+        <MenuItem>
           <Link to="/info">Info</Link>
-        </li>
-        <li style={style.menuitem}>
+        </MenuItem>
+        <MenuItem>
           <Link to="/contact">Contact</Link>
-        </li>
-      </ul>
+        </MenuItem>
+      </MenuContainer>
     </div>
   );
 };
