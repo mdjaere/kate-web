@@ -1,6 +1,5 @@
 body {
-  font-size: 10px;
-  font-family: Verdana, sans-serif;
+  background-color: white;
   margin: 0;
   padding: 0;
 }
@@ -20,62 +19,4 @@ a:visited {
 a:hover {
   text-decoration: underline;
   color: #666;
-}
-
-.header {
-  font-size: 1.8em;
-}
-
-.menuPanel {
-  position: fixed;
-  width: 205px;
-  left: 0;
-  height: 100%;
-  background-color: white;
-  padding: 5px;
-}
-
-.contentPanel {
-  position: absolute;
-  left: 215px;
-  right: 0;
-  padding: 5px;
-  height: 100%;
-}
-
-/* .imagesContainer{
-    background-color: #292525;
-} */
-
-.imagesContainer{
-    background-color: #fff;
-}
-
-.imageBox {
-  margin: 9px 20px 32px 0px;
-}
-
-.painting{
-  height: auto;
-  width: 100%;
-}
-
-.imageText{
-  font-size: 1em;
-}
-
-.menulist {
-  list-style: none;
-  padding: 0;
-}
-
-.menuitem {
-}
-
-.active{
-  font-weight: bold;
-}
-
-.info{
-
 }

@@ -6,6 +6,33 @@ import Menu from "./Menu";
 import Info from "./Info";
 import Contact from "./Contact";
 
+const style = {
+  body: {
+    fontSize: "10px",
+    fontFamily: ["Verdana", "sans-serif"],
+    margin: 0,
+    padding: 0,
+  },
+  header: {
+    fontSize: "1.8em"
+  },
+  menuPanel: {
+    position: "fixed",
+    width: "205px",
+    left: 0,
+    height: "100%",
+    backgroundColor: "white",
+    padding: "5px",
+  },
+  contentPanel: {
+    position: "absolute",
+    left: "215px",
+    right: 0,
+    padding: "5px",
+    height: "100%",
+  }
+}
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -14,13 +41,13 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <div>
-          <div className="menuPanel">
-            <div className="header">Kate Warner</div>
+        <div style={style.body}>
+          <div style={style.menuPanel}>
+            <div style={style.header}>Kate Warner</div>
             <Menu/>
             <p>copyright 2018</p>
           </div>
-          <div className="contentPanel">
+          <div style={style.contentPanel}>
             <Route exact path="/" component={Paintings} />
             <Route path="/info" component={Info} />
             <Route path="/contact" component={Contact} />

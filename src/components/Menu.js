@@ -1,19 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const menu = (props) => {
+const style = {
+  menulist: {
+    listStyle: "none",
+    padding: 0
+  },
+  menuitem: {},
+  active: {
+    fontWeight: "bold"
+  }
+};
+
+const menu = props => {
   return (
     <div>
-      <ul className="menulist">
-        <li className="menuitem">
+      <ul style={style.menulist}>
+        <li style={style.menuitem}>
           <Link to="/">Main</Link>
         </li>
-      </ul>
-      <ul className="menulist">
-        <li className="menuitem">
+        <li style={style.menuitem}>
           <Link to="/info">Info</Link>
         </li>
-        <li className="menuitem">
+        <li style={style.menuitem}>
           <Link to="/contact">Contact</Link>
         </li>
       </ul>
