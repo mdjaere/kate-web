@@ -5,33 +5,35 @@ import Paintings from "./Paintings";
 import Menu from "./Menu";
 import Info from "./Info";
 import Contact from "./Contact";
+import styled from "styled-components";
 
-const style = {
-  body: {
-    fontSize: "10px",
-    fontFamily: ["Verdana", "sans-serif"],
-    margin: 0,
-    padding: 0,
-  },
-  header: {
-    fontSize: "1.8em"
-  },
-  menuPanel: {
-    position: "fixed",
-    width: "205px",
-    left: 0,
-    height: "100%",
-    backgroundColor: "white",
-    padding: "5px",
-  },
-  contentPanel: {
-    position: "absolute",
-    left: "215px",
-    right: 0,
-    padding: "5px",
-    height: "100%",
-  }
-}
+const MenuContainer = styled.div`
+  font-size: 10px;
+  font-family: verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+`;
+
+const MenuPanel = styled.div`
+  position: fixed;
+  width: 205px;
+  left: 0;
+  height: 100%;
+  background-color: white;
+  padding: 5px;
+`;
+
+const PanelHeader = styled.div`
+  font-size: 1.8em;
+`;
+
+const ContentPanel = styled.div`
+  position: absolute;
+  left: 215px;
+  right: 0;
+  padding: 5px;
+  height: 100%;
+`;
 
 class App extends React.Component {
   constructor(props) {
@@ -41,18 +43,18 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <div style={style.body}>
-          <div style={style.menuPanel}>
-            <div style={style.header}>Kate Warner</div>
-            <Menu/>
+        <MenuContainer>
+          <MenuPanel>
+            <PanelHeader>Kate Warner</PanelHeader>
+            <Menu />
             <p>copyright 2018</p>
-          </div>
-          <div style={style.contentPanel}>
+          </MenuPanel>
+          <ContentPanel>
             <Route exact path="/" component={Paintings} />
             <Route path="/info" component={Info} />
             <Route path="/contact" component={Contact} />
-          </div>
-        </div>
+          </ContentPanel>
+        </MenuContainer>
       </Router>
     );
   }

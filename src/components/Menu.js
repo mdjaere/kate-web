@@ -2,17 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
-const style = {
-  menulist: {
-    listStyle: "none",
-    padding: 0
-  },
-  menuitem: {},
-  active: {
-    fontWeight: "bold"
-  }
-};
-
 const MenuContainer = styled.ul`
   list-style: none;
   padding: 0;
@@ -37,7 +26,7 @@ const menu = props => {
           <Link to="/info">Info</Link>
         </MenuItem>
         <MenuItem>
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact">Contact / News</Link>
         </MenuItem>
       </MenuContainer>
     </div>
