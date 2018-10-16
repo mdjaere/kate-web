@@ -1,2 +1,2 @@
-import App from "./App";
+import App from "./components/App";
 import style from "./main.css";

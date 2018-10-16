@@ -1,9 +1,9 @@
-body {
+/* body {
   font-size: 10px;
   font-family: Verdana, sans-serif;
   margin: 0;
   padding: 0;
-}
+} */
 
 a:link {
   text-decoration: none;
@@ -22,45 +22,49 @@ a:hover {
   color: #666;
 }
 
-.header {
+/* .header {
   font-size: 1.8em;
-}
+} */
 
-.leftPanel {
+/* .menuPanel {
   position: fixed;
   width: 205px;
   left: 0;
   height: 100%;
   background-color: white;
   padding: 5px;
-}
+} */
 
-.rightPanel {
+/* .contentPanel {
   position: absolute;
   left: 215px;
   right: 0;
   padding: 5px;
   height: 100%;
-}
+} */
 
-.imagesContainer{
+/* .imagesContainer{
     background-color: #292525;
+} */
+
+/* .imagesContainer{
+    background-color: #fff;
 }
 
 .imageBox {
-  margin: 9px 0 32px 0;
+  margin: 9px 20px 32px 0px;
 }
 
 .painting{
-  max-height: 100%;
-  width: 95%;
+  height: auto;
+  width: 100%;
 }
 
 .imageText{
   font-size: 1em;
-}
+} */
 
-.menulist {
+/* .menulist {
   list-style: none;
   padding: 0;
 }
@@ -70,8 +74,4 @@ a:hover {
 
 .active{
   font-weight: bold;
-}
-
-.info{
-
-}
+} */
