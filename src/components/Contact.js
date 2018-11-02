@@ -28,9 +28,11 @@ const Contact = () => (
           The Mothership Project Satellite Residency
         </a>{" "}
         <br />
-        Cowhouse Studios, Wexford, Ireland <br />
+        <a href="https://cowhousestudios.com/satellite-residency-kate-warner-james-o-haodha/"> 
+        Cow House Studios, Wexford, Ireland</a> <br />
         October 2018
       </p>
+
     </NewsPanel>
   </div>
 );
