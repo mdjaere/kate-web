@@ -12,6 +12,7 @@
   "author": "Kate Warner",
   "license": "ISC",
   "dependencies": {
+    "contentful": "^7.0.5",
     "express": "^4.16.3",
     "npm": "^5.8.0",
     "react": "^16.3.1",

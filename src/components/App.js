@@ -5,6 +5,7 @@ import Paintings from "./Paintings";
 import Menu from "./Menu";
 import Info from "./Info";
 import Contact from "./Contact";
+import Artwork from "./Artwork"
 import styled from "styled-components";
 
 const MenuContainer = styled.div`
@@ -50,7 +51,8 @@ class App extends React.Component {
             <p>copyright 2018</p>
           </MenuPanel>
           <ContentPanel>
-            <Route exact path="/" component={Paintings} />
+            {/* <Route exact path="/" component={Paintings} /> */}
+            <Route exact path="/" component={Artwork} />
             <Route path="/info" component={Info} />
             <Route path="/contact" component={Contact} />
           </ContentPanel>
