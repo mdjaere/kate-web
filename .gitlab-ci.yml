@@ -16,6 +16,7 @@ build:
     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
   only:
     - master
+    - dev
 
 # requires RANCHER_ACCESS_KEY, RANCHER_SECRET_KEY and to be present in gitlab project secret variables.
 deploy:

@@ -14,6 +14,15 @@ const Info = props => (
       National College of Art & Design, Dublin, BA Fine Art & History of Art
       2005 <br />
     </p>
+    <strong>Projects/ Residencies</strong>
+    <p>
+    <a href="https://themothershipproject.wordpress.com">
+          The Mothership Project Satellite Residency
+        </a>, <a href="https://cowhousestudios.com/satellite-residency-kate-warner-james-o-haodha/"> 
+        Cow House Studios, Co.Wexford 2018</a> <br />
+      Unbuilding Project, Co.Wicklow 2009-10 <br />
+      Independent Studio Artists Ltd, Dublin 2007-2010 <br />
+    </p>
     <strong>Awards</strong>
     <p>
       Neville Burston Award 2012 <br />
@@ -51,12 +60,6 @@ const Info = props => (
       Recent Graduates, RHA Ashford Gallery, Dublin 2005 <br />A Moment in Time,
       Temple Bar Gallery 2005 <br />
       It’s All Over & About to Begin, Ard Bia Gallery, Galway 2005 <br />
-    </p>
-    <strong>Projects/ Residencies</strong>
-    <p>
-      The Mothership Project Satellite Residency, Wexford 2018 <br />
-      Unbuilding Project, Co.Wicklow 2009-10 <br />
-      Independent Studio Artists Ltd, Dublin 2007-2010 <br />
     </p>
   </div>
 );
