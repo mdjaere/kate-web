@@ -26,3 +26,4 @@ deploy:
     - upgrade --environment rakettlab --service $CI_COMMIT_REF_NAME --stack kateweb --new-image $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME --start-before-stopping --wait-for-upgrade-to-finish
   only:
     - master
+    - dev
