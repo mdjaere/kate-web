@@ -60,7 +60,7 @@ class Artwork extends React.Component {
           <ImageBox key={i}>
             {fields.images.map(({ fields }, i) => (
               <div key={i}>
-                <ImageItem src={"http:" + fields.file.url} />
+                <ImageItem src={"http:" + fields.file.url + "?w=" + window.screen.width} />
               </div>
             ))}
             <ImageText>
