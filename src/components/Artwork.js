@@ -23,8 +23,11 @@ class Artwork extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      posts: []
+      posts: [],
     };
+
+    this.pixelratio = window.devicePixelRatio ? window.devicePixelRatio : 1
+    this.width = window.screen.width
 
     this.client = contentful.createClient({
       space: "dlgxohln8q1h",
@@ -60,7 +63,14 @@ class Artwork extends React.Component {
           <ImageBox key={i}>
             {fields.images.map(({ fields }, i) => (
               <div key={i}>
-                <ImageItem src={"http:" + fields.file.url + "?w=" + window.screen.width} />
+                <ImageItem
+                  src={
+                    "http:" +
+                    fields.file.url +
+                    "?w=" +
+                    this.width * this.pixelratio
+                  }
+                />
               </div>
             ))}
             <ImageText>
