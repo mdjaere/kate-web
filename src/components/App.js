@@ -5,7 +5,7 @@ import Paintings from "./Paintings";
 import Menu from "./Menu";
 import Info from "./Info";
 import Contact from "./Contact";
-import Artwork from "./Artwork"
+import Artwork from "./Artwork";
 import styled from "styled-components";
 
 const MenuContainer = styled.div`
@@ -39,6 +39,13 @@ const ContentPanel = styled.div`
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = 
+      {showOriginal: false}
+    this.switchVersion = this.switchVersion.bind(this)
+  }
+
+  switchVersion(){
+    this.setState({showOriginal: !this.state.showOriginal})
   }
 
   render() {
@@ -48,11 +55,11 @@ class App extends React.Component {
           <MenuPanel>
             <PanelHeader>Kate Warner</PanelHeader>
             <Menu />
-            <p>copyright 2018</p>
+            <p onClick={this.switchVersion}>copyright 2018</p>
           </MenuPanel>
           <ContentPanel>
-            {/* <Route exact path="/" component={Paintings} /> */}
-            <Route exact path="/" component={Artwork} />
+            {this.state.showOriginal && <Route exact path="/" component={Paintings} />}
+            {!this.state.showOriginal &&<Route exact path="/" component={Artwork} />}
             <Route path="/info" component={Info} />
             <Route path="/contact" component={Contact} />
           </ContentPanel>
