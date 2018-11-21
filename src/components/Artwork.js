@@ -23,36 +23,31 @@ class Artwork extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      posts: [],
+      posts: []
     };
 
-    this.pixelratio = window.devicePixelRatio ? window.devicePixelRatio : 1
-    this.width = window.screen.width
+    this.pixelRatio = window.devicePixelRatio ? window.devicePixelRatio : 1;
+    this.screenWidth = window.screen.width;
+    this.deviceSpecificImageWidth = this.pixelRatio * this.screenWidth;
 
     this.client = contentful.createClient({
       space: "dlgxohln8q1h",
       accessToken:
         "207bd0790feb33520b6772a155fecdc0cc0f1399e3ae71d4a2962d236ec86c51"
-    });
-
-    this.fetchPosts = this.fetchPosts.bind(this);
-    this.setPosts = this.setPosts.bind(this);
+    })
   }
 
   componentDidMount() {
-    this.fetchPosts().then(this.setPosts);
-  }
-
-  fetchPosts() {
-    return this.client.getEntries({
-      content_type: "artwork"
-    });
-  }
-
-  setPosts(response) {
-    this.setState({
-      posts: response.items
-    });
+    this.client
+      .getEntries({
+        content_type: "artwork"
+      })
+      .then(response => {
+        this.setState({
+          posts: response.items
+        });
+      })
+      .catch(error => console.error("Cannot fetch posts:", error));
   }
 
   render() {
@@ -68,7 +63,7 @@ class Artwork extends React.Component {
                     "http:" +
                     fields.file.url +
                     "?w=" +
-                    this.width * this.pixelratio
+                    this.deviceSpecificImageWidth
                   }
                 />
               </div>
