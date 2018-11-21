@@ -35,20 +35,32 @@ class Artwork extends React.Component {
       accessToken:
         "207bd0790feb33520b6772a155fecdc0cc0f1399e3ae71d4a2962d236ec86c51"
     })
+
+ }
+
+  sortPostsFunction(a,b){
+    const aIndex = a.fields.displayOrder / 100 || a.fields.year || 3000
+    const bIndex = b.fields.displayOrder / 100 || b.fields.year || 3000
+    const sortValue =  bIndex - aIndex
+    return sortValue
   }
 
   componentDidMount() {
+    // Fetching posts
     this.client
       .getEntries({
         content_type: "artwork"
       })
+
       .then(response => {
         this.setState({
-          posts: response.items
+          posts: response.items.sort(this.sortPostsFunction)
         });
       })
       .catch(error => console.error("Cannot fetch posts:", error));
+
   }
+
 
   render() {
     const posts = this.state.posts;
@@ -71,10 +83,10 @@ class Artwork extends React.Component {
             <ImageText>
               {fields.title && <a>{fields.title}</a>}
               {fields.year && <a>, {fields.year}</a>}
-              {fields.medium && <a>, {fields.medium.toLowerCase()}</a>}
+              {fields.medium2 && <a>, {fields.medium2.toLowerCase()}</a>}
               {fields.dimensions && <a>, {fields.dimensions}</a>}
+              {fields.project && <a>, {fields.project}</a>}
             </ImageText>
-            {console.log(fields)}
           </ImageBox>
         ))}
       </ArtworkContainer>

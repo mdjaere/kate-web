@@ -36,34 +36,96 @@ const ContentPanel = styled.div`
   height: 100%;
 `;
 
+const MenuPanelMobile = styled.div`
+  position: fixed;
+  height: 100px;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  padding: 5px;
+`;
+
+const ContentPanelMobile = styled.div`
+position: absolute;
+top: 400;
+left: 0;
+right: 0;
+padding: 5px;
+`;
+
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = 
-      {showOriginal: false}
-    this.switchVersion = this.switchVersion.bind(this)
+    this.state = {
+      showOriginal: false,
+      width: window.innerWidth,
+      height: window.innerHeight
+    };
+    this.switchVersion = this.switchVersion.bind(this);
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
-  switchVersion(){
-    this.setState({showOriginal: !this.state.showOriginal})
+  componentDidMount() {
+    // Adding windows size listener
+    window.addEventListener("resize", this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions() {
+    this.setState(
+      { width: window.innerWidth, height: window.innerHeight },
+      () => console.log("dim changed", this.state.width, this.state.height)
+    );
+  }
+
+  switchVersion() {
+    this.setState({ showOriginal: !this.state.showOriginal });
   }
 
   render() {
+    const width = this.state.width;
     return (
       <Router>
-        <MenuContainer>
-          <MenuPanel>
-            <PanelHeader>Kate Warner</PanelHeader>
-            <Menu />
-            <p onClick={this.switchVersion}>copyright 2018</p>
-          </MenuPanel>
-          <ContentPanel>
-            {this.state.showOriginal && <Route exact path="/" component={Paintings} />}
-            {!this.state.showOriginal &&<Route exact path="/" component={Artwork} />}
-            <Route path="/info" component={Info} />
-            <Route path="/contact" component={Contact} />
-          </ContentPanel>
-        </MenuContainer>
+        {width > 800 ? (
+          <MenuContainer>
+            <MenuPanel>
+              <PanelHeader>Kate Warner</PanelHeader>
+              <Menu />
+              <p onClick={this.switchVersion}>copyright 2018</p>
+            </MenuPanel>
+            <ContentPanel>
+              {this.state.showOriginal && (
+                <Route exact path="/" component={Paintings} />
+              )}
+              {!this.state.showOriginal && (
+                <Route exact path="/" component={Artwork} />
+              )}
+              <Route path="/info" component={Info} />
+              <Route path="/contact" component={Contact} />
+            </ContentPanel>
+          </MenuContainer>
+        ) : (
+          <MenuContainer>
+            <MenuPanelMobile>
+              <PanelHeader>Kate Warner</PanelHeader>
+              <Menu />
+              <p onClick={this.switchVersion}>copyright 2018</p>
+            </MenuPanelMobile>
+            <ContentPanelMobile>
+              {this.state.showOriginal && (
+                <Route exact path="/" component={Paintings} />
+              )}
+              {!this.state.showOriginal && (
+                <Route exact path="/" component={Artwork} />
+              )}
+              <Route path="/info" component={Info} />
+              <Route path="/contact" component={Contact} />
+            </ContentPanelMobile>
+          </MenuContainer>
+        )}
       </Router>
     );
   }
