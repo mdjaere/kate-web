@@ -28,6 +28,7 @@ const menu = props => {
         <MenuItem>
           <Link to="/contact">Contact / News</Link>
         </MenuItem>
+        <p onClick={props.switchVersion}>copyright 2018</p>
       </MenuContainer>
     </div>
   );

@@ -26,7 +26,9 @@ class Artwork extends React.Component {
       posts: []
     };
 
-    this.pixelRatio = window.devicePixelRatio ? window.devicePixelRatio : 1;
+    this.pixelRatioRaw = window.devicePixelRatio ? window.devicePixelRatio : 1;
+    this.pixelRatio = Math.round(this.pixelRatioRaw * 100) / 100;
+    console.log( this.pixelRatioRaw, this.pixelRatio)
     this.screenWidth = window.screen.width;
     this.deviceSpecificImageWidth = this.pixelRatio * this.screenWidth;
 
@@ -34,15 +36,14 @@ class Artwork extends React.Component {
       space: "dlgxohln8q1h",
       accessToken:
         "207bd0790feb33520b6772a155fecdc0cc0f1399e3ae71d4a2962d236ec86c51"
-    })
+    });
+  }
 
- }
-
-  sortPostsFunction(a,b){
-    const aIndex = a.fields.displayOrder / 100 || a.fields.year || 3000
-    const bIndex = b.fields.displayOrder / 100 || b.fields.year || 3000
-    const sortValue =  bIndex - aIndex
-    return sortValue
+  sortPostsFunction(a, b) {
+    const aIndex = a.fields.displayOrder / 100 || a.fields.year || 3000;
+    const bIndex = b.fields.displayOrder / 100 || b.fields.year || 3000;
+    const sortValue = bIndex - aIndex;
+    return sortValue;
   }
 
   componentDidMount() {
@@ -58,9 +59,7 @@ class Artwork extends React.Component {
         });
       })
       .catch(error => console.error("Cannot fetch posts:", error));
-
   }
-
 
   render() {
     const posts = this.state.posts;

@@ -8,8 +8,8 @@ import Contact from "./Contact";
 import Artwork from "./Artwork";
 import styled from "styled-components";
 
-const MenuContainer = styled.div`
-  font-size: 10px;
+const RootContainer = styled.div`
+  font-size: calc( 16px + (24 - 26) * (100vw - 400px) / (800-400));
   font-family: verdana, sans-serif;
   margin: 0;
   padding: 0;
@@ -19,7 +19,6 @@ const MenuPanel = styled.div`
   position: fixed;
   width: 205px;
   left: 0;
-  height: 100%;
   background-color: white;
   padding: 5px;
 `;
@@ -38,19 +37,15 @@ const ContentPanel = styled.div`
 
 const MenuPanelMobile = styled.div`
   position: fixed;
-  height: 100px;
-  top: 0;
+  top:0;
   width: 100%;
   background-color: white;
   padding: 5px;
 `;
 
 const ContentPanelMobile = styled.div`
-position: absolute;
-top: 400;
-left: 0;
-right: 0;
-padding: 5px;
+  position: static;
+  padding: 5px;
 `;
 
 class App extends React.Component {
@@ -58,8 +53,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       showOriginal: false,
-      width: window.innerWidth,
-      height: window.innerHeight
+      width: 0,
+      height: 0
     };
     this.switchVersion = this.switchVersion.bind(this);
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -67,6 +62,7 @@ class App extends React.Component {
 
   componentDidMount() {
     // Adding windows size listener
+    this.updateWindowDimensions()
     window.addEventListener("resize", this.updateWindowDimensions);
   }
 
@@ -76,7 +72,7 @@ class App extends React.Component {
 
   updateWindowDimensions() {
     this.setState(
-      { width: window.innerWidth, height: window.innerHeight },
+      { width: window.outerWidth, height: window.outerHeight },
       () => console.log("dim changed", this.state.width, this.state.height)
     );
   }
@@ -90,12 +86,11 @@ class App extends React.Component {
     return (
       <Router>
         {width > 800 ? (
-          <MenuContainer>
+          <RootContainer>
             <MenuPanel>
               <PanelHeader>Kate Warner</PanelHeader>
-              <Menu />
-              <p onClick={this.switchVersion}>copyright 2018</p>
-            </MenuPanel>
+              <Menu switchVersion={this.switchVersion}/>
+              </MenuPanel>
             <ContentPanel>
               {this.state.showOriginal && (
                 <Route exact path="/" component={Paintings} />
@@ -106,25 +101,23 @@ class App extends React.Component {
               <Route path="/info" component={Info} />
               <Route path="/contact" component={Contact} />
             </ContentPanel>
-          </MenuContainer>
+          </RootContainer>
         ) : (
-          <MenuContainer>
+          <RootContainer>
             <MenuPanelMobile>
               <PanelHeader>Kate Warner</PanelHeader>
-              <Menu />
-              <p onClick={this.switchVersion}>copyright 2018</p>
+              <Menu switchVersion={this.switchVersion}/>
             </MenuPanelMobile>
             <ContentPanelMobile>
-              {this.state.showOriginal && (
+              {this.state.showOriginal ? (
                 <Route exact path="/" component={Paintings} />
-              )}
-              {!this.state.showOriginal && (
+              ) : (
                 <Route exact path="/" component={Artwork} />
               )}
               <Route path="/info" component={Info} />
               <Route path="/contact" component={Contact} />
             </ContentPanelMobile>
-          </MenuContainer>
+          </RootContainer>
         )}
       </Router>
     );
