@@ -40,13 +40,13 @@ const RootContainerMobile = styled.div`
 `;
 
 const MenuPanelMobile = styled.div`
-width: 100%;
-position: absolute;
-z-index: 1;
-top: 0;
-background-color: white;
-overflow-x: hidden;
-margin: 5px;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  background-color: white;
+  overflow-x: hidden;
+  margin: 5px;
 `;
 
 const PanelHeaderMobile = styled.div`
@@ -63,11 +63,13 @@ class App extends React.Component {
     super(props);
     this.state = {
       showOriginal: true,
-      mobileLayout: false
+      isMobile: false,
+      showMobileMenu: false
     };
-    this.mobileLayoutWidth = 800;
+    this.mobileLayoutWidthLimit = 800;
     this.switchVersion = this.switchVersion.bind(this);
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
   }
 
   componentDidMount() {
@@ -85,7 +87,7 @@ class App extends React.Component {
       {
         width: window.outerWidth,
         height: window.outerHeight,
-        mobileLayout: window.outerWidth < this.mobileLayoutWidth
+        isMobile: window.outerWidth < this.mobileLayoutWidthLimit
       },
       () =>
         console.log(
@@ -98,15 +100,20 @@ class App extends React.Component {
   }
 
   switchVersion() {
-    console.log("switching version")
+    console.log("switching version");
     this.setState({ showOriginal: !this.state.showOriginal });
+  }
+
+  toggleMobileMenu() {
+    const value = !this.state.showMobileMenu
+    this.setState({ showMobileMenu: value });
   }
 
   render() {
     const Art = this.state.showOriginal ? Paintings : Artwork;
     return (
       <Router>
-        {!this.state.mobileLayout ? (
+        {!this.state.isMobile ? (
           <RootContainer>
             <MenuPanel>
               <PanelHeader>Kate Warner</PanelHeader>
@@ -121,8 +128,10 @@ class App extends React.Component {
         ) : (
           <RootContainerMobile>
             <MenuPanelMobile>
-              <PanelHeaderMobile>Kate Warner</PanelHeaderMobile>
-              <Menu switchVersion={this.switchVersion} />
+              <PanelHeaderMobile  onClick={this.toggleMobileMenu}>Kate Warner</PanelHeaderMobile>
+              {this.state.showMobileMenu && (
+                <Menu switchVersion={this.switchVersion} isMobile={this.state.isMobile} />
+              )}
             </MenuPanelMobile>
             <ContentPanelMobile>
               <Route exact path="/" component={Art} />
