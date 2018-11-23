@@ -1,33 +1,36 @@
 import React from "react";
 import paintingList from "./paintingList.js";
 
-const style = {
-  imagesContainer: {
-    backgroundColor: "white"
-  },
-  imageBox: {
-    margin: ["9px", "20px", "32px", "0px"]
-  },
-  painting: {
-    height: "auto",
-    width: "100%"
-  },
-  imageText: {
-    fontSize: "1em"
-  }
-};
+import styled from "styled-components";
+
+const ArtworkContainer = styled.div`
+  background-color: white;
+`;
+
+const ImageBox = styled.div`
+  margin: 9px 20px 32px 0px;
+`;
+
+const ImageItem = styled.img`
+  height: auto;
+  width: 100%;
+`;
+
+const ImageText = styled.span`
+  font-size: 0.5em;
+`;
 
 const Paintings = props => {
   return (
-    <div style={style.imagesContainer}>
+    <ArtworkContainer>
       {paintingList.map(item => (
-        <div style={style.imageBox} key={item.src}>
-          <img style={style.painting} src={item.src} />
+        <ImageBox key={item.src}>
+          <ImageItem src={item.src} />
           <br />
-          <span style={style.imageText}> {item.text}</span>
-        </div>
+          <ImageText>{item.text}</ImageText>
+        </ImageBox>
       ))}
-    </div>
+    </ArtworkContainer>
   );
 };
 

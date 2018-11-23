@@ -62,9 +62,10 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showOriginal: false,
+      showOriginal: true,
       mobileLayout: false
     };
+    console.log("INIT STATE: ", this.state)
     this.mobileLayoutWidth = 800;
     this.switchVersion = this.switchVersion.bind(this);
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -98,11 +99,13 @@ class App extends React.Component {
   }
 
   switchVersion() {
+    console.log("switching version")
     this.setState({ showOriginal: !this.state.showOriginal });
   }
 
   render() {
     const Art = this.state.showOriginal ? Paintings : Artwork;
+    console.log("LOADED: ", Art)
     return (
       <Router>
         {!this.state.mobileLayout ? (
@@ -124,7 +127,7 @@ class App extends React.Component {
               <Menu switchVersion={this.switchVersion} />
             </MenuPanelMobile>
             <ContentPanelMobile>
-              <Route exact path="/" component={Artwork} />
+              <Route exact path="/" component={Art} />
               <Route path="/info" component={Info} />
               <Route path="/contact" component={Contact} />
             </ContentPanelMobile>
