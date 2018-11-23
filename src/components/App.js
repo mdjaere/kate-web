@@ -65,7 +65,6 @@ class App extends React.Component {
       showOriginal: true,
       mobileLayout: false
     };
-    console.log("INIT STATE: ", this.state)
     this.mobileLayoutWidth = 800;
     this.switchVersion = this.switchVersion.bind(this);
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -105,7 +104,6 @@ class App extends React.Component {
 
   render() {
     const Art = this.state.showOriginal ? Paintings : Artwork;
-    console.log("LOADED: ", Art)
     return (
       <Router>
         {!this.state.mobileLayout ? (
