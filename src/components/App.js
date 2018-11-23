@@ -9,38 +9,48 @@ import Artwork from "./Artwork";
 import styled from "styled-components";
 
 const RootContainer = styled.div`
-  font-size: calc( 16px + (24 - 26) * (100vw - 400px) / (800-400));
+  font-size: 3mm;
   font-family: verdana, sans-serif;
-  margin: 0;
-  padding: 0;
 `;
 
 const MenuPanel = styled.div`
+  height: 100%;
+  width: 200px;
   position: fixed;
-  width: 205px;
+  z-index: 1;
+  top: 0;
   left: 0;
   background-color: white;
-  padding: 5px;
+  overflow-x: hidden;
+  margin: 5px;
 `;
 
 const PanelHeader = styled.div`
-  font-size: 1.8em;
+  font-size: 2em;
 `;
 
 const ContentPanel = styled.div`
-  position: absolute;
-  left: 215px;
-  right: 0;
+  margin-left: 200px;
   padding: 5px;
-  height: 100%;
+`;
+
+const RootContainerMobile = styled.div`
+  font-size: 5mm;
+  font-family: verdana, sans-serif;
 `;
 
 const MenuPanelMobile = styled.div`
-  position: fixed;
-  top:0;
-  width: 100%;
-  background-color: white;
-  padding: 5px;
+width: 100%;
+position: absolute;
+z-index: 1;
+top: 0;
+background-color: white;
+overflow-x: hidden;
+margin: 5px;
+`;
+
+const PanelHeaderMobile = styled.div`
+  font-size: 2em;
 `;
 
 const ContentPanelMobile = styled.div`
@@ -53,16 +63,16 @@ class App extends React.Component {
     super(props);
     this.state = {
       showOriginal: false,
-      width: 0,
-      height: 0
+      mobileLayout: false
     };
+    this.mobileLayoutWidth = 800;
     this.switchVersion = this.switchVersion.bind(this);
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
   componentDidMount() {
     // Adding windows size listener
-    this.updateWindowDimensions()
+    this.updateWindowDimensions();
     window.addEventListener("resize", this.updateWindowDimensions);
   }
 
@@ -72,8 +82,18 @@ class App extends React.Component {
 
   updateWindowDimensions() {
     this.setState(
-      { width: window.outerWidth, height: window.outerHeight },
-      () => console.log("dim changed", this.state.width, this.state.height)
+      {
+        width: window.outerWidth,
+        height: window.outerHeight,
+        mobileLayout: window.outerWidth < this.mobileLayoutWidth
+      },
+      () =>
+        console.log(
+          "dim changed",
+          window.outerWidth,
+          "Mobile Layout: ",
+          this.state.mobileLayout
+        )
     );
   }
 
@@ -82,42 +102,33 @@ class App extends React.Component {
   }
 
   render() {
-    const width = this.state.width;
+    const Art = this.state.showOriginal ? Paintings : Artwork;
     return (
       <Router>
-        {width > 800 ? (
+        {!this.state.mobileLayout ? (
           <RootContainer>
             <MenuPanel>
               <PanelHeader>Kate Warner</PanelHeader>
-              <Menu switchVersion={this.switchVersion}/>
-              </MenuPanel>
+              <Menu switchVersion={this.switchVersion} />
+            </MenuPanel>
             <ContentPanel>
-              {this.state.showOriginal && (
-                <Route exact path="/" component={Paintings} />
-              )}
-              {!this.state.showOriginal && (
-                <Route exact path="/" component={Artwork} />
-              )}
+              <Route exact path="/" component={Art} />
               <Route path="/info" component={Info} />
               <Route path="/contact" component={Contact} />
             </ContentPanel>
           </RootContainer>
         ) : (
-          <RootContainer>
+          <RootContainerMobile>
             <MenuPanelMobile>
-              <PanelHeader>Kate Warner</PanelHeader>
-              <Menu switchVersion={this.switchVersion}/>
+              <PanelHeaderMobile>Kate Warner</PanelHeaderMobile>
+              <Menu switchVersion={this.switchVersion} />
             </MenuPanelMobile>
             <ContentPanelMobile>
-              {this.state.showOriginal ? (
-                <Route exact path="/" component={Paintings} />
-              ) : (
-                <Route exact path="/" component={Artwork} />
-              )}
+              <Route exact path="/" component={Artwork} />
               <Route path="/info" component={Info} />
               <Route path="/contact" component={Contact} />
             </ContentPanelMobile>
-          </RootContainer>
+          </RootContainerMobile>
         )}
       </Router>
     );
