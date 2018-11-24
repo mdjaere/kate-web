@@ -4,20 +4,17 @@ import styled from "styled-components";
 import makeCancelable from "./makeCancelable";
 
 const ArtworkContainer = styled.div`
-  background-color: white;
 `;
 
 const ImageBox = styled.div`
-  margin: 9px 20px 32px 0px;
 `;
 
 const ImageItem = styled.img`
   height: auto;
-  width: 100%;
+  width: 80%;
 `;
 
 const ImageText = styled.span`
-  font-size: 1em;
 `;
 
 class Artwork extends React.Component {
@@ -44,8 +41,8 @@ class Artwork extends React.Component {
   }
 
   sortPostsFunction(a, b) {
-    const aIndex = a.fields.displayOrder / 100 || a.fields.year || 3000;
-    const bIndex = b.fields.displayOrder / 100 || b.fields.year || 3000;
+    const aIndex = a.fields.displayOrder;
+    const bIndex = b.fields.displayOrder;
     const sortValue = bIndex - aIndex;
     return sortValue;
   }
