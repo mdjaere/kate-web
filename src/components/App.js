@@ -22,13 +22,13 @@ const MenuPanel = styled.div`
   left: 0;
   background-color: white;
   overflow-x: hidden;
-  margin: 5px;
+  padding: 5px;
 `;
 
 const PanelHeader = styled.div`
   font-size: 2em;
 `;
-
+  
 const ContentPanel = styled.div`
   margin-left: 200px;
   padding: 5px;
@@ -46,7 +46,7 @@ const MenuPanelMobile = styled.div`
   top: 0;
   background-color: white;
   overflow-x: hidden;
-  margin: 5px;
+  padding: 5px;
 `;
 
 const PanelHeaderMobile = styled.div`
@@ -117,7 +117,7 @@ class App extends React.Component {
           <RootContainer>
             <MenuPanel>
               <PanelHeader>Kate Warner</PanelHeader>
-              <Menu switchVersion={this.switchVersion} />
+              <Menu switchVersion={this.switchVersion}/>
             </MenuPanel>
             <ContentPanel>
               <Route exact path="/" component={Art} />
@@ -130,7 +130,7 @@ class App extends React.Component {
             <MenuPanelMobile>
               <PanelHeaderMobile  onClick={this.toggleMobileMenu}>Kate Warner</PanelHeaderMobile>
               {this.state.showMobileMenu && (
-                <Menu switchVersion={this.switchVersion} isMobile={this.state.isMobile} />
+                <Menu switchVersion={this.switchVersion} isMobile toggleMobileMenu={this.toggleMobileMenu}/>
               )}
             </MenuPanelMobile>
             <ContentPanelMobile>
