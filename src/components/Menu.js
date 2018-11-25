@@ -4,33 +4,32 @@ import styled, { css } from "styled-components";
 
 const MenuContainer = styled.ul`
   list-style: none;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 1em;
 `;
 
 const MenuItem = styled.li`
-  ${props =>
-    props.active &&
-    css`
-      font-weight: bold;
-    `};
 `;
 
 const menu = props => {
   return (
-    <div>
-      <MenuContainer>
-        <MenuItem active>
-          <Link to="/">Main</Link>
+
+      <MenuContainer className={props.className}>
+        <MenuItem>
+          <Link to="/">Paintings</Link>
+        </MenuItem>
+        {/* <MenuItem>
+          <Link to="/projects">Projects</Link>
+        </MenuItem> */}
+        <MenuItem>
+          <Link to="/info">Bio</Link>
         </MenuItem>
         <MenuItem>
-          <Link to="/info">Info</Link>
+          <Link to="/contact">Contact</Link>
         </MenuItem>
-        <MenuItem>
-          <Link to="/contact">Contact / News</Link>
-        </MenuItem>
-        <p onClick={props.switchVersion}>copyright 2018</p>
       </MenuContainer>
-    </div>
   );
 };
 

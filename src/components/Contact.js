@@ -2,22 +2,29 @@ import React from "react";
 import styled from "styled-components";
 import bgImg from "../assets/7_background.jpg";
 
+const Container = styled.div`
+`
+
 const ContactPanel = styled.div`
-  position: absolute;
-  top: 10px;
-  left: 10px;
+  position: static;
 `;
 
 const NewsPanel = styled.div`
-  position: absolute;
-  top: 60px;
-  left: 10px;
+  position: static;
 `;
 
+const Backdrop = styled.img`
+  position: absolute;
+  z-index:-1;
+  width: 100%;
+  heigth: auto;
+`
+
 const Contact = () => (
-  <div>
-    <img src={bgImg} />
+  <Container>
+
     <ContactPanel>
+      <Backdrop src={bgImg} />
       Contact: <br />
       <br />
       <strong>katewarner@gmail.com</strong>
@@ -34,7 +41,7 @@ const Contact = () => (
       </p>
 
     </NewsPanel>
-  </div>
+  </Container>
 );
 
 export default Contact;

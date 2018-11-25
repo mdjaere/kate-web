@@ -11,7 +11,7 @@ const ImageBox = styled.div`
 
 const ImageItem = styled.img`
   height: auto;
-  width: 80%;
+  width: 100%;
 `;
 
 const ImageText = styled.span`
