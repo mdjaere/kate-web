@@ -10,7 +10,7 @@ import styled from "styled-components";
 
 const RootContainer = styled.div`
   font-family: verdana, sans-serif;
-  font-size: 2vw;
+  font-size: 3vw;
   width: 100% ;
   height: 100% ;
 `;
