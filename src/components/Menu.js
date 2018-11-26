@@ -8,6 +8,7 @@ const MenuContainer = styled.ul`
   flex-direction: column;
   align-items: flex-end;
   font-size: 1em;
+  cursor: pointer;
 `;
 
 const MenuItem = styled.li``;
@@ -38,7 +39,7 @@ class Menu extends React.Component {
         <Link to="/projects">Projects</Link>
       </MenuItem>
         <MenuItem>
-          <Link to="/info">Bio</Link>
+          <Link to="/bio">Bio</Link>
         </MenuItem>
         <MenuItem>
           <Link to="/contact">Contact</Link>

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Paintings from "./Paintings";
 import Menu from "./Menu";
-import Info from "./Info";
+import Bio from "./Bio";
 import Contact from "./Contact";
 import Artwork from "./Artwork";
 import styled from "styled-components";
@@ -11,7 +11,6 @@ import styled from "styled-components";
 const RootContainer = styled.div`
   font-family: verdana, sans-serif;
   font-size: 24px;
-  padding: 10px;
 `;
 
 const Headerpanel = styled.div`
@@ -36,6 +35,7 @@ const ContentPanel = styled.div`
 `;
 
 const Footer = styled.div`
+font-size: 0.7em;
 bottom: 0
 `
 
@@ -85,7 +85,7 @@ class App extends React.Component {
           </Headerpanel>
           <ContentPanel>
             <Route exact path="/" component={Art} />
-            <Route path="/info" component={Info} />
+            <Route path="/bio" component={Bio} />
             <Route path="/contact" component={Contact} />
           </ContentPanel>
           <Footer>

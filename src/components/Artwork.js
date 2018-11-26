@@ -7,10 +7,11 @@ const ArtworkContainer = styled.div`
   display: static;
 `;
 
-const ImageBox = styled.div``;
+const ImageBox = styled.div`
+  margin: 9px 0px 32px 0px;
+`;
 
 const ImageItemContainer = styled.div`
-  background-color: whitesmoke;
 `;
 
 const ImageItem = styled.img`
@@ -19,7 +20,8 @@ const ImageItem = styled.img`
 `;
 
 const ImageText = styled.span`
-  font-size: 0.5em;
+width:100%;
+  font-size: 0.7em;
 `;
 
 class Artwork extends React.Component {
