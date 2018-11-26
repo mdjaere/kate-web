@@ -3,7 +3,8 @@ import * as contentful from "contentful";
 import styled from "styled-components";
 import makeCancelable from "./makeCancelable";
 
-const ArtworkContainer = styled.div``;
+const ArtworkContainer = styled.div`
+`;
 
 const ImageBox = styled.div``;
 
@@ -72,19 +73,22 @@ class Artwork extends React.Component {
         {posts.map(({ fields }, i) => (
           <ImageBox key={i}>
             {fields.images.map(({ fields }, i) => {
-              const {width, height} = fields.file.details.image
-              const heightWidthhRatio = height / width
-              const dWidth = this.deviceSpecificImageWidth
-              const dHeight = this.deviceSpecificImageWidth * heightWidthhRatio
+              const { width, height } = fields.file.details.image;
+              const heightWidthhRatio = height / width;
+              const dWidth = window.innerWidth;
+              const dHeight = dWidth * heightWidthhRatio;
 
               return (
-                <ImageItemContainer style={{width: dWidth, height: dHeight}} key={i}>
+                <ImageItemContainer
+                  style={{ width: dWidth, height: dHeight }}
+                  key={i}
+                >
                   <ImageItem
                     src={
                       "http:" +
                       fields.file.url +
                       "?w=" +
-                      dWidth
+                      this.deviceSpecificImageWidth
                     }
                   />
                 </ImageItemContainer>
