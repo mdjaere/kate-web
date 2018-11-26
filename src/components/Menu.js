@@ -10,19 +10,33 @@ const MenuContainer = styled.ul`
   font-size: 1em;
 `;
 
-const MenuItem = styled.li`
-`;
+const MenuItem = styled.li``;
 
-const menu = props => {
-  return (
+class Menu extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      isOpen: false
+    };
+    this.toggleOpen = this.toggleOpen.bind(this);
+  }
 
-      <MenuContainer className={props.className}>
+  toggleOpen() {
+    this.setState({ isOpen: !this.state.isOpen });
+  }
+  render() {
+    const isOpen = this.state.isOpen;
+    return isOpen ? (
+      <MenuContainer className={this.props.className}>
+        <MenuItem>
+          <div onClick={this.toggleOpen}>Close</div>
+        </MenuItem>
         <MenuItem>
           <Link to="/">Paintings</Link>
         </MenuItem>
-        {/* <MenuItem>
-          <Link to="/projects">Projects</Link>
-        </MenuItem> */}
+        <MenuItem>
+        <Link to="/projects">Projects</Link>
+      </MenuItem>
         <MenuItem>
           <Link to="/info">Bio</Link>
         </MenuItem>
@@ -30,7 +44,14 @@ const menu = props => {
           <Link to="/contact">Contact</Link>
         </MenuItem>
       </MenuContainer>
-  );
-};
+    ) : (
+      <MenuContainer className={this.props.className}>
+        <MenuItem>
+          <div onClick={this.toggleOpen}>Menu</div>
+        </MenuItem>
+      </MenuContainer>
+    );
+  }
+}
 
-export default menu;
+export default Menu;

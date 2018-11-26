@@ -10,9 +10,7 @@ import styled from "styled-components";
 
 const RootContainer = styled.div`
   font-family: verdana, sans-serif;
-  font-size: 3vw;
-  width: 100% ;
-  height: 100% ;
+  font-size: 24px;
 `;
 
 const Headerpanel = styled.div`
@@ -24,12 +22,12 @@ const Headerpanel = styled.div`
   overflow-x: hidden;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   
 `;
 
 const Header = styled.div`
-  font-size: 2.5em;
+  font-size: 2em;
 `;
 
 const ContentPanel = styled.div`
