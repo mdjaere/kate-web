@@ -3,10 +3,12 @@ import * as contentful from "contentful";
 import styled from "styled-components";
 import makeCancelable from "./makeCancelable";
 
-const ArtworkContainer = styled.div`
-`;
+const ArtworkContainer = styled.div``;
 
-const ImageBox = styled.div`
+const ImageBox = styled.div``;
+
+const ImageItemContainer = styled.div`
+  background-color: whitesmoke;
 `;
 
 const ImageItem = styled.img`
@@ -14,8 +16,7 @@ const ImageItem = styled.img`
   width: 100%;
 `;
 
-const ImageText = styled.span`
-`;
+const ImageText = styled.span``;
 
 class Artwork extends React.Component {
   constructor(props) {
@@ -70,18 +71,25 @@ class Artwork extends React.Component {
       <ArtworkContainer>
         {posts.map(({ fields }, i) => (
           <ImageBox key={i}>
-            {fields.images.map(({ fields }, i) => (
-              <div key={i}>
-                <ImageItem
-                  src={
-                    "http:" +
-                    fields.file.url +
-                    "?w=" +
-                    this.deviceSpecificImageWidth
-                  }
-                />
-              </div>
-            ))}
+            {fields.images.map(({ fields }, i) => {
+              const {width, height} = fields.file.details.image
+              const heightWidthhRatio = height / width
+              const dWidth = this.deviceSpecificImageWidth
+              const dHeight = this.deviceSpecificImageWidth * heightWidthhRatio
+
+              return (
+                <ImageItemContainer style={{width: dWidth, height: dHeight}} key={i}>
+                  <ImageItem
+                    src={
+                      "http:" +
+                      fields.file.url +
+                      "?w=" +
+                      dWidth
+                    }
+                  />
+                </ImageItemContainer>
+              );
+            })}
             <ImageText>
               {fields.title && <a>{fields.title}</a>}
               {fields.year && <a>, {fields.year}</a>}
