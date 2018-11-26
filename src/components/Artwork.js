@@ -4,6 +4,7 @@ import styled from "styled-components";
 import makeCancelable from "./makeCancelable";
 
 const ArtworkContainer = styled.div`
+  display: static;
 `;
 
 const ImageBox = styled.div``;
@@ -17,13 +18,16 @@ const ImageItem = styled.img`
   width: 100%;
 `;
 
-const ImageText = styled.span``;
+const ImageText = styled.span`
+  font-size: 0.5em;
+`;
 
 class Artwork extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      posts: []
+      posts: [],
+      loaded: false
     };
 
     this.pixelRatioRaw = window.devicePixelRatio ? window.devicePixelRatio : 1;
@@ -55,7 +59,8 @@ class Artwork extends React.Component {
     this.cancelableArtFetching.promise
       .then(response => {
         this.setState({
-          posts: response.items.sort(this.sortPostsFunction)
+          posts: response.items.sort(this.sortPostsFunction),
+          loaded: true
         });
       })
       .catch(error => console.error("Cannot fetch posts:", error));
@@ -70,39 +75,32 @@ class Artwork extends React.Component {
     const posts = this.state.posts;
     return (
       <ArtworkContainer>
-        {posts.map(({ fields }, i) => (
-          <ImageBox key={i}>
-            {fields.images.map(({ fields }, i) => {
-              const { width, height } = fields.file.details.image;
-              const heightWidthhRatio = height / width;
-              const dWidth = window.innerWidth;
-              const dHeight = dWidth * heightWidthhRatio;
-
-              return (
-                <ImageItemContainer
-                  style={{ width: dWidth, height: dHeight }}
-                  key={i}
-                >
-                  <ImageItem
-                    src={
-                      "http:" +
-                      fields.file.url +
-                      "?w=" +
-                      this.deviceSpecificImageWidth
-                    }
-                  />
-                </ImageItemContainer>
-              );
-            })}
-            <ImageText>
-              {fields.title && <a>{fields.title}</a>}
-              {fields.year && <a>, {fields.year}</a>}
-              {fields.medium2 && <a>, {fields.medium2.toLowerCase()}</a>}
-              {fields.dimensions && <a>, {fields.dimensions}</a>}
-              {fields.project && <a>, {fields.project}</a>}
-            </ImageText>
-          </ImageBox>
-        ))}
+        {this.state.loaded &&
+          posts.map(({ fields }, i) => (
+            <ImageBox key={i}>
+              {fields.images.map(({ fields }, i) => {
+                return (
+                  <ImageItemContainer key={i}>
+                    <ImageItem
+                      src={
+                        "http:" +
+                        fields.file.url +
+                        "?w=" +
+                        this.deviceSpecificImageWidth
+                      }
+                    />
+                  </ImageItemContainer>
+                );
+              })}
+              <ImageText>
+                {fields.title && <a>{fields.title}</a>}
+                {fields.year && <a>, {fields.year}</a>}
+                {fields.medium2 && <a>, {fields.medium2.toLowerCase()}</a>}
+                {fields.dimensions && <a>, {fields.dimensions}</a>}
+                {fields.project && <a>, {fields.project}</a>}
+              </ImageText>
+            </ImageBox>
+          ))}
       </ArtworkContainer>
     );
   }

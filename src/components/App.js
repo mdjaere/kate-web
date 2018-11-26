@@ -11,6 +11,7 @@ import styled from "styled-components";
 const RootContainer = styled.div`
   font-family: verdana, sans-serif;
   font-size: 24px;
+  padding: 10px;
 `;
 
 const Headerpanel = styled.div`
