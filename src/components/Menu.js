@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
+import hamburger from "../assets/Hamburger_icon.svg";
 
 const MenuContainer = styled.ul`
   list-style: none;
@@ -32,12 +33,13 @@ class Menu extends React.Component {
         <MenuItem>
           <div onClick={this.toggleOpen}>Close</div>
         </MenuItem>
+
         <MenuItem>
           <Link to="/">Paintings</Link>
         </MenuItem>
         <MenuItem>
-        <Link to="/projects">Projects</Link>
-      </MenuItem>
+          <Link to="/projects">Projects</Link>
+        </MenuItem>
         <MenuItem>
           <Link to="/bio">Bio</Link>
         </MenuItem>
@@ -48,7 +50,7 @@ class Menu extends React.Component {
     ) : (
       <MenuContainer className={this.props.className}>
         <MenuItem>
-          <div onClick={this.toggleOpen}>Menu</div>
+          <img src={hamburger} onClick={this.toggleOpen} />
         </MenuItem>
       </MenuContainer>
     );
