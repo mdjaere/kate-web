@@ -11,6 +11,7 @@ import styled from "styled-components";
 const RootContainer = styled.div`
   font-family: verdana, sans-serif;
   font-size: 24px;
+  margin: 10px 32px 0px 10px;
 `;
 
 const Headerpanel = styled.div`
@@ -43,7 +44,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showOriginal: false
+      showOriginal: true
     };
     this.switchVersion = this.switchVersion.bind(this);
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);

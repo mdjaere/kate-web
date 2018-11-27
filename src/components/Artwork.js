@@ -8,20 +8,19 @@ const ArtworkContainer = styled.div`
 `;
 
 const ImageBox = styled.div`
-  margin: 9px 0px 32px 0px;
 `;
 
-const ImageItemContainer = styled.div`
-`;
+const ImageItemContainer = styled.div``;
 
 const ImageItem = styled.img`
   height: auto;
   width: 100%;
 `;
 
-const ImageText = styled.span`
-width:100%;
-  font-size: 0.7em;
+const ImageText = styled.div`
+  width: 100%;
+  font-size: 0.6em;
+  margin: 0px 0px 32px 0px;
 `;
 
 class Artwork extends React.Component {
@@ -94,13 +93,13 @@ class Artwork extends React.Component {
                   </ImageItemContainer>
                 );
               })}
-              <ImageText>
+              {fields.title && <ImageText>
                 {fields.title && <a>{fields.title}</a>}
                 {fields.year && <a>, {fields.year}</a>}
                 {fields.medium2 && <a>, {fields.medium2.toLowerCase()}</a>}
                 {fields.dimensions && <a>, {fields.dimensions}</a>}
                 {fields.project && <a>, {fields.project}</a>}
-              </ImageText>
+              </ImageText>}
             </ImageBox>
           ))}
       </ArtworkContainer>
@@ -108,4 +107,5 @@ class Artwork extends React.Component {
   }
 }
 
-export default Artwork;
+export default Artwork 
+export {ArtworkContainer, ImageBox, ImageItemContainer, ImageItem, ImageText}
