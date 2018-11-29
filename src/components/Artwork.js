@@ -4,7 +4,9 @@ import styled from "styled-components";
 import makeCancelable from "./makeCancelable";
 
 const ArtworkContainer = styled.div`
-  display: static;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const ImageBox = styled.div`
@@ -13,8 +15,8 @@ const ImageBox = styled.div`
 const ImageItemContainer = styled.div``;
 
 const ImageItem = styled.img`
-  height: auto;
-  width: 100%;
+  max-width: 100%;
+  max-height: 80vw;
 `;
 
 const ImageText = styled.div`

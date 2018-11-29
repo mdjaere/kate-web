@@ -3,43 +3,41 @@ import styled from "styled-components";
 import bgImg from "../assets/7_background.jpg";
 
 const Container = styled.div`
-`
-
-const ContactPanel = styled.div`
-  position: static;
+  font-size: 0.7em;
 `;
 
-const NewsPanel = styled.div`
-  position: static;
-`;
+const ContactPanel = styled.div``;
+
+const NewsPanel = styled.div``;
 
 const Backdrop = styled.img`
-  position: absolute;
-  z-index:-1;
+  z-index: -1;
   width: 100%;
   heigth: auto;
-`
+`;
 
 const Contact = () => (
   <Container>
-
+    <Backdrop src={bgImg} />
     <ContactPanel>
-      <Backdrop src={bgImg} />
-      Contact: <br />
-      <br />
-      <strong>katewarner@gmail.com</strong>
+      <p>
+        Contact <br />
+        katewarner@gmail.com
+      </p>
     </ContactPanel>
     <NewsPanel>
       <p>
+        Latest projects <br />
+        October 2018
+        <br />
         <a href="https://themothershipproject.wordpress.com">
           The Mothership Project Satellite Residency
         </a>{" "}
         <br />
-        <a href="https://cowhousestudios.com/satellite-residency-kate-warner-james-o-haodha/"> 
-        Cow House Studios, Wexford, Ireland</a> <br />
-        October 2018
+        <a href="https://cowhousestudios.com/satellite-residency-kate-warner-james-o-haodha/">
+          Cow House Studios, Wexford, Ireland
+        </a>{" "}
       </p>
-
     </NewsPanel>
   </Container>
 );

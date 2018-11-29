@@ -7,7 +7,6 @@ const Biotext = styled.div`
 
 const Bio = props => (
   <Biotext>
-    <strong>katewarner@gmail.com</strong>
     <p>
       Born 1982, Ireland <br />
       Based in London, UK

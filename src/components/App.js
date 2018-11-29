@@ -10,18 +10,23 @@ import styled from "styled-components";
 
 const RootContainer = styled.div`
   font-family: verdana, sans-serif;
-  font-size: 24px;
-  margin: 10px 32px 0px 10px;
+  font-size: 20px;
+  margin: 0px 20px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Headerpanel = styled.div`
   width: 100%;
-  position: static;
+  max-width: 960px;
+  margin: 20px 0px 20px 0px;
   z-index: 1;
   top: 0;
   background-color: white;
   overflow-x: hidden;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   
@@ -32,7 +37,6 @@ const Header = styled.div`
 `;
 
 const ContentPanel = styled.div`
-  position: static;
 `;
 
 const Footer = styled.div`
@@ -66,7 +70,7 @@ class App extends React.Component {
         width: window.innerWidth,
         height: window.innerHeight
       },
-      () => console.log("Width changed: ", this.state.width)
+      () => console.log(`Dim changed: ${this.state.width} x ${this.state.height}`  )
     );
   }
 
@@ -90,7 +94,7 @@ class App extends React.Component {
             <Route path="/contact" component={Contact} />
           </ContentPanel>
           <Footer>
-            <p onClick={this.switchVersion}>copyright 2018</p>
+            <p onClick={this.switchVersion}>Copyright 2018</p>
           </Footer>
         </RootContainer>
       </Router>
