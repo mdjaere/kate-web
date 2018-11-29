@@ -4,6 +4,8 @@ import styled from "styled-components";
 import makeCancelable from "./makeCancelable";
 
 const ArtworkContainer = styled.div`
+  position: relative:
+  top: -20px
   display: flex;
   flex-direction: column;
   align-items: center;
