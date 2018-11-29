@@ -3,9 +3,15 @@ import * as contentful from "contentful";
 import styled from "styled-components";
 import makeCancelable from "./makeCancelable";
 
+// const ArtworkContainer = styled.div`
+//   position: relative:
+//   top: -20px
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// `;
+
 const ArtworkContainer = styled.div`
-  position: relative:
-  top: -20px
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,7 +24,7 @@ const ImageItemContainer = styled.div``;
 
 const ImageItem = styled.img`
   max-width: 100%;
-  max-height: 80vw;
+  max-height: 80vh;
 `;
 
 const ImageText = styled.div`
