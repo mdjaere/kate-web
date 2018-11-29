@@ -48,7 +48,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showOriginal: true
+      showOriginal: false
     };
     this.switchVersion = this.switchVersion.bind(this);
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);

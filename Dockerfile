@@ -1,4 +1,4 @@
-FROM node:9-alpine
+FROM node:11-alpine
 
 ADD src /app/src
 ADD .babelrc \
