@@ -10,22 +10,6 @@ const MenuContainer = styled.ul`
   align-items: flex-end;
   font-size: 1em;
   cursor: pointer;
-  a:link {
-    text-decoration: none;
-    color: #666;
-  }
-  a:active {
-    text-decoration: none;
-    color: #666;
-  }
-  a:visited {
-    text-decoration: none;
-    color: #666;
-  }
-  a:hover {
-    text-decoration: underline;
-    color: #666;
-  }
 `;
 
 const MenuItem = styled.li``;

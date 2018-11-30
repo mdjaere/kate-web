@@ -6,19 +6,17 @@ import projectList from "./projectList";
 const ProjectsContainer = styled.div`
   display: flex;
   max-width: 960px;
+  width: 100%;
   flex-direction: column;
   align-items: center;
-
 `;
 
 const ProjectItem = styled.div`
   display: flex;
-  justify-content: space-evenly
 `;
 
 const ProjectHeader = styled.div`
-flex-basis: 25em
-`
+`;
 
 const ProjectDate = styled.div`
   margin: 0px 0px 0px 0px;
@@ -29,8 +27,6 @@ const ProjectBlurbAndLink = styled.div`
 `;
 
 const ProjectImage = styled.img`
-  max-width: 100%;
-  max-height: 50vh;
   margin: 0px 20px 0px 20px;
 `;
 
