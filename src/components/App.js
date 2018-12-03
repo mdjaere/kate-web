@@ -115,7 +115,7 @@ class App extends React.Component {
             <Menu />
           </Headerpanel>
           <ContentPanel>
-            <Route exact path="/" component={Projects} />
+            <Route exact path="/" component={Paintings} />
             <Route path="/paintings" component={Paintings} />
             <Route path="/projects" component={Projects} />
             <Route path="/bio" component={Bio} />
