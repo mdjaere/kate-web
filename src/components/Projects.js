@@ -4,19 +4,17 @@ import { Link } from "react-router-dom";
 import projectList from "./projectList";
 
 const ProjectsContainer = styled.div`
-  display: flex;
   max-width: 960px;
   width: 100%;
-  flex-direction: column;
-  align-items: center;
 `;
 
 const ProjectItem = styled.div`
   display: flex;
+  flex-direction: column;
+  margin: 0px 0px 20px 0px;
 `;
 
-const ProjectHeader = styled.div`
-`;
+const ProjectHeader = styled.div``;
 
 const ProjectDate = styled.div`
   margin: 0px 0px 0px 0px;
@@ -27,22 +25,24 @@ const ProjectBlurbAndLink = styled.div`
 `;
 
 const ProjectImage = styled.img`
-  margin: 0px 20px 0px 20px;
+  width: 200px;
+  heighth: auto;
+  margin: 20px 0px 5px 0px;
 `;
 
 const ProjectTitle = styled.div`
-  text-decoration: underline;
+  // text-decoration: underline;
 `;
 
 const ProjectBlurb = styled.div`
-  text-indent: 30px;
+  // text-indent: 30px;
   font-size: 0.7em;
   margin: 0px 0px 0px 0px;
 `;
 
 const ProjectLink = styled.div`
   font-size: 0.7em;
-  margin-top: 10px;
+  margin-top: 5px;
 `;
 
 class Projects extends React.Component {
@@ -56,9 +56,10 @@ class Projects extends React.Component {
         {projectList.map(project => (
           <ProjectItem key={project.title}>
             <ProjectHeader>
-              {/* <ProjectDate>{project.date} </ProjectDate> */}
               <ProjectTitle>
-                <Link to={"/"}>{project.title}</Link>
+                <Link to={"/"}>
+                  <ProjectDate>{project.date}</ProjectDate> {project.title}
+                </Link>
               </ProjectTitle>
             </ProjectHeader>
             <ProjectImage src={project.images[0]} />
