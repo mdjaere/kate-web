@@ -9,9 +9,7 @@ const ProjectsContainer = styled.div`
 `;
 
 const ProjectItem = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 26px 0px;
 `;
 
 const ProjectHeader = styled.div``;
@@ -25,13 +23,14 @@ const ProjectBlurbAndLink = styled.div`
 `;
 
 const ProjectImage = styled.img`
-  width: 200px;
-  heighth: auto;
-  margin: 20px 0px 5px 0px;
+  width: 250px;
+  height: auto;
+  margin: 12px 0px 5px 0px;
 `;
 
 const ProjectTitle = styled.div`
   // text-decoration: underline;
+  width: ;
 `;
 
 const ProjectBlurb = styled.div`
@@ -54,17 +53,15 @@ class Projects extends React.Component {
     return (
       <ProjectsContainer>
         {projectList.map(project => (
-          <ProjectItem key={project.title}>
+          <ProjectItem key={project.headline}>
             <ProjectHeader>
               <ProjectTitle>
-                <Link to={"/"}>
-                  <ProjectDate>{project.date}</ProjectDate> {project.title}
-                </Link>
+                <Link to={"/"}>{project.headline}</Link>
               </ProjectTitle>
             </ProjectHeader>
             <ProjectImage src={project.images[0]} />
             <ProjectBlurbAndLink>
-              <ProjectBlurb> {project.blurb} </ProjectBlurb>
+              <ProjectBlurb> {project.intro} </ProjectBlurb>
               <ProjectLink>
                 <Link to={"/"}> Read More </Link>{" "}
               </ProjectLink>{" "}

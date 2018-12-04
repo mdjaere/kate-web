@@ -7,11 +7,12 @@ import img31 from "../assets/1_unbuilding-2010-web.jpg";
 const projectList = [
   {
     date: "Spring 2010",
-    title: "The Sinking World",
+    url_title: "the_sinking_world",
+    headline: "The Sinking World",
     images: [img30, img31],
     videos: [],
     text: "'The Sinking World' 2010: Unbuilding project",
-    blurb:
+    intro:
       "How do I display a list of all network cards under Linux operating " +
       "systems? You can use any one of the following command to list network " +
       "cards installed under Linux operating systems. ",
@@ -29,11 +30,12 @@ const projectList = [
   },
   {
     date: "2012",
-    title: "Cross Gallery",
+    url_title: "cross_gallery_2012",
+    headline: "Cross Gallery",
     images: [img2, img3, img26],
     videos: [],
     text: "'If, then else' at Cross Gallery",
-    blurb:
+    intro:
       "Solo Exhibition in Cross Gallery in Dublin, Ireland.",
     body:
       "You can use any one of the following command " +
