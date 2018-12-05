@@ -36,12 +36,11 @@ const ProjectLink = styled.div`
 
 const ProjectItem = (props) => {
   const { match, project } = props;
-  console.log(match)
   return (
     <ProjectItemContainer>
       <ProjectHeader>
         <ProjectTitle>
-          <Link to={"/"}>{project.headline}</Link>
+          <Link to={`${match.url}/${project.url_title}`}>{project.headline}</Link>
         </ProjectTitle>
       </ProjectHeader>
       <ProjectImage src={project.images[0]} />
