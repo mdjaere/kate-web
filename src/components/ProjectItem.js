@@ -19,23 +19,24 @@ const ProjectIntroAndLink = styled.div`
 const ProjectImage = styled.img`
   width: 250px;
   height: auto;
-  margin: 12px 0px 5px 0px;
+  margin: 10px 0px 10px 0px;
 `;
 
 const ProjectTitle = styled.div``;
 
 const ProjectIntro = styled.div`
-  // text-indent: 30px;
   font-size: 0.7em;
   margin: 0px 0px 0px 0px;
 `;
 
 const ProjectLink = styled.div`
   font-size: 0.7em;
-  margin-top: 5px;
+  margin-top: 7px;
 `;
 
-const ProjectItem = ({ project }) => {
+const ProjectItem = (props) => {
+  const { match, project } = props;
+  console.log(match)
   return (
     <ProjectItemContainer>
       <ProjectHeader>
@@ -47,11 +48,11 @@ const ProjectItem = ({ project }) => {
       <ProjectIntroAndLink>
         <ProjectIntro> {project.intro} </ProjectIntro>
         <ProjectLink>
-          <Link to={"/"}> Read More </Link>{" "}
+          <Link to={`${match.url}/${project.url_title}`}> Read More </Link>{" "}
         </ProjectLink>{" "}
       </ProjectIntroAndLink>
     </ProjectItemContainer>
   );
 };
 
-export default ProjectItem
+export default ProjectItem;

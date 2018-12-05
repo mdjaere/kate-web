@@ -1,12 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Redirect,
+  Route,
+  Link
+} from "react-router-dom";
 import Paintings from "./Paintings";
 import Menu from "./Menu";
 import Bio from "./Bio";
 import Contact from "./Contact";
 import Artwork from "./Artwork";
 import Projects from "./Projects";
+import Project from "./Project";
 import styled from "styled-components";
 
 const RootContainer = styled.div`
@@ -72,29 +79,29 @@ class App extends React.Component {
       showOriginal: true
     };
     this.switchVersion = this.switchVersion.bind(this);
-    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    // this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
-  componentDidMount() {
-    // Adding windows size listener
-    this.updateWindowDimensions();
-    window.addEventListener("resize", this.updateWindowDimensions);
-  }
+  // componentDidMount() {
+  //   // Adding windows size listener
+  //   this.updateWindowDimensions();
+  //   window.addEventListener("resize", this.updateWindowDimensions);
+  // }
 
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateWindowDimensions);
-  }
+  // componentWillUnmount() {
+  //   window.removeEventListener("resize", this.updateWindowDimensions);
+  // }
 
-  updateWindowDimensions() {
-    this.setState(
-      {
-        width: window.innerWidth,
-        height: window.innerHeight
-      },
-      () =>
-        console.log(`Dim changed: ${this.state.width} x ${this.state.height}`)
-    );
-  }
+  // updateWindowDimensions() {
+  //   this.setState(
+  //     {
+  //       width: window.innerWidth,
+  //       height: window.innerHeight
+  //     },
+  //     () =>
+  //       console.log(`Dim changed: ${this.state.width} x ${this.state.height}`)
+  //   );
+  // }
 
   switchVersion() {
     console.log("switching version");
@@ -115,11 +122,17 @@ class App extends React.Component {
             <Menu />
           </Headerpanel>
           <ContentPanel>
-            <Route exact path="/" component={Paintings} />
-            <Route path="/paintings" component={Paintings} />
-            <Route path="/projects" component={Projects} />
-            <Route path="/bio" component={Bio} />
-            <Route path="/contact" component={Contact} />
+            <Switch>
+              {/* <Route exact path="/">
+                <Redirect to={"/projects"} />
+              </Route> */}
+              <Route exact path="/" component={Paintings} />
+              <Route exact path="/paintings" component={Paintings} />
+              <Route exact path="/projects" component={Projects} />
+              <Route path path="/projects/:id" component={Project} />
+              <Route exact path="/bio" component={Bio} />
+              <Route exact path="/contact" component={Contact} />
+            </Switch>
           </ContentPanel>
           <Footer>
             <p onClick={this.switchVersion}>Copyright 2018</p>
