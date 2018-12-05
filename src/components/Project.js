@@ -1,9 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import projectList from "./projectList";
 
 const ProjectItemContainer = styled.div`
   margin: 0px 0px 26px 0px;
+`;
+
+const BackLink = styled.div`
+  font-size: 0.7em;
+  margin: 20px 0px 20px 0px;
 `;
 
 const ProjectHeader = styled.div``;
@@ -75,6 +81,9 @@ class Project extends React.Component {
         ) : (
           <div>Loading...</div>
         )}
+        <BackLink>
+          <Link to="/projects"> Back to all projects</Link>
+        </BackLink>
       </div>
     );
   }
