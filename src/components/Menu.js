@@ -50,7 +50,7 @@ class Menu extends React.Component {
     ) : (
       <MenuContainer className={this.props.className}>
         <MenuItem>
-          <img height={24} src={hamburger} onClick={this.toggleOpen} />
+          <img height={24} src={"/"+hamburger} onClick={this.toggleOpen} />
         </MenuItem>
       </MenuContainer>
     );
