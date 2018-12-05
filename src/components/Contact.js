@@ -8,6 +8,9 @@ const Container = styled.div`
 
 const ContactPanel = styled.div``;
 
+const TextPanel = styled.div`
+`;
+
 const NewsPanel = styled.div``;
 
 const Backdrop = styled.img`
@@ -19,26 +22,28 @@ const Backdrop = styled.img`
 const Contact = () => (
   <Container>
     <Backdrop src={bgImg} />
-    <ContactPanel>
-      <p>
-        Contact <br />
-        katewarner@gmail.com
-      </p>
-    </ContactPanel>
-    <NewsPanel>
-      <p>
-        Latest projects <br />
-        October 2018
-        <br />
-        <a href="https://themothershipproject.wordpress.com">
-          The Mothership Project Satellite Residency
-        </a>{" "}
-        <br />
-        <a href="https://cowhousestudios.com/satellite-residency-kate-warner-james-o-haodha/">
-          Cow House Studios, Wexford, Ireland
-        </a>{" "}
-      </p>
-    </NewsPanel>
+    <TextPanel>
+      <ContactPanel>
+        <p>
+          Contact <br />
+          katewarner@gmail.com
+        </p>
+      </ContactPanel>
+      <NewsPanel>
+        <p>
+          Latest projects <br />
+          October 2018
+          <br />
+          <a href="https://themothershipproject.wordpress.com">
+            The Mothership Project Satellite Residency
+          </a>{" "}
+          <br />
+          <a href="https://cowhousestudios.com/satellite-residency-kate-warner-james-o-haodha/">
+            Cow House Studios, Wexford, Ireland
+          </a>{" "}
+        </p>
+      </NewsPanel>
+    </TextPanel>
   </Container>
 );
 

@@ -26,6 +26,7 @@ const ProjectImage = styled.img`
   width: 250px;
   height: auto;
   margin: 10px 10px 10px 10px;
+  transition: all 0.2s linear;
 `;
 
 const ProjectTitle = styled.div``;
@@ -49,7 +50,11 @@ const ProjectLink = styled.div`
 class Project extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { project: null };
+    this.state = {
+      project: null,
+      imageInFocus: null
+    };
+    this.setImageInFocus = this.setImageInFocus.bind(this);
   }
 
   componentDidMount() {
@@ -58,6 +63,15 @@ class Project extends React.Component {
         item => item.url_title === this.props.match.params.id
       )
     });
+  }
+
+  setImageInFocus(newImage, e) {
+    this.setState(
+      {
+        imageInFocus: newImage !== this.state.imageInFocus ? newImage : null
+      },
+      () => console.log("New image in focus: ", this.state.imageInFocus)
+    );
   }
 
   render() {
@@ -71,7 +85,27 @@ class Project extends React.Component {
               <ProjectTitle>{project.headline}</ProjectTitle>
             </ProjectHeader>
             {project.images.map(image => {
-              return <ProjectImage key={image} src={"/" + image} />;
+              const inFocus = this.state.imageInFocus === image;
+              const img = inFocus ? (
+                <ProjectImage
+                  style={{ 
+                    width: "80vw",
+                    height: "auto",
+                  }}
+                  key={image}
+                  onClick={e => this.setImageInFocus(image, e)}
+                  inFocus
+                  src={"/" + image}
+                />
+              ) : (
+                <ProjectImage
+                  key={image}
+                  onClick={e => this.setImageInFocus(image, e)}
+                  inFocus
+                  src={"/" + image}
+                />
+              );
+              return img;
             })}
             <ProjectIntroAndBody>
               <ProjectIntro> {project.intro} </ProjectIntro> <br />
