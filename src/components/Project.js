@@ -60,7 +60,7 @@ class Project extends React.Component {
   componentDidMount() {
     this.setState({
       project: projectList.find(
-        item => item.url_title === this.props.match.params.id
+        item => item.urlTitle === this.props.match.params.id
       )
     });
   }

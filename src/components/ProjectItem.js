@@ -3,21 +3,24 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const ProjectItemContainer = styled.div`
-  margin: 0px 0px 26px 0px;
+  width: 300px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 5px 26px 5px;
+  overflow-x: hidden;
 `;
 
 const ProjectHeader = styled.div``;
 
 const ProjectDate = styled.div`
-  margin: 0px 0px 0px 0px;
+
 `;
 
 const ProjectIntroAndLink = styled.div`
-  margin: 0px 0px 0px 0px;
+
 `;
 
 const ProjectImage = styled.img`
-  width: 250px;
+  width: 300px;
   height: auto;
   margin: 10px 0px 10px 0px;
 `;
@@ -40,14 +43,14 @@ const ProjectItem = (props) => {
     <ProjectItemContainer>
       <ProjectHeader>
         <ProjectTitle>
-          <Link to={`${match.url}/${project.url_title}`}>{project.headline}</Link>
+          <Link to={`${match.url}/${project.urlTitle}`}>{project.headline}</Link>
         </ProjectTitle>
       </ProjectHeader>
-      <ProjectImage src={project.images[0]} />
+      <ProjectImage src={project.coverImage} />
       <ProjectIntroAndLink>
         <ProjectIntro> {project.intro} </ProjectIntro>
         <ProjectLink>
-          <Link to={`${match.url}/${project.url_title}`}> Read More </Link>{" "}
+          <Link to={`${match.url}/${project.urlTitle}`}> Read More </Link>{" "}
         </ProjectLink>{" "}
       </ProjectIntroAndLink>
     </ProjectItemContainer>

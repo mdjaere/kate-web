@@ -123,9 +123,9 @@ class App extends React.Component {
           </Headerpanel>
           <ContentPanel>
             <Switch>
-              {/* <Route exact path="/">
-                <Redirect to={"/projects"} />
-              </Route> */}
+              <Route exact path="/">
+                <Redirect to={"/paintings"} />
+              </Route>
               <Route exact path="/" component={Paintings} />
               <Route exact path="/paintings" component={Paintings} />
               <Route exact path="/projects" component={Projects} />
