@@ -7,7 +7,6 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Paintings from "./Paintings";
 import Menu from "./Menu";
 import Bio from "./Bio";
 import Contact from "./Contact";
@@ -76,40 +75,17 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showOriginal: true
+      showOffline: true
     };
     this.switchVersion = this.switchVersion.bind(this);
-    // this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
-
-  // componentDidMount() {
-  //   // Adding windows size listener
-  //   this.updateWindowDimensions();
-  //   window.addEventListener("resize", this.updateWindowDimensions);
-  // }
-
-  // componentWillUnmount() {
-  //   window.removeEventListener("resize", this.updateWindowDimensions);
-  // }
-
-  // updateWindowDimensions() {
-  //   this.setState(
-  //     {
-  //       width: window.innerWidth,
-  //       height: window.innerHeight
-  //     },
-  //     () =>
-  //       console.log(`Dim changed: ${this.state.width} x ${this.state.height}`)
-  //   );
-  // }
 
   switchVersion() {
     console.log("switching version");
-    this.setState({ showOriginal: !this.state.showOriginal });
+    this.setState({ showOffline: !this.state.showOffline });
   }
 
   render() {
-    const Art = this.state.showOriginal ? Paintings : Artwork;
     return (
       <Router>
         <RootContainer>
@@ -126,8 +102,13 @@ class App extends React.Component {
               <Route exact path="/">
                 <Redirect to={"/paintings"} />
               </Route>
-              <Route exact path="/" component={Paintings} />
-              <Route exact path="/paintings" component={Paintings} />
+              <Route
+                exact
+                path="/paintings"
+                component={() => {
+                  return <Artwork showOffline={this.state.showOffline} />;
+                }}
+              />
               <Route exact path="/projects" component={Projects} />
               <Route path path="/projects/:id" component={Project} />
               <Route exact path="/bio" component={Bio} />
