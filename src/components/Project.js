@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import projectList from "./projectList";
 
 const ProjectItemContainer = styled.div`
@@ -26,7 +26,14 @@ const ProjectImage = styled.img`
   width: 250px;
   height: auto;
   margin: 10px 10px 10px 10px;
-  transition: all 0.2s linear;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  ${props =>
+    props.inFocus &&
+    css`
+      width: 80vw;
+      height: auto;
+    `}
 `;
 
 const ProjectTitle = styled.div``;
@@ -84,29 +91,14 @@ class Project extends React.Component {
             <ProjectHeader>
               <ProjectTitle>{project.headline}</ProjectTitle>
             </ProjectHeader>
-            {project.images.map(image => {
-              const inFocus = this.state.imageInFocus === image;
-              const img = inFocus ? (
-                <ProjectImage
-                  style={{ 
-                    width: "80vw",
-                    height: "auto",
-                  }}
-                  key={image}
-                  onClick={e => this.setImageInFocus(image, e)}
-                  inFocus
-                  src={"/" + image}
-                />
-              ) : (
-                <ProjectImage
-                  key={image}
-                  onClick={e => this.setImageInFocus(image, e)}
-                  inFocus
-                  src={"/" + image}
-                />
-              );
-              return img;
-            })}
+            {project.images.map(image => (
+              <ProjectImage
+                key={image}
+                onClick={e => this.setImageInFocus(image, e)}
+                inFocus={this.state.imageInFocus === image}
+                src={"/" + image}
+              />
+            ))}
             <ProjectIntroAndBody>
               <ProjectIntro> {project.intro} </ProjectIntro> <br />
               <ProjectBody> {project.body} </ProjectBody>
