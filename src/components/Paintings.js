@@ -29,7 +29,8 @@ class Paintings extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      posts: [],
+      allPosts: [],
+      postsLoaded: [],
       loaded: false
     };
 
@@ -51,6 +52,7 @@ class Paintings extends React.Component {
         })
       );
     }
+    this.loadAnotherPost = this.loadAnotherPost.bind(this)
   }
 
   sortPostsFunction(a, b) {
@@ -66,12 +68,25 @@ class Paintings extends React.Component {
     console.log(`Mounting Artwork. ${mode}`);
     this.cancelableArtFetching.promise
       .then(response => {
+        // console.log("Painting response:", response)
+        const allPosts = response.items.sort(this.sortPostsFunction);
         this.setState({
-          posts: response.items.sort(this.sortPostsFunction),
-          loaded: true
+          allPosts: allPosts,
+          loaded: true,
+          postsLoaded: [allPosts[0]]
         });
       })
       .catch(error => console.error("Cannot fetch posts:", error));
+  }
+
+  loadAnotherPost() {
+    const allPostsNum = this.state.allPosts.length 
+    const allLoadedNum = this.state.postsLoaded.length
+    if ( allPostsNum !== allLoadedNum) {
+      this.setState({
+        postsLoaded: this.state.postsLoaded.concat( this.state.allPosts[allLoadedNum] )
+      });
+    }
   }
 
   componentWillUnmount() {
@@ -80,7 +95,7 @@ class Paintings extends React.Component {
   }
 
   render() {
-    const posts = this.state.posts;
+    const posts = this.state.postsLoaded;
     return (
       <ArtworkContainer>
         {this.state.loaded ? (
@@ -90,6 +105,7 @@ class Paintings extends React.Component {
                 return (
                   <ImageItemContainer key={i}>
                     <ImageItem
+                      onLoad={this.loadAnotherPost}
                       src={
                         "http:" +
                         fields.file.url +
