@@ -30,7 +30,9 @@ module.exports = {
         use: [
           {
             loader: "file-loader",
-            options: {}
+            options: {
+              name: 'Kate_Warner_[name].[ext]',
+            }
           }
         ]
       }
