@@ -62,9 +62,8 @@ class Paintings extends React.Component {
 
   componentDidMount() {
     // Fetching posts
-    console.log(
-      `Mounting Artwork. Offline mode ${this.props.showOffline.toString()}`
-    );
+    const mode = this.props.showOffline ? "Offline mode" : "Online mode";
+    console.log(`Mounting Artwork. ${mode}`);
     this.cancelableArtFetching.promise
       .then(response => {
         this.setState({

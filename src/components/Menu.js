@@ -15,8 +15,8 @@ const MenuContainer = styled.ul`
 const MenuItem = styled.li``;
 
 class Menu extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       isOpen: false
     };
@@ -28,6 +28,8 @@ class Menu extends React.Component {
   }
   render() {
     const isOpen = this.state.isOpen;
+    const activeLocation = this.props.history.location.pathname;
+    console.log(activeLocation);
     return isOpen ? (
       <MenuContainer className={this.props.className}>
         <MenuItem>
@@ -50,7 +52,7 @@ class Menu extends React.Component {
     ) : (
       <MenuContainer className={this.props.className}>
         <MenuItem>
-          <img height={24} src={"/"+hamburger} onClick={this.toggleOpen} />
+          <img height={24} src={"/" + hamburger} onClick={this.toggleOpen} />
         </MenuItem>
       </MenuContainer>
     );

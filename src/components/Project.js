@@ -83,7 +83,6 @@ class Project extends React.Component {
 
   render() {
     const project = this.state.project;
-    console.log("MATCH", this.props.match);
     return (
       <div>
         {project ? (

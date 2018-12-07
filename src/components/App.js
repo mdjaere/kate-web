@@ -5,7 +5,8 @@ import {
   Switch,
   Redirect,
   Route,
-  Link
+  Link,
+  withRouter
 } from "react-router-dom";
 import Menu from "./Menu";
 import Bio from "./Bio";
@@ -75,7 +76,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showOffline: false,
+      showOffline: false
     };
     this.switchVersion = this.switchVersion.bind(this);
   }
@@ -86,6 +87,7 @@ class App extends React.Component {
   }
 
   render() {
+    const MenuWithRouter = withRouter(Menu)
     return (
       <Router>
         <RootContainer>
@@ -95,7 +97,7 @@ class App extends React.Component {
                 Kate Warner
               </Link>
             </Header>
-            <Menu />
+            <MenuWithRouter />
           </Headerpanel>
           <ContentPanel>
             <Switch>
