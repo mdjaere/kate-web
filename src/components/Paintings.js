@@ -25,7 +25,7 @@ const ImageText = styled.div`
   margin: 0px 0px 32px 0px;
 `;
 
-class Artwork extends React.Component {
+class Paintings extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -113,12 +113,12 @@ class Artwork extends React.Component {
             </ImageBox>
           ))
         ) : (
-          <h1>Loading...</h1>
+          <div>Loading...</div>
         )}
       </ArtworkContainer>
     );
   }
 }
 
-export default Artwork;
+export default Paintings;
 export { ArtworkContainer, ImageBox, ImageItemContainer, ImageItem, ImageText };

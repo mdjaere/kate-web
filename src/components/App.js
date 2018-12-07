@@ -10,7 +10,7 @@ import {
 import Menu from "./Menu";
 import Bio from "./Bio";
 import Contact from "./Contact";
-import Artwork from "./Artwork";
+import Paintings from "./Paintings";
 import Projects from "./Projects";
 import Project from "./Project";
 import styled from "styled-components";
@@ -75,7 +75,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showOffline: true
+      showOffline: false,
     };
     this.switchVersion = this.switchVersion.bind(this);
   }
@@ -106,7 +106,7 @@ class App extends React.Component {
                 exact
                 path="/paintings"
                 component={() => {
-                  return <Artwork showOffline={this.state.showOffline} />;
+                  return <Paintings showOffline={this.state.showOffline} />;
                 }}
               />
               <Route exact path="/projects" component={Projects} />
