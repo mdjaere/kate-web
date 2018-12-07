@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 import hamburger from "../assets/Hamburger_icon.svg";
+import closeX from "../assets/Close_x.svg";
 
 const MenuContainer = styled.ul`
   list-style: none;
@@ -33,7 +34,7 @@ class Menu extends React.Component {
     return isOpen ? (
       <MenuContainer className={this.props.className}>
         <MenuItem>
-          <div onClick={this.toggleOpen}>Close</div>
+        <img height={24} src={"/" + closeX} onClick={this.toggleOpen} />
         </MenuItem>
 
         <MenuItem>
