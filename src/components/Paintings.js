@@ -68,7 +68,7 @@ class Paintings extends React.Component {
     console.log(`Mounting Artwork. ${mode}`);
     this.cancelableArtFetching.promise
       .then(response => {
-        // console.log("Painting response:", response)
+        // console.log( JSON.stringify(response, null, 4))
         const allPosts = response.items.sort(this.sortPostsFunction);
         this.setState({
           allPosts: allPosts,
