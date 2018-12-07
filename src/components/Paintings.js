@@ -128,7 +128,7 @@ class Paintings extends React.Component {
             </ImageBox>
           ))
         ) : (
-          <div>Loading...</div>
+          <div>...</div>
         )}
       </ArtworkContainer>
     );
