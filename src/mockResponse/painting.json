@@ -1,0 +1,3624 @@
+{
+  "sys": {
+    "type": "Array"
+  },
+  "total": 30,
+  "skip": 0,
+  "limit": 100,
+  "items": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "1aqqfQgOE2QciCKWmacYqi",
+        "type": "Entry",
+        "createdAt": "2018-11-24T21:43:23.760Z",
+        "updatedAt": "2018-11-24T21:43:23.760Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "2VwZH1ieru4CwiQyWagSik",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:28:17.527Z",
+              "updatedAt": "2018-11-21T15:28:17.527Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Cross Gallery - Five Paintings",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/2VwZH1ieru4CwiQyWagSik/62815d65fb3bb65725516c9280b5b410/1_web32.jpg",
+                "details": {
+                  "size": 127149,
+                  "image": {
+                    "width": 1024,
+                    "height": 616
+                  }
+                },
+                "fileName": "1_web32.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "displayOrder": 201302
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "66AnqBLyEgaymeIUAqkWKu",
+        "type": "Entry",
+        "createdAt": "2018-11-24T21:44:04.741Z",
+        "updatedAt": "2018-11-24T21:44:04.741Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "3cYuneMZpCiiISKqOoeY62",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:34:39.114Z",
+              "updatedAt": "2018-11-21T15:34:39.114Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Cross Gallery - 1 web30",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/3cYuneMZpCiiISKqOoeY62/c10fdf6779a8df280e01612c90e70298/1_web30.jpg",
+                "details": {
+                  "size": 133917,
+                  "image": {
+                    "width": 1024,
+                    "height": 689
+                  }
+                },
+                "fileName": "1_web30.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "displayOrder": 201303
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "5SmPjZu01iEAGMuc4WsqeG",
+        "type": "Entry",
+        "createdAt": "2018-11-24T21:46:36.946Z",
+        "updatedAt": "2018-11-24T21:46:36.946Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "5dc9DJ3geAYeIC60kG2cWQ",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:23:57.546Z",
+              "updatedAt": "2018-11-21T15:23:57.546Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Cross Gallery - Moon Rock",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/5dc9DJ3geAYeIC60kG2cWQ/623cd31b866d3558e02cf69dc87b7746/1_web37.jpg",
+                "details": {
+                  "size": 111127,
+                  "image": {
+                    "width": 1024,
+                    "height": 696
+                  }
+                },
+                "fileName": "1_web37.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "displayOrder": 201305
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "2H7MGJlcCQ0C0WeyUE4ueU",
+        "type": "Entry",
+        "createdAt": "2018-11-24T21:32:35.439Z",
+        "updatedAt": "2018-11-24T21:32:35.439Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "7cwerTuo3CY4eykawAwOoi",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:31:54.995Z",
+              "updatedAt": "2018-11-21T15:31:54.995Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Cross Gallery - 1 web10",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/7cwerTuo3CY4eykawAwOoi/359c6753924db1696c9d482a3693fe20/1_web10.jpg",
+                "details": {
+                  "size": 331198,
+                  "image": {
+                    "width": 1024,
+                    "height": 713
+                  }
+                },
+                "fileName": "1_web10.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "displayOrder": 201204
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "1m7YQrKsS08WWE0GmmW4yo",
+        "type": "Entry",
+        "createdAt": "2018-11-24T22:19:35.777Z",
+        "updatedAt": "2018-11-24T22:19:35.777Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "2bA95amt0gEiaamqqOWyKE",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:21:31.599Z",
+              "updatedAt": "2018-11-21T15:21:31.599Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Massed",
+              "description": "'Massed' 2012: watercolour & ink on panel, 22x28cm",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/2bA95amt0gEiaamqqOWyKE/cd9cd311d7a2a01c56873c52b7ac6e6d/1_webb.jpg",
+                "details": {
+                  "size": 642824,
+                  "image": {
+                    "width": 1024,
+                    "height": 800
+                  }
+                },
+                "fileName": "1_webb.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "title": "Massed",
+        "year": "2012",
+        "medium2": "Watercolour & ink on panel",
+        "dimensions": "22x28cm",
+        "displayOrder": 222210
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "fVShGmvDeoouGagCsA0wM",
+        "type": "Entry",
+        "createdAt": "2018-11-24T22:30:03.118Z",
+        "updatedAt": "2018-11-24T22:30:03.118Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "5aKluCnccMCeEgqaWmESq8",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:36:23.408Z",
+              "updatedAt": "2018-11-21T15:37:25.821Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 3,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Untitled - 2014",
+              "description": "Untitled, 2014: oil on linen",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/5aKluCnccMCeEgqaWmESq8/fcb51ece8c32309a994975f6f3b5ed70/1_untitled-2014-web2_v2.jpg",
+                "details": {
+                  "size": 227160,
+                  "image": {
+                    "width": 800,
+                    "height": 1016
+                  }
+                },
+                "fileName": "1_untitled-2014-web2_v2.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "title": "Untitled",
+        "year": "2014",
+        "medium2": "Oil on linen",
+        "displayOrder": 222300
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "2UzjNhwyXmMESo6SiaA0gc",
+        "type": "Entry",
+        "createdAt": "2018-11-24T22:34:45.197Z",
+        "updatedAt": "2018-11-24T22:34:45.197Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "3U6AdcJmPKEqusAEK2UwAk",
+              "type": "Asset",
+              "createdAt": "2018-11-05T21:52:50.668Z",
+              "updatedAt": "2018-11-21T15:12:48.723Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 2,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Disseveral",
+              "description": "'Disseveral' 2012: oil on panel, 21x28cm",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/3U6AdcJmPKEqusAEK2UwAk/8b0e120ab1660e08b5c21e5fe6d9db16/1_web1_v2.jpg",
+                "details": {
+                  "size": 703969,
+                  "image": {
+                    "width": 975,
+                    "height": 728
+                  }
+                },
+                "fileName": "1_web1_v2.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "title": "Disseveral",
+        "year": "2012",
+        "medium2": "Oil on panel",
+        "dimensions": "21x28cm",
+        "displayOrder": 222380
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "5rxNXQsg7YqcUiEUE00uMo",
+        "type": "Entry",
+        "createdAt": "2018-11-21T15:55:02.294Z",
+        "updatedAt": "2018-11-21T15:56:46.367Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "4GBeDGnC3uSiKY6GWgmE0Q",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:41:47.933Z",
+              "updatedAt": "2018-11-21T15:41:47.933Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Bean Rows",
+              "description": "'Bean Rows' 2011: oil on board",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/4GBeDGnC3uSiKY6GWgmE0Q/eb39611a2bda601c18ecc6ed7843bd42/1_bean-rows-2011-web.jpg",
+                "details": {
+                  "size": 246723,
+                  "image": {
+                    "width": 1024,
+                    "height": 783
+                  }
+                },
+                "fileName": "1_bean-rows-2011-web.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "title": "Bean Rows",
+        "year": "2011",
+        "medium2": "Oil on board",
+        "displayOrder": 201100
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "5ytm8RelZmgkoGyEU60ek0",
+        "type": "Entry",
+        "createdAt": "2018-11-24T22:30:47.856Z",
+        "updatedAt": "2018-11-24T22:31:18.822Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "450dZ8Kq8MOEyCysiKIEeu",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:37:09.289Z",
+              "updatedAt": "2018-11-21T15:37:09.289Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Untitled - 2014",
+              "description": "Untitled, 2014: oil on linen",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/450dZ8Kq8MOEyCysiKIEeu/f8376e749ed2e1bb33ea0dbc2da2c6be/1_untitled-2014-web.jpg",
+                "details": {
+                  "size": 340897,
+                  "image": {
+                    "width": 800,
+                    "height": 1063
+                  }
+                },
+                "fileName": "1_untitled-2014-web.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "title": "Untitled",
+        "year": "2014",
+        "medium2": "Oil on linen",
+        "displayOrder": 222310
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "6fZVu54bjUKae6aqwAgeO6",
+        "type": "Entry",
+        "createdAt": "2018-11-21T15:45:55.483Z",
+        "updatedAt": "2018-11-21T15:56:58.248Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 4,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "3jDjFrZlhem20UAaO0isMU",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:38:58.242Z",
+              "updatedAt": "2018-11-21T15:38:58.242Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "The Sinking World",
+              "description": "'The Sinking World' 2010: Unbuilding project",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/3jDjFrZlhem20UAaO0isMU/4046d0a33faa0050695230ab21cdd3e3/1_unbuilding-2010-web.jpg",
+                "details": {
+                  "size": 148984,
+                  "image": {
+                    "width": 800,
+                    "height": 1202
+                  }
+                },
+                "fileName": "1_unbuilding-2010-web.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          },
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "60cYLEWpu880kuk0WIgomu",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:37:57.440Z",
+              "updatedAt": "2018-11-21T15:37:57.440Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "The Sinking World",
+              "description": "'The Sinking World' 2010: Unbuilding project",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/60cYLEWpu880kuk0WIgomu/338e2ef1dbedb9b652c76c4c7a342980/1_unbuilding-2010-web2.jpg",
+                "details": {
+                  "size": 153192,
+                  "image": {
+                    "width": 800,
+                    "height": 1202
+                  }
+                },
+                "fileName": "1_unbuilding-2010-web2.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "title": "The Sinking World",
+        "year": "2010",
+        "project": "Unbuilding Project",
+        "displayOrder": 201000
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "5vnNcCtoZy0sgIwKEWMCIK",
+        "type": "Entry",
+        "createdAt": "2018-11-24T21:28:51.103Z",
+        "updatedAt": "2018-11-24T21:28:51.103Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "4EJ3SW3gROAkAYy4k4SO4y",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:39:32.695Z",
+              "updatedAt": "2018-11-21T15:39:32.695Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Tracked",
+              "description": "'Tracked' 2012: oil on board",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/4EJ3SW3gROAkAYy4k4SO4y/301be0d72a3cdf73b007884e6d9cefa9/1_tracked-2012-web.jpg",
+                "details": {
+                  "size": 342851,
+                  "image": {
+                    "width": 1024,
+                    "height": 838
+                  }
+                },
+                "fileName": "1_tracked-2012-web.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "title": "Tracked",
+        "year": "2012",
+        "medium2": "Oil on board",
+        "displayOrder": 201201
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "6q56CcvHLG4a0YOM2YG4Eq",
+        "type": "Entry",
+        "createdAt": "2018-11-24T21:30:20.815Z",
+        "updatedAt": "2018-11-24T21:30:20.815Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "4J3sTwgZ2EGgq44CSG6Gk6",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:30:24.746Z",
+              "updatedAt": "2018-11-21T15:30:24.746Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Of Isinglass",
+              "description": "'Of Isinglass', 2012: oil on linen, 26x36cm",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/4J3sTwgZ2EGgq44CSG6Gk6/4f2708ddcb80c7f0bb243d2a87a0277f/1_web17.jpg",
+                "details": {
+                  "size": 678639,
+                  "image": {
+                    "width": 983,
+                    "height": 722
+                  }
+                },
+                "fileName": "1_web17.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "title": "Of Isinglass",
+        "year": "2012",
+        "medium2": "Oil on linen",
+        "dimensions": "26x36cm",
+        "displayOrder": 201202
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "1WjwACov4oqSqKaCWGKCyG",
+        "type": "Entry",
+        "createdAt": "2018-11-24T21:33:53.786Z",
+        "updatedAt": "2018-11-24T21:34:05.473Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "2r3qdgQddmy6yI0GoYaCyA",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:19:47.748Z",
+              "updatedAt": "2018-11-21T15:19:47.748Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Moonrock",
+              "description": "'Moonrock', 2012: oil on panel, 25x30cm",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/2r3qdgQddmy6yI0GoYaCyA/71e3699ffa2615e1c6b7c050346f8b32/1_webg_v2.jpg",
+                "details": {
+                  "size": 752196,
+                  "image": {
+                    "width": 991,
+                    "height": 822
+                  }
+                },
+                "fileName": "1_webg_v2.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "title": "Moonrock",
+        "year": "2012",
+        "medium2": "Oil on panel",
+        "dimensions": "25x30cm",
+        "displayOrder": 201205
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "6lVCAWSzPaQGAQEY0wuwOQ",
+        "type": "Entry",
+        "createdAt": "2018-11-24T21:50:23.105Z",
+        "updatedAt": "2018-11-24T21:50:23.106Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "442dvdOzm88Uku8Cq6S06i",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:20:53.531Z",
+              "updatedAt": "2018-11-21T15:20:53.531Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Outcrop",
+              "description": "'Outcrop' 2013: oil on panel, 33x28cm",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/442dvdOzm88Uku8Cq6S06i/54df7dda4d46a07c9818ad3ff2bdfc70/1_web40.jpg",
+                "details": {
+                  "size": 647661,
+                  "image": {
+                    "width": 1024,
+                    "height": 872
+                  }
+                },
+                "fileName": "1_web40.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "title": "Outcrop",
+        "year": "2013",
+        "medium2": "Oil on panel",
+        "dimensions": "33x28cm",
+        "displayOrder": 201306
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "1SUEhcznZykk0aCiw0k8S0",
+        "type": "Entry",
+        "createdAt": "2018-11-24T22:32:31.759Z",
+        "updatedAt": "2018-11-24T22:32:48.461Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "BlnHVvclMsYciCsO8W4s",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:24:37.913Z",
+              "updatedAt": "2018-11-21T15:24:37.913Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Cross Gallery - Two Paintings ",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/BlnHVvclMsYciCsO8W4s/1061955bd5ac766b7b2a05c51263a7ce/1_web31.jpg",
+                "details": {
+                  "size": 133863,
+                  "image": {
+                    "width": 1024,
+                    "height": 743
+                  }
+                },
+                "fileName": "1_web31.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "displayOrder": 222350
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "4kBbBjNHYsE86siykq0Aq2",
+        "type": "Entry",
+        "createdAt": "2018-11-24T21:42:44.543Z",
+        "updatedAt": "2018-11-24T21:42:44.543Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "wwG11m0HRYMOECyq0sMao",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:14:31.548Z",
+              "updatedAt": "2018-11-21T15:14:31.548Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Gunta",
+              "description": "'Gunta', 2013: oil on linen, 40x50cm",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/wwG11m0HRYMOECyq0sMao/2cc5e7cb07548205227aad4c5e21cfe8/1_webh.jpg",
+                "details": {
+                  "size": 644134,
+                  "image": {
+                    "width": 1024,
+                    "height": 826
+                  }
+                },
+                "fileName": "1_webh.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "title": "Gunta",
+        "year": "2013",
+        "medium2": "Oil on linen",
+        "dimensions": "40x50cm",
+        "displayOrder": 201301
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "FmghXh2Ia4MEOKC6ySyws",
+        "type": "Entry",
+        "createdAt": "2018-11-24T21:53:20.939Z",
+        "updatedAt": "2018-11-24T21:53:20.939Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "6i1ziyX4E8g6ucsCYKemEe",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:23:29.767Z",
+              "updatedAt": "2018-11-21T15:23:29.767Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Cross Gallery - Doorway and three paintings",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/6i1ziyX4E8g6ucsCYKemEe/5d57f4a71e801033a50a377840ca4500/1_webc_v2.jpg",
+                "details": {
+                  "size": 91000,
+                  "image": {
+                    "width": 1024,
+                    "height": 606
+                  }
+                },
+                "fileName": "1_webc_v2.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "displayOrder": 201307
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "2M1R8lGBwsykgmu68yiKEc",
+        "type": "Entry",
+        "createdAt": "2018-11-24T22:18:16.139Z",
+        "updatedAt": "2018-11-24T22:18:16.139Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "HS03t1NROCEMggkmSO08U",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:21:59.247Z",
+              "updatedAt": "2018-11-21T15:21:59.247Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "You Pour, I'll Count",
+              "description": "'You Pour, I'll Count', 2012: oil on linen, 28x36cm",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/HS03t1NROCEMggkmSO08U/7eb3fd1d6c81116110bde282c175c6c0/1_weba_v2.jpg",
+                "details": {
+                  "size": 422532,
+                  "image": {
+                    "width": 999,
+                    "height": 756
+                  }
+                },
+                "fileName": "1_weba_v2.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "title": "You Pour, I'll Count",
+        "year": "2012",
+        "medium2": "Oil on linen",
+        "dimensions": "28x36cm",
+        "displayOrder": 222200
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "2OAAPYDHjyoAyuMgSYyoYy",
+        "type": "Entry",
+        "createdAt": "2018-11-24T22:24:54.287Z",
+        "updatedAt": "2018-11-24T22:24:54.287Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "6OVmvC2ize4iUc2e2YSEkG",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:40:14.348Z",
+              "updatedAt": "2018-11-21T15:40:14.348Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Million",
+              "description": "'Million', 2012: oil on paper",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/6OVmvC2ize4iUc2e2YSEkG/3ca99fef9dda945a419a5d6d9c7387fd/1_one-million-2012-web_v2.jpg",
+                "details": {
+                  "size": 353630,
+                  "image": {
+                    "width": 794,
+                    "height": 1032
+                  }
+                },
+                "fileName": "1_one-million-2012-web_v2.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "title": "Million",
+        "year": "2012",
+        "medium2": "Oil on paper",
+        "displayOrder": 222260
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "4ZiRd8U2diU0yaUWKoqWQC",
+        "type": "Entry",
+        "createdAt": "2018-11-24T22:33:22.779Z",
+        "updatedAt": "2018-11-24T22:33:52.315Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "6hkAdtt7jy20CEGm0KaMym",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:31:24.253Z",
+              "updatedAt": "2018-11-21T15:31:24.253Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Cross Gallery - 1 web14",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/6hkAdtt7jy20CEGm0KaMym/f0a1763c6ca9473077de20c823746046/1_web14.jpg",
+                "details": {
+                  "size": 330876,
+                  "image": {
+                    "width": 1024,
+                    "height": 602
+                  }
+                },
+                "fileName": "1_web14.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "displayOrder": 222370
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "1wbyqj27280MI80IoIGui4",
+        "type": "Entry",
+        "createdAt": "2018-11-24T22:26:00.921Z",
+        "updatedAt": "2018-11-24T22:26:14.825Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "5HDr1dg7fiOaqOskUyCaie",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:40:42.388Z",
+              "updatedAt": "2018-11-21T15:40:42.388Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Leviathan",
+              "description": "'Leviathan', 2011: oil on paper",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/5HDr1dg7fiOaqOskUyCaie/e425d25a1fefc4e5da436f6ad9b01806/1_leviathan-2012-web.jpg",
+                "details": {
+                  "size": 290893,
+                  "image": {
+                    "width": 800,
+                    "height": 1268
+                  }
+                },
+                "fileName": "1_leviathan-2012-web.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "title": "'Leviathan'",
+        "year": "2011",
+        "medium2": "Oil on paper",
+        "displayOrder": 222270
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "2gZJBTzGSokUSU2kO2wOWa",
+        "type": "Entry",
+        "createdAt": "2018-11-24T22:22:14.819Z",
+        "updatedAt": "2018-11-24T22:22:14.819Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "x2bRqsBPXi4ysUCgmsuI4",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:35:44.631Z",
+              "updatedAt": "2018-11-21T15:35:44.631Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Scattering",
+              "description": "'Scattering' 2012: oil on linen, 24x28cm",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/x2bRqsBPXi4ysUCgmsuI4/04562734cac12f21f530f126f824c372/1_web2.jpg",
+                "details": {
+                  "size": 1040347,
+                  "image": {
+                    "width": 998,
+                    "height": 850
+                  }
+                },
+                "fileName": "1_web2.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "title": "Scattering",
+        "year": "2012",
+        "medium2": "Oil on linen",
+        "dimensions": "24x28cm",
+        "displayOrder": 222230
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "6bvcPnlBFSUuA6euCiIq4e",
+        "type": "Entry",
+        "createdAt": "2018-11-24T22:23:48.116Z",
+        "updatedAt": "2018-11-24T22:23:48.116Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "2JjiHSiOUwmI6sosGig2a2",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:34:58.519Z",
+              "updatedAt": "2018-11-21T15:34:58.519Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Nutshell King",
+              "description": "'Nutshell King' 2012: oil on linen & panel, pin, 24x30cm",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/2JjiHSiOUwmI6sosGig2a2/4a7af7091750e4a5ef13914da2d82c46/1_web3.jpg",
+                "details": {
+                  "size": 1067240,
+                  "image": {
+                    "width": 996,
+                    "height": 795
+                  }
+                },
+                "fileName": "1_web3.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "title": "Nutshell King",
+        "year": "2012",
+        "medium2": "Oil on linen & panel, pin",
+        "dimensions": "24x30cm",
+        "displayOrder": 222250
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "2cyaytCJc8820MuOmicWQ",
+        "type": "Entry",
+        "createdAt": "2018-11-24T22:20:13.898Z",
+        "updatedAt": "2018-11-24T22:20:13.898Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "4X6QUtzyNiy4UAwaoeMmYo",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:19:19.444Z",
+              "updatedAt": "2018-11-21T15:19:19.444Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Cross Gallery - Gunta and Tick Tick",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/4X6QUtzyNiy4UAwaoeMmYo/b52721321fc4f924ec292efd42ba3504/1_webl.jpg",
+                "details": {
+                  "size": 107507,
+                  "image": {
+                    "width": 1024,
+                    "height": 662
+                  }
+                },
+                "fileName": "1_webl.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "displayOrder": 222220
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "2yoaVWwZrKqCeg6O8cQ2Sq",
+        "type": "Entry",
+        "createdAt": "2018-11-24T22:28:26.945Z",
+        "updatedAt": "2018-11-24T22:28:26.945Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "30ZvLUGihigA6WYwA26eCU",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:41:19.798Z",
+              "updatedAt": "2018-11-21T15:41:19.798Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Cod stacked for drying",
+              "description": "Cod stacked for drying, Røst",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/30ZvLUGihigA6WYwA26eCU/12ae9fcc87bdc05bca4cd73acfbd12ed/1_cod-lofoten-web.jpg",
+                "details": {
+                  "size": 418871,
+                  "image": {
+                    "width": 1024,
+                    "height": 768
+                  }
+                },
+                "fileName": "1_cod-lofoten-web.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "title": "Cod stacked for drying",
+        "project": "Røst",
+        "displayOrder": 222290
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "4724gxoOzScyWggSe82MCM",
+        "type": "Entry",
+        "createdAt": "2018-11-21T16:01:07.064Z",
+        "updatedAt": "2018-11-21T16:01:07.064Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "5tg4r5JngcsUOuKeKSCOuW",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:31:06.093Z",
+              "updatedAt": "2018-11-21T15:31:06.093Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Cross Gallery - 1 web8",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/5tg4r5JngcsUOuKeKSCOuW/1c7730aea1a00061de916ca9dc4d4c3d/1_web8.jpg",
+                "details": {
+                  "size": 266642,
+                  "image": {
+                    "width": 1024,
+                    "height": 632
+                  }
+                },
+                "fileName": "1_web8.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "displayOrder": 201101
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "6xWR3zKe1G4iQKecs6qyeI",
+        "type": "Entry",
+        "createdAt": "2018-11-24T22:27:10.468Z",
+        "updatedAt": "2018-11-24T22:27:10.468Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "3B55VIKPLy4EWYwyySu4SQ",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:39:55.953Z",
+              "updatedAt": "2018-11-21T15:39:55.953Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Blanket 2012",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/3B55VIKPLy4EWYwyySu4SQ/53e8c937d2de5583f0faacbbece819e2/1_research-pic-web.jpg",
+                "details": {
+                  "size": 263509,
+                  "image": {
+                    "width": 1024,
+                    "height": 768
+                  }
+                },
+                "fileName": "1_research-pic-web.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "title": "Blanket",
+        "year": "2012",
+        "displayOrder": 222280
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "6wh7KkZC9iGyYIy40kgEic",
+        "type": "Entry",
+        "createdAt": "2018-11-24T22:32:05.540Z",
+        "updatedAt": "2018-11-24T22:32:05.540Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "6zDDV7dPA4qAua6UMC8Qs",
+              "type": "Asset",
+              "createdAt": "2018-11-05T22:20:55.623Z",
+              "updatedAt": "2018-11-05T22:20:55.623Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "1 untitled-2014-web3",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/6zDDV7dPA4qAua6UMC8Qs/852d53cf44570058c7e6f434b663624b/1_untitled-2014-web3.jpg",
+                "details": {
+                  "size": 248996,
+                  "image": {
+                    "width": 800,
+                    "height": 1072
+                  }
+                },
+                "fileName": "1_untitled-2014-web3.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "title": "Untitled",
+        "year": "2014",
+        "medium2": "Oil on board",
+        "displayOrder": 222330
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "55bjhecZdKeA4mKQegCyEu",
+        "type": "Entry",
+        "createdAt": "2018-11-24T21:45:22.715Z",
+        "updatedAt": "2018-11-24T21:45:22.715Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "2eQvu07diUwEg66EIQAk08",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:15:13.841Z",
+              "updatedAt": "2018-11-21T15:15:13.841Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Tick Tick",
+              "description": "'Tick Tick', 2013: oil on panel, 21.5x28cm",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/2eQvu07diUwEg66EIQAk08/b906534bae674b41cf00506a15383538/1_webi.jpg",
+                "details": {
+                  "size": 335774,
+                  "image": {
+                    "width": 999,
+                    "height": 762
+                  }
+                },
+                "fileName": "1_webi.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "title": "Tick Tick",
+        "year": "2013",
+        "medium2": "Oil on panel",
+        "dimensions": " 21.5x28cm",
+        "displayOrder": 201304
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "28i4Nk1kdS4ayq8eeKKiue",
+        "type": "Entry",
+        "createdAt": "2018-11-24T21:31:12.960Z",
+        "updatedAt": "2018-11-24T21:31:22.828Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artwork"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "allXxZ27HU628qWgawWO6",
+              "type": "Asset",
+              "createdAt": "2018-11-21T15:11:44.312Z",
+              "updatedAt": "2018-11-21T15:11:44.312Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "Hair Collector",
+              "description": "'Hair Collector', 2012: oil & ink on panel, 28x22cm",
+              "file": {
+                "url": "//images.ctfassets.net/dlgxohln8q1h/allXxZ27HU628qWgawWO6/9500a49d7c0152aa7a330c1cc42ea652/1_webk.jpg",
+                "details": {
+                  "size": 85680,
+                  "image": {
+                    "width": 958,
+                    "height": 855
+                  }
+                },
+                "fileName": "1_webk.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "title": "Hair Collector",
+        "year": "2012",
+        "medium2": "Oil & ink on panel",
+        "dimensions": "28x22cm",
+        "displayOrder": 201203
+      }
+    }
+  ],
+  "includes": {
+    "Asset": [
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "2JjiHSiOUwmI6sosGig2a2",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:34:58.519Z",
+          "updatedAt": "2018-11-21T15:34:58.519Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Nutshell King",
+          "description": "'Nutshell King' 2012: oil on linen & panel, pin, 24x30cm",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/2JjiHSiOUwmI6sosGig2a2/4a7af7091750e4a5ef13914da2d82c46/1_web3.jpg",
+            "details": {
+              "size": 1067240,
+              "image": {
+                "width": 996,
+                "height": 795
+              }
+            },
+            "fileName": "1_web3.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "2VwZH1ieru4CwiQyWagSik",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:28:17.527Z",
+          "updatedAt": "2018-11-21T15:28:17.527Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Cross Gallery - Five Paintings",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/2VwZH1ieru4CwiQyWagSik/62815d65fb3bb65725516c9280b5b410/1_web32.jpg",
+            "details": {
+              "size": 127149,
+              "image": {
+                "width": 1024,
+                "height": 616
+              }
+            },
+            "fileName": "1_web32.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "2bA95amt0gEiaamqqOWyKE",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:21:31.599Z",
+          "updatedAt": "2018-11-21T15:21:31.599Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Massed",
+          "description": "'Massed' 2012: watercolour & ink on panel, 22x28cm",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/2bA95amt0gEiaamqqOWyKE/cd9cd311d7a2a01c56873c52b7ac6e6d/1_webb.jpg",
+            "details": {
+              "size": 642824,
+              "image": {
+                "width": 1024,
+                "height": 800
+              }
+            },
+            "fileName": "1_webb.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "2eQvu07diUwEg66EIQAk08",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:15:13.841Z",
+          "updatedAt": "2018-11-21T15:15:13.841Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Tick Tick",
+          "description": "'Tick Tick', 2013: oil on panel, 21.5x28cm",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/2eQvu07diUwEg66EIQAk08/b906534bae674b41cf00506a15383538/1_webi.jpg",
+            "details": {
+              "size": 335774,
+              "image": {
+                "width": 999,
+                "height": 762
+              }
+            },
+            "fileName": "1_webi.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "2r3qdgQddmy6yI0GoYaCyA",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:19:47.748Z",
+          "updatedAt": "2018-11-21T15:19:47.748Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Moonrock",
+          "description": "'Moonrock', 2012: oil on panel, 25x30cm",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/2r3qdgQddmy6yI0GoYaCyA/71e3699ffa2615e1c6b7c050346f8b32/1_webg_v2.jpg",
+            "details": {
+              "size": 752196,
+              "image": {
+                "width": 991,
+                "height": 822
+              }
+            },
+            "fileName": "1_webg_v2.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "30ZvLUGihigA6WYwA26eCU",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:41:19.798Z",
+          "updatedAt": "2018-11-21T15:41:19.798Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Cod stacked for drying",
+          "description": "Cod stacked for drying, Røst",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/30ZvLUGihigA6WYwA26eCU/12ae9fcc87bdc05bca4cd73acfbd12ed/1_cod-lofoten-web.jpg",
+            "details": {
+              "size": 418871,
+              "image": {
+                "width": 1024,
+                "height": 768
+              }
+            },
+            "fileName": "1_cod-lofoten-web.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "3B55VIKPLy4EWYwyySu4SQ",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:39:55.953Z",
+          "updatedAt": "2018-11-21T15:39:55.953Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Blanket 2012",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/3B55VIKPLy4EWYwyySu4SQ/53e8c937d2de5583f0faacbbece819e2/1_research-pic-web.jpg",
+            "details": {
+              "size": 263509,
+              "image": {
+                "width": 1024,
+                "height": 768
+              }
+            },
+            "fileName": "1_research-pic-web.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "3U6AdcJmPKEqusAEK2UwAk",
+          "type": "Asset",
+          "createdAt": "2018-11-05T21:52:50.668Z",
+          "updatedAt": "2018-11-21T15:12:48.723Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 2,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Disseveral",
+          "description": "'Disseveral' 2012: oil on panel, 21x28cm",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/3U6AdcJmPKEqusAEK2UwAk/8b0e120ab1660e08b5c21e5fe6d9db16/1_web1_v2.jpg",
+            "details": {
+              "size": 703969,
+              "image": {
+                "width": 975,
+                "height": 728
+              }
+            },
+            "fileName": "1_web1_v2.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "3cYuneMZpCiiISKqOoeY62",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:34:39.114Z",
+          "updatedAt": "2018-11-21T15:34:39.114Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Cross Gallery - 1 web30",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/3cYuneMZpCiiISKqOoeY62/c10fdf6779a8df280e01612c90e70298/1_web30.jpg",
+            "details": {
+              "size": 133917,
+              "image": {
+                "width": 1024,
+                "height": 689
+              }
+            },
+            "fileName": "1_web30.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "3jDjFrZlhem20UAaO0isMU",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:38:58.242Z",
+          "updatedAt": "2018-11-21T15:38:58.242Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "The Sinking World",
+          "description": "'The Sinking World' 2010: Unbuilding project",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/3jDjFrZlhem20UAaO0isMU/4046d0a33faa0050695230ab21cdd3e3/1_unbuilding-2010-web.jpg",
+            "details": {
+              "size": 148984,
+              "image": {
+                "width": 800,
+                "height": 1202
+              }
+            },
+            "fileName": "1_unbuilding-2010-web.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "442dvdOzm88Uku8Cq6S06i",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:20:53.531Z",
+          "updatedAt": "2018-11-21T15:20:53.531Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Outcrop",
+          "description": "'Outcrop' 2013: oil on panel, 33x28cm",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/442dvdOzm88Uku8Cq6S06i/54df7dda4d46a07c9818ad3ff2bdfc70/1_web40.jpg",
+            "details": {
+              "size": 647661,
+              "image": {
+                "width": 1024,
+                "height": 872
+              }
+            },
+            "fileName": "1_web40.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "450dZ8Kq8MOEyCysiKIEeu",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:37:09.289Z",
+          "updatedAt": "2018-11-21T15:37:09.289Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Untitled - 2014",
+          "description": "Untitled, 2014: oil on linen",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/450dZ8Kq8MOEyCysiKIEeu/f8376e749ed2e1bb33ea0dbc2da2c6be/1_untitled-2014-web.jpg",
+            "details": {
+              "size": 340897,
+              "image": {
+                "width": 800,
+                "height": 1063
+              }
+            },
+            "fileName": "1_untitled-2014-web.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "4EJ3SW3gROAkAYy4k4SO4y",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:39:32.695Z",
+          "updatedAt": "2018-11-21T15:39:32.695Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Tracked",
+          "description": "'Tracked' 2012: oil on board",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/4EJ3SW3gROAkAYy4k4SO4y/301be0d72a3cdf73b007884e6d9cefa9/1_tracked-2012-web.jpg",
+            "details": {
+              "size": 342851,
+              "image": {
+                "width": 1024,
+                "height": 838
+              }
+            },
+            "fileName": "1_tracked-2012-web.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "4GBeDGnC3uSiKY6GWgmE0Q",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:41:47.933Z",
+          "updatedAt": "2018-11-21T15:41:47.933Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Bean Rows",
+          "description": "'Bean Rows' 2011: oil on board",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/4GBeDGnC3uSiKY6GWgmE0Q/eb39611a2bda601c18ecc6ed7843bd42/1_bean-rows-2011-web.jpg",
+            "details": {
+              "size": 246723,
+              "image": {
+                "width": 1024,
+                "height": 783
+              }
+            },
+            "fileName": "1_bean-rows-2011-web.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "4J3sTwgZ2EGgq44CSG6Gk6",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:30:24.746Z",
+          "updatedAt": "2018-11-21T15:30:24.746Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Of Isinglass",
+          "description": "'Of Isinglass', 2012: oil on linen, 26x36cm",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/4J3sTwgZ2EGgq44CSG6Gk6/4f2708ddcb80c7f0bb243d2a87a0277f/1_web17.jpg",
+            "details": {
+              "size": 678639,
+              "image": {
+                "width": 983,
+                "height": 722
+              }
+            },
+            "fileName": "1_web17.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "4X6QUtzyNiy4UAwaoeMmYo",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:19:19.444Z",
+          "updatedAt": "2018-11-21T15:19:19.444Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Cross Gallery - Gunta and Tick Tick",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/4X6QUtzyNiy4UAwaoeMmYo/b52721321fc4f924ec292efd42ba3504/1_webl.jpg",
+            "details": {
+              "size": 107507,
+              "image": {
+                "width": 1024,
+                "height": 662
+              }
+            },
+            "fileName": "1_webl.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "5HDr1dg7fiOaqOskUyCaie",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:40:42.388Z",
+          "updatedAt": "2018-11-21T15:40:42.388Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Leviathan",
+          "description": "'Leviathan', 2011: oil on paper",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/5HDr1dg7fiOaqOskUyCaie/e425d25a1fefc4e5da436f6ad9b01806/1_leviathan-2012-web.jpg",
+            "details": {
+              "size": 290893,
+              "image": {
+                "width": 800,
+                "height": 1268
+              }
+            },
+            "fileName": "1_leviathan-2012-web.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "5aKluCnccMCeEgqaWmESq8",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:36:23.408Z",
+          "updatedAt": "2018-11-21T15:37:25.821Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 3,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Untitled - 2014",
+          "description": "Untitled, 2014: oil on linen",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/5aKluCnccMCeEgqaWmESq8/fcb51ece8c32309a994975f6f3b5ed70/1_untitled-2014-web2_v2.jpg",
+            "details": {
+              "size": 227160,
+              "image": {
+                "width": 800,
+                "height": 1016
+              }
+            },
+            "fileName": "1_untitled-2014-web2_v2.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "5dc9DJ3geAYeIC60kG2cWQ",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:23:57.546Z",
+          "updatedAt": "2018-11-21T15:23:57.546Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Cross Gallery - Moon Rock",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/5dc9DJ3geAYeIC60kG2cWQ/623cd31b866d3558e02cf69dc87b7746/1_web37.jpg",
+            "details": {
+              "size": 111127,
+              "image": {
+                "width": 1024,
+                "height": 696
+              }
+            },
+            "fileName": "1_web37.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "5tg4r5JngcsUOuKeKSCOuW",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:31:06.093Z",
+          "updatedAt": "2018-11-21T15:31:06.093Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Cross Gallery - 1 web8",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/5tg4r5JngcsUOuKeKSCOuW/1c7730aea1a00061de916ca9dc4d4c3d/1_web8.jpg",
+            "details": {
+              "size": 266642,
+              "image": {
+                "width": 1024,
+                "height": 632
+              }
+            },
+            "fileName": "1_web8.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "60cYLEWpu880kuk0WIgomu",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:37:57.440Z",
+          "updatedAt": "2018-11-21T15:37:57.440Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "The Sinking World",
+          "description": "'The Sinking World' 2010: Unbuilding project",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/60cYLEWpu880kuk0WIgomu/338e2ef1dbedb9b652c76c4c7a342980/1_unbuilding-2010-web2.jpg",
+            "details": {
+              "size": 153192,
+              "image": {
+                "width": 800,
+                "height": 1202
+              }
+            },
+            "fileName": "1_unbuilding-2010-web2.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "6OVmvC2ize4iUc2e2YSEkG",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:40:14.348Z",
+          "updatedAt": "2018-11-21T15:40:14.348Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Million",
+          "description": "'Million', 2012: oil on paper",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/6OVmvC2ize4iUc2e2YSEkG/3ca99fef9dda945a419a5d6d9c7387fd/1_one-million-2012-web_v2.jpg",
+            "details": {
+              "size": 353630,
+              "image": {
+                "width": 794,
+                "height": 1032
+              }
+            },
+            "fileName": "1_one-million-2012-web_v2.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "6hkAdtt7jy20CEGm0KaMym",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:31:24.253Z",
+          "updatedAt": "2018-11-21T15:31:24.253Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Cross Gallery - 1 web14",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/6hkAdtt7jy20CEGm0KaMym/f0a1763c6ca9473077de20c823746046/1_web14.jpg",
+            "details": {
+              "size": 330876,
+              "image": {
+                "width": 1024,
+                "height": 602
+              }
+            },
+            "fileName": "1_web14.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "6i1ziyX4E8g6ucsCYKemEe",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:23:29.767Z",
+          "updatedAt": "2018-11-21T15:23:29.767Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Cross Gallery - Doorway and three paintings",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/6i1ziyX4E8g6ucsCYKemEe/5d57f4a71e801033a50a377840ca4500/1_webc_v2.jpg",
+            "details": {
+              "size": 91000,
+              "image": {
+                "width": 1024,
+                "height": 606
+              }
+            },
+            "fileName": "1_webc_v2.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "6zDDV7dPA4qAua6UMC8Qs",
+          "type": "Asset",
+          "createdAt": "2018-11-05T22:20:55.623Z",
+          "updatedAt": "2018-11-05T22:20:55.623Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "1 untitled-2014-web3",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/6zDDV7dPA4qAua6UMC8Qs/852d53cf44570058c7e6f434b663624b/1_untitled-2014-web3.jpg",
+            "details": {
+              "size": 248996,
+              "image": {
+                "width": 800,
+                "height": 1072
+              }
+            },
+            "fileName": "1_untitled-2014-web3.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "7cwerTuo3CY4eykawAwOoi",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:31:54.995Z",
+          "updatedAt": "2018-11-21T15:31:54.995Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Cross Gallery - 1 web10",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/7cwerTuo3CY4eykawAwOoi/359c6753924db1696c9d482a3693fe20/1_web10.jpg",
+            "details": {
+              "size": 331198,
+              "image": {
+                "width": 1024,
+                "height": 713
+              }
+            },
+            "fileName": "1_web10.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "BlnHVvclMsYciCsO8W4s",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:24:37.913Z",
+          "updatedAt": "2018-11-21T15:24:37.913Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Cross Gallery - Two Paintings ",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/BlnHVvclMsYciCsO8W4s/1061955bd5ac766b7b2a05c51263a7ce/1_web31.jpg",
+            "details": {
+              "size": 133863,
+              "image": {
+                "width": 1024,
+                "height": 743
+              }
+            },
+            "fileName": "1_web31.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "HS03t1NROCEMggkmSO08U",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:21:59.247Z",
+          "updatedAt": "2018-11-21T15:21:59.247Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "You Pour, I'll Count",
+          "description": "'You Pour, I'll Count', 2012: oil on linen, 28x36cm",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/HS03t1NROCEMggkmSO08U/7eb3fd1d6c81116110bde282c175c6c0/1_weba_v2.jpg",
+            "details": {
+              "size": 422532,
+              "image": {
+                "width": 999,
+                "height": 756
+              }
+            },
+            "fileName": "1_weba_v2.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "allXxZ27HU628qWgawWO6",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:11:44.312Z",
+          "updatedAt": "2018-11-21T15:11:44.312Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Hair Collector",
+          "description": "'Hair Collector', 2012: oil & ink on panel, 28x22cm",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/allXxZ27HU628qWgawWO6/9500a49d7c0152aa7a330c1cc42ea652/1_webk.jpg",
+            "details": {
+              "size": 85680,
+              "image": {
+                "width": 958,
+                "height": 855
+              }
+            },
+            "fileName": "1_webk.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "wwG11m0HRYMOECyq0sMao",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:14:31.548Z",
+          "updatedAt": "2018-11-21T15:14:31.548Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Gunta",
+          "description": "'Gunta', 2013: oil on linen, 40x50cm",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/wwG11m0HRYMOECyq0sMao/2cc5e7cb07548205227aad4c5e21cfe8/1_webh.jpg",
+            "details": {
+              "size": 644134,
+              "image": {
+                "width": 1024,
+                "height": 826
+              }
+            },
+            "fileName": "1_webh.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "x2bRqsBPXi4ysUCgmsuI4",
+          "type": "Asset",
+          "createdAt": "2018-11-21T15:35:44.631Z",
+          "updatedAt": "2018-11-21T15:35:44.631Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "Scattering",
+          "description": "'Scattering' 2012: oil on linen, 24x28cm",
+          "file": {
+            "url": "//images.ctfassets.net/dlgxohln8q1h/x2bRqsBPXi4ysUCgmsuI4/04562734cac12f21f530f126f824c372/1_web2.jpg",
+            "details": {
+              "size": 1040347,
+              "image": {
+                "width": 998,
+                "height": 850
+              }
+            },
+            "fileName": "1_web2.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    ]
+  }
+}
