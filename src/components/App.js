@@ -87,7 +87,7 @@ class App extends React.Component {
   }
 
   render() {
-    const MenuWithRouter = withRouter(Menu)
+    const MenuWithRouter = withRouter(Menu);
     return (
       <Router>
         <RootContainer>
@@ -107,8 +107,13 @@ class App extends React.Component {
               <Route
                 exact
                 path="/paintings"
-                component={() => {
-                  return <Paintings showOffline={this.state.showOffline} />;
+                component={props => {
+                  return (
+                    <Paintings
+                      {...props}
+                      showOffline={this.state.showOffline}
+                    />
+                  );
                 }}
               />
               <Route exact path="/projects" component={Projects} />
