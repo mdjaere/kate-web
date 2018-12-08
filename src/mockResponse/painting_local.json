@@ -1199,7 +1199,7 @@
             "fields": {
               "title": "Cross Gallery - Two Paintings ",
               "file": {
-                "url": "assets/assets_web31.jpg",
+                "url": "assets_web31.jpg",
                 "details": {
                   "size": 133863,
                   "image": {
@@ -1275,7 +1275,7 @@
               "title": "Gunta",
               "description": "'Gunta', 2013: oil on linen, 40x50cm",
               "file": {
-                "url": "assets/assets1_webh.jpg",
+                "url": "assets1_webh.jpg",
                 "details": {
                   "size": 644134,
                   "image": {
@@ -1430,7 +1430,7 @@
               "title": "You Pour, I'll Count",
               "description": "'You Pour, I'll Count', 2012: oil on linen, 28x36cm",
               "file": {
-                "url": "assets/assets1_weba_v2.jpg",
+                "url": "assets1_weba_v2.jpg",
                 "details": {
                   "size": 422532,
                   "image": {
@@ -1743,7 +1743,7 @@
               "title": "Scattering",
               "description": "'Scattering' 2012: oil on linen, 24x28cm",
               "file": {
-                "url": "assets/assets1_web2.jpg",
+                "url": "assets1_web2.jpg",
                 "details": {
                   "size": 1040347,
                   "image": {
@@ -2207,7 +2207,7 @@
             "fields": {
               "title": "1 untitled-2014-web3",
               "file": {
-                "url": "assets/assets1_untitled-2014-web3.jpg",
+                "url": "assets1_untitled-2014-web3.jpg",
                 "details": {
                   "size": 248996,
                   "image": {
@@ -2366,7 +2366,7 @@
               "title": "Hair Collector",
               "description": "'Hair Collector', 2012: oil & ink on panel, 28x22cm",
               "file": {
-                "url": "assets/assets1_webk.jpg",
+                "url": "assets1_webk.jpg",
                 "details": {
                   "size": 85680,
                   "image": {
@@ -2417,7 +2417,7 @@
           "title": "Nutshell King",
           "description": "'Nutshell King' 2012: oil on linen & panel, pin, 24x30cm",
           "file": {
-            "url": "1_web3.jpg",
+            "url": "assets/1_web3.jpg",
             "details": {
               "size": 1067240,
               "image": {
@@ -2456,7 +2456,7 @@
         "fields": {
           "title": "Cross Gallery - Five Paintings",
           "file": {
-            "url": "1_web32.jpg",
+            "url": "assets/1_web32.jpg",
             "details": {
               "size": 127149,
               "image": {
@@ -2496,7 +2496,7 @@
           "title": "Massed",
           "description": "'Massed' 2012: watercolour & ink on panel, 22x28cm",
           "file": {
-            "url": "1_webb.jpg",
+            "url": "assets/1_webb.jpg",
             "details": {
               "size": 642824,
               "image": {
@@ -2536,7 +2536,7 @@
           "title": "Tick Tick",
           "description": "'Tick Tick', 2013: oil on panel, 21.5x28cm",
           "file": {
-            "url": "1_webi.jpg",
+            "url": "assets/1_webi.jpg",
             "details": {
               "size": 335774,
               "image": {
@@ -2576,7 +2576,7 @@
           "title": "Moonrock",
           "description": "'Moonrock', 2012: oil on panel, 25x30cm",
           "file": {
-            "url": "1_webg_v2.jpg",
+            "url": "assets/1_webg_v2.jpg",
             "details": {
               "size": 752196,
               "image": {
@@ -2616,7 +2616,7 @@
           "title": "Cod stacked for drying",
           "description": "Cod stacked for drying, Røst",
           "file": {
-            "url": "1_cod-lofoten-web.jpg",
+            "url": "assets/1_cod-lofoten-web.jpg",
             "details": {
               "size": 418871,
               "image": {
@@ -2655,7 +2655,7 @@
         "fields": {
           "title": "Blanket 2012",
           "file": {
-            "url": "1_research-pic-web.jpg",
+            "url": "assets/1_research-pic-web.jpg",
             "details": {
               "size": 263509,
               "image": {
@@ -2695,7 +2695,7 @@
           "title": "Disseveral",
           "description": "'Disseveral' 2012: oil on panel, 21x28cm",
           "file": {
-            "url": "1_web1_v2.jpg",
+            "url": "assets/1_web1_v2.jpg",
             "details": {
               "size": 703969,
               "image": {
@@ -2734,7 +2734,7 @@
         "fields": {
           "title": "Cross Gallery - 1 web30",
           "file": {
-            "url": "1_web30.jpg",
+            "url": "assets/1_web30.jpg",
             "details": {
               "size": 133917,
               "image": {
@@ -2774,7 +2774,7 @@
           "title": "The Sinking World",
           "description": "'The Sinking World' 2010: Unbuilding project",
           "file": {
-            "url": "1_unbuilding-2010-web.jpg",
+            "url": "assets/1_unbuilding-2010-web.jpg",
             "details": {
               "size": 148984,
               "image": {
@@ -2814,7 +2814,7 @@
           "title": "Outcrop",
           "description": "'Outcrop' 2013: oil on panel, 33x28cm",
           "file": {
-            "url": "1_web40.jpg",
+            "url": "assets/1_web40.jpg",
             "details": {
               "size": 647661,
               "image": {
@@ -2854,7 +2854,7 @@
           "title": "Untitled - 2014",
           "description": "Untitled, 2014: oil on linen",
           "file": {
-            "url": "1_untitled-2014-web.jpg",
+            "url": "assets/1_untitled-2014-web.jpg",
             "details": {
               "size": 340897,
               "image": {
@@ -2894,7 +2894,7 @@
           "title": "Tracked",
           "description": "'Tracked' 2012: oil on board",
           "file": {
-            "url": "1_tracked-2012-web.jpg",
+            "url": "assets/1_tracked-2012-web.jpg",
             "details": {
               "size": 342851,
               "image": {
@@ -2934,7 +2934,7 @@
           "title": "Bean Rows",
           "description": "'Bean Rows' 2011: oil on board",
           "file": {
-            "url": "1_bean-rows-2011-web.jpg",
+            "url": "assets/1_bean-rows-2011-web.jpg",
             "details": {
               "size": 246723,
               "image": {
@@ -2974,7 +2974,7 @@
           "title": "Of Isinglass",
           "description": "'Of Isinglass', 2012: oil on linen, 26x36cm",
           "file": {
-            "url": "1_web17.jpg",
+            "url": "assets/1_web17.jpg",
             "details": {
               "size": 678639,
               "image": {
@@ -3013,7 +3013,7 @@
         "fields": {
           "title": "Cross Gallery - Gunta and Tick Tick",
           "file": {
-            "url": "1_webl.jpg",
+            "url": "assets/1_webl.jpg",
             "details": {
               "size": 107507,
               "image": {
@@ -3053,7 +3053,7 @@
           "title": "Leviathan",
           "description": "'Leviathan', 2011: oil on paper",
           "file": {
-            "url": "1_leviathan-2012-web.jpg",
+            "url": "assets/1_leviathan-2012-web.jpg",
             "details": {
               "size": 290893,
               "image": {
@@ -3093,7 +3093,7 @@
           "title": "Untitled - 2014",
           "description": "Untitled, 2014: oil on linen",
           "file": {
-            "url": "1_untitled-2014-web2_v2.jpg",
+            "url": "assets/1_untitled-2014-web2_v2.jpg",
             "details": {
               "size": 227160,
               "image": {
@@ -3132,7 +3132,7 @@
         "fields": {
           "title": "Cross Gallery - Moon Rock",
           "file": {
-            "url": "1_web37.jpg",
+            "url": "assets/1_web37.jpg",
             "details": {
               "size": 111127,
               "image": {
@@ -3171,7 +3171,7 @@
         "fields": {
           "title": "Cross Gallery - 1 web8",
           "file": {
-            "url": "1_web8.jpg",
+            "url": "assets/1_web8.jpg",
             "details": {
               "size": 266642,
               "image": {
@@ -3211,7 +3211,7 @@
           "title": "The Sinking World",
           "description": "'The Sinking World' 2010: Unbuilding project",
           "file": {
-            "url": "1_unbuilding-2010-web2.jpg",
+            "url": "assets/1_unbuilding-2010-web2.jpg",
             "details": {
               "size": 153192,
               "image": {
@@ -3251,7 +3251,7 @@
           "title": "Million",
           "description": "'Million', 2012: oil on paper",
           "file": {
-            "url": "1_one-million-2012-web_v2.jpg",
+            "url": "assets/1_one-million-2012-web_v2.jpg",
             "details": {
               "size": 353630,
               "image": {
@@ -3290,7 +3290,7 @@
         "fields": {
           "title": "Cross Gallery - 1 web14",
           "file": {
-            "url": "1_web14.jpg",
+            "url": "assets/1_web14.jpg",
             "details": {
               "size": 330876,
               "image": {
@@ -3329,7 +3329,7 @@
         "fields": {
           "title": "Cross Gallery - Doorway and three paintings",
           "file": {
-            "url": "1_webc_v2.jpg",
+            "url": "assets/1_webc_v2.jpg",
             "details": {
               "size": 91000,
               "image": {
@@ -3407,7 +3407,7 @@
         "fields": {
           "title": "Cross Gallery - 1 web10",
           "file": {
-            "url": "1_web10.jpg",
+            "url": "assets/1_web10.jpg",
             "details": {
               "size": 331198,
               "image": {

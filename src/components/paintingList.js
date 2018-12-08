@@ -29,6 +29,7 @@ import img28 from "../assets/1_web8.jpg";
 import img29 from "../assets/1_bean-rows-2011-web.jpg";
 import img30 from "../assets/1_unbuilding-2010-web2.jpg";
 import img31 from "../assets/1_unbuilding-2010-web.jpg";
+import jsontest from "../mockResponse/painting_local"
 
 const paintingList = {
   items: [
@@ -222,7 +223,7 @@ const paintingList = {
 };
 
 const promisedPaintings = new Promise((resolve, reject) => {
-  resolve(paintingList);
+  resolve(jsontest);
 });
 
 export { promisedPaintings };
