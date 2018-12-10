@@ -1,8 +1,12 @@
 import React from "react";
 import * as contentful from "contentful";
 import styled from "styled-components";
-import { promisedPaintings } from "./paintingList.js";
 import makeCancelable from "./makeCancelable";
+
+import jsonResponse from "../mockResponse/painting_local";
+const promisedPaintings = new Promise((resolve, reject) => {
+  resolve(jsonResponse);
+});
 
 const ArtworkContainer = styled.div`
   display: flex;
@@ -52,7 +56,7 @@ class Paintings extends React.Component {
         })
       );
     }
-    this.loadAnotherPost = this.loadAnotherPost.bind(this)
+    this.loadAnotherPost = this.loadAnotherPost.bind(this);
   }
 
   sortPostsFunction(a, b) {
@@ -80,11 +84,13 @@ class Paintings extends React.Component {
   }
 
   loadAnotherPost() {
-    const allPostsNum = this.state.allPosts.length 
-    const allLoadedNum = this.state.postsLoaded.length
-    if ( allPostsNum !== allLoadedNum) {
+    const allPostsNum = this.state.allPosts.length;
+    const allLoadedNum = this.state.postsLoaded.length;
+    if (allPostsNum !== allLoadedNum) {
       this.setState({
-        postsLoaded: this.state.postsLoaded.concat( this.state.allPosts[allLoadedNum] )
+        postsLoaded: this.state.postsLoaded.concat(
+          this.state.allPosts[allLoadedNum]
+        )
       });
     }
   }
