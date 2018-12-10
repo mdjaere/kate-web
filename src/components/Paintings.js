@@ -4,7 +4,7 @@ import styled from "styled-components";
 import makeCancelable from "./makeCancelable";
 
 import jsonResponse from "../mockResponse/painting_local";
-const promisedPaintings = new Promise((resolve, reject) => {
+const promisedOfflineContent = new Promise((resolve, reject) => {
   resolve(jsonResponse);
 });
 
@@ -43,14 +43,14 @@ class Paintings extends React.Component {
     this.screenWidth = window.screen.width;
     this.deviceSpecificImageWidth = this.pixelRatio * this.screenWidth;
     if (this.props.showOffline) {
-      this.cancelableArtFetching = makeCancelable(promisedPaintings);
+      this.cancelableContentFetching = makeCancelable(promisedOfflineContent);
     } else {
       this.client = contentful.createClient({
         space: "dlgxohln8q1h",
         accessToken:
           "207bd0790feb33520b6772a155fecdc0cc0f1399e3ae71d4a2962d236ec86c51"
       });
-      this.cancelableArtFetching = makeCancelable(
+      this.cancelableContentFetching = makeCancelable(
         this.client.getEntries({
           content_type: "artwork"
         })
@@ -70,7 +70,7 @@ class Paintings extends React.Component {
     // Fetching posts
     const mode = this.props.showOffline ? "Offline mode" : "Online mode";
     console.log(`Mounting Artwork. ${mode}`);
-    this.cancelableArtFetching.promise
+    this.cancelableContentFetching.promise
       .then(response => {
         // console.log( JSON.stringify(response, null, 4))
         const allPosts = response.items.sort(this.sortPostsFunction);
@@ -97,7 +97,7 @@ class Paintings extends React.Component {
 
   componentWillUnmount() {
     console.log("Unmounting Artwork");
-    this.cancelableArtFetching.cancel();
+    this.cancelableContentFetching.cancel();
   }
 
   render() {

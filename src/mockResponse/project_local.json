@@ -1,0 +1,455 @@
+{
+  "sys": {
+    "type": "Array"
+  },
+  "total": 3,
+  "skip": 0,
+  "limit": 100,
+  "items": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "1KLrbKuvqoycoUUeYi0yIc",
+        "type": "Entry",
+        "createdAt": "2018-12-10T23:07:11.138Z",
+        "updatedAt": "2018-12-10T23:07:11.138Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "date": "June 2017",
+        "title": "PGCE Art & Design Exhibition",
+        "location": "UCL Institute of Education",
+        "urlTitle": "PGCE_Exhibition",
+        "coverImage": {
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "dlgxohln8q1h"
+              }
+            },
+            "id": "2POFz9WHaEYmmeo0YaEA28",
+            "type": "Asset",
+            "createdAt": "2018-12-10T23:06:33.116Z",
+            "updatedAt": "2018-12-10T23:06:33.116Z",
+            "environment": {
+              "sys": {
+                "id": "master",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "revision": 1,
+            "locale": "en-GB"
+          },
+          "fields": {
+            "title": "PCGE Exhibition UNADJUSTEDRAW",
+            "description": "PGCE Exhibition 1",
+            "file": {
+              "url": "assets/PCGE_Exhibition_UNADJUSTEDRAW.jpg",
+              "details": {
+                "size": 101473,
+                "image": {
+                  "width": 1087,
+                  "height": 723
+                }
+              },
+              "fileName": "PCGE_Exhibition_UNADJUSTEDRAW.jpg",
+              "contentType": "image/jpeg"
+            }
+          }
+        },
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "2POFz9WHaEYmmeo0YaEA28",
+              "type": "Asset",
+              "createdAt": "2018-12-10T23:06:33.116Z",
+              "updatedAt": "2018-12-10T23:06:33.116Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "PCGE Exhibition UNADJUSTEDRAW",
+              "description": "PGCE Exhibition 1",
+              "file": {
+                "url": "assets/PCGE_Exhibition_UNADJUSTEDRAW.jpg",
+                "details": {
+                  "size": 101473,
+                  "image": {
+                    "width": 1087,
+                    "height": 723
+                  }
+                },
+                "fileName": "PCGE_Exhibition_UNADJUSTEDRAW.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "intro": "Ending a year of research and teaching practice, this month provided a return to studio\nwork in the context of art education.",
+        "body": "Within studios tucked at the top of the brutalist Institute of Education, there was a chance to dig materials out from their domestic hiding places and find new configurations, considering ideas of shelter, reuse and responsiveness."
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "1sjmGMRCokEoi0iWQWAmko",
+        "type": "Entry",
+        "createdAt": "2018-12-10T23:10:48.695Z",
+        "updatedAt": "2018-12-10T23:10:48.695Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "date": "March 2017",
+        "title": "Mapping Tate Modern Families Workshop",
+        "location": "‘Occupation’ at Tate Exchange",
+        "urlTitle": "mapping_tate_modern",
+        "intro": "Freelands Foundation & IOE Institute of Education",
+        "body": "__Occupation__, a collaboration between Freelands Foundation and the IOE, took the form of an exhibition, a publication, and a series of discussions and events around art education and contemporary art in schools. The artwork shown was developed from projects that first took place in London schools, led by student teachers from IOE.\n\n__Mapping Tate Modern__ grew out of a project with Year 7 students at Arts and Media School, Islington in January 2017. This drop-in workshop for families asked visitors to draw a map to their favourite artwork or location inside Tate Modern. The maps were passed on to other visitors through the news stand set up for the ‘Occupation’."
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "dlgxohln8q1h"
+          }
+        },
+        "id": "4umUAb5A8Eqqoq8aY2Ygeu",
+        "type": "Entry",
+        "createdAt": "2018-12-10T23:03:26.025Z",
+        "updatedAt": "2018-12-10T23:03:26.025Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        },
+        "locale": "en-GB"
+      },
+      "fields": {
+        "date": "October 2018",
+        "title": "The Mothership Project Satellite Residency",
+        "location": "Cow House Studios, Co. Wexford",
+        "urlTitle": "The_Mothership_Project_Residency",
+        "coverImage": {
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "dlgxohln8q1h"
+              }
+            },
+            "id": "2ZYxTThYWcAwiyAQIYgaQg",
+            "type": "Asset",
+            "createdAt": "2018-12-10T23:01:48.233Z",
+            "updatedAt": "2018-12-10T23:01:48.233Z",
+            "environment": {
+              "sys": {
+                "id": "master",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "revision": 1,
+            "locale": "en-GB"
+          },
+          "fields": {
+            "title": "dsc8639 Kate",
+            "description": "Kate in Cowhouse Studios (By Frank)",
+            "file": {
+              "url": "assets/dsc8639_Kate.jpg",
+              "details": {
+                "size": 246712,
+                "image": {
+                  "width": 1000,
+                  "height": 667
+                }
+              },
+              "fileName": "dsc8639_Kate.jpg",
+              "contentType": "image/jpeg"
+            }
+          }
+        },
+        "images": [
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "4pTpGP3oFOMY0oEEsEEU6g",
+              "type": "Asset",
+              "createdAt": "2018-12-10T23:03:00.101Z",
+              "updatedAt": "2018-12-10T23:03:00.101Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "dsc8639 Mothership Vest",
+              "description": "Nora's vest srying at Cowhouse studios",
+              "file": {
+                "url": "assets/dsc8639_Mothership_Vest.jpg",
+                "details": {
+                  "size": 174454,
+                  "image": {
+                    "width": 700,
+                    "height": 1052
+                  }
+                },
+                "fileName": "dsc8639_Mothership_Vest.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          },
+          {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "dlgxohln8q1h"
+                }
+              },
+              "id": "2ZYxTThYWcAwiyAQIYgaQg",
+              "type": "Asset",
+              "createdAt": "2018-12-10T23:01:48.233Z",
+              "updatedAt": "2018-12-10T23:01:48.233Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1,
+              "locale": "en-GB"
+            },
+            "fields": {
+              "title": "dsc8639 Kate",
+              "description": "Kate in Cowhouse Studios (By Frank)",
+              "file": {
+                "url": "assets/dsc8639_Kate.jpg",
+                "details": {
+                  "size": 246712,
+                  "image": {
+                    "width": 1000,
+                    "height": 667
+                  }
+                },
+                "fileName": "dsc8639_Kate.jpg",
+                "contentType": "image/jpeg"
+              }
+            }
+          }
+        ],
+        "intro": "The wonderful Cow House Studios hosted the 15 artists selected for The Mothership Project\nSatellite Residency through autumn 2018.",
+        "body": "With childcare, accommodation and meals\nprovided, the residency provided a valuable breathing space to explore draw, paint and\nspark new ideas for practice. [Cow House Studios](https://cowhousestudios.com). \n\nOur week on the farm was spent alongside interdisciplinary artist [James O hAodha](http://gsamfa.com/year/2017/james-o-haodha/), providing a chance to share our experiences in navigating parenthood as artists.\n\nThe Mothership Project is a network of parenting artists in Ireland. It aims to support\nparenting artists in the development of their practice and to encourage arts organisations to\nmake the art world a more inclusive place for artists with children. [The Satellite Residency](https://themothershipproject.wordpress.com/2018/10/11/the-mothership-project- satellite-residency-selected-artists-announced/) is\nfunded by the Arts Council of Ireland and Wexford County Council Arts Office, and is\nsupported by Visual, Carlow and Wexford Arts Centre."
+      }
+    }
+  ],
+  "includes": {
+    "Asset": [
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "2POFz9WHaEYmmeo0YaEA28",
+          "type": "Asset",
+          "createdAt": "2018-12-10T23:06:33.116Z",
+          "updatedAt": "2018-12-10T23:06:33.116Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "PCGE Exhibition UNADJUSTEDRAW",
+          "description": "PGCE Exhibition 1",
+          "file": {
+            "url": "assets/PCGE_Exhibition_UNADJUSTEDRAW.jpg",
+            "details": {
+              "size": 101473,
+              "image": {
+                "width": 1087,
+                "height": 723
+              }
+            },
+            "fileName": "PCGE_Exhibition_UNADJUSTEDRAW.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "2ZYxTThYWcAwiyAQIYgaQg",
+          "type": "Asset",
+          "createdAt": "2018-12-10T23:01:48.233Z",
+          "updatedAt": "2018-12-10T23:01:48.233Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "dsc8639 Kate",
+          "description": "Kate in Cowhouse Studios (By Frank)",
+          "file": {
+            "url": "assets/dsc8639_Kate.jpg",
+            "details": {
+              "size": 246712,
+              "image": {
+                "width": 1000,
+                "height": 667
+              }
+            },
+            "fileName": "dsc8639_Kate.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "dlgxohln8q1h"
+            }
+          },
+          "id": "4pTpGP3oFOMY0oEEsEEU6g",
+          "type": "Asset",
+          "createdAt": "2018-12-10T23:03:00.101Z",
+          "updatedAt": "2018-12-10T23:03:00.101Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-GB"
+        },
+        "fields": {
+          "title": "dsc8639 Mothership Vest",
+          "description": "Nora's vest srying at Cowhouse studios",
+          "file": {
+            "url": "assets/dsc8639_Mothership_Vest.jpg",
+            "details": {
+              "size": 174454,
+              "image": {
+                "width": 700,
+                "height": 1052
+              }
+            },
+            "fileName": "dsc8639_Mothership_Vest.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    ]
+  }
+}
