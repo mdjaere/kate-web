@@ -1199,7 +1199,7 @@
             "fields": {
               "title": "Cross Gallery - Two Paintings ",
               "file": {
-                "url": "assets_web31.jpg",
+                "url": "assets/1_web31.jpg",
                 "details": {
                   "size": 133863,
                   "image": {
@@ -1275,7 +1275,7 @@
               "title": "Gunta",
               "description": "'Gunta', 2013: oil on linen, 40x50cm",
               "file": {
-                "url": "assets1_webh.jpg",
+                "url": "assets/1_webh.jpg",
                 "details": {
                   "size": 644134,
                   "image": {
@@ -1430,7 +1430,7 @@
               "title": "You Pour, I'll Count",
               "description": "'You Pour, I'll Count', 2012: oil on linen, 28x36cm",
               "file": {
-                "url": "assets1_weba_v2.jpg",
+                "url": "assets/1_weba_v2.jpg",
                 "details": {
                   "size": 422532,
                   "image": {
@@ -1743,7 +1743,7 @@
               "title": "Scattering",
               "description": "'Scattering' 2012: oil on linen, 24x28cm",
               "file": {
-                "url": "assets1_web2.jpg",
+                "url": "assets/1_web2.jpg",
                 "details": {
                   "size": 1040347,
                   "image": {
@@ -2207,7 +2207,7 @@
             "fields": {
               "title": "1 untitled-2014-web3",
               "file": {
-                "url": "assets1_untitled-2014-web3.jpg",
+                "url": "assets/1_untitled-2014-web3.jpg",
                 "details": {
                   "size": 248996,
                   "image": {
@@ -2366,7 +2366,7 @@
               "title": "Hair Collector",
               "description": "'Hair Collector', 2012: oil & ink on panel, 28x22cm",
               "file": {
-                "url": "assets1_webk.jpg",
+                "url": "assets/1_webk.jpg",
                 "details": {
                   "size": 85680,
                   "image": {
@@ -3368,7 +3368,7 @@
         "fields": {
           "title": "1 untitled-2014-web3",
           "file": {
-            "url": "assets1_untitled-2014-web3.jpg",
+            "url": "assets/1_untitled-2014-web3.jpg",
             "details": {
               "size": 248996,
               "image": {
@@ -3486,7 +3486,7 @@
           "title": "You Pour, I'll Count",
           "description": "'You Pour, I'll Count', 2012: oil on linen, 28x36cm",
           "file": {
-            "url": "assets1_weba_v2.jpg",
+            "url": "assets/1_weba_v2.jpg",
             "details": {
               "size": 422532,
               "image": {
@@ -3526,7 +3526,7 @@
           "title": "Hair Collector",
           "description": "'Hair Collector', 2012: oil & ink on panel, 28x22cm",
           "file": {
-            "url": "assets1_webk.jpg",
+            "url": "assets/1_webk.jpg",
             "details": {
               "size": 85680,
               "image": {
@@ -3566,7 +3566,7 @@
           "title": "Gunta",
           "description": "'Gunta', 2013: oil on linen, 40x50cm",
           "file": {
-            "url": "assets1_webh.jpg",
+            "url": "assets/1_webh.jpg",
             "details": {
               "size": 644134,
               "image": {
@@ -3606,7 +3606,7 @@
           "title": "Scattering",
           "description": "'Scattering' 2012: oil on linen, 24x28cm",
           "file": {
-            "url": "assets1_web2.jpg",
+            "url": "assets/1_web2.jpg",
             "details": {
               "size": 1040347,
               "image": {

@@ -48,7 +48,7 @@ module.exports = {
       filename: "[name].css",
       chunkFilename: "[id].css"
     }),
-    new CopyWebpackPlugin([{ from: "src/assets/*.jpg", to: "assets" }])
+    new CopyWebpackPlugin([{ from: "src/assets", to: "./assets" }])
   ],
   devServer: {
     contentBase: path.join(__dirname, "dist"),
