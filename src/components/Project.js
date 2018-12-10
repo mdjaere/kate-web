@@ -4,6 +4,8 @@ import styled, { css } from "styled-components";
 import projectList from "./projectList";
 
 const ProjectItemContainer = styled.div`
+  max-width: 960px;
+  width: 100%;
   margin: 0px 0px 26px 0px;
 `;
 
@@ -62,6 +64,10 @@ class Project extends React.Component {
       imageInFocus: null
     };
     this.setImageInFocus = this.setImageInFocus.bind(this);
+    this.pixelRatioRaw = window.devicePixelRatio ? window.devicePixelRatio : 1;
+    this.pixelRatio = Math.round(this.pixelRatioRaw * 100) / 100;
+    this.screenWidth = window.screen.width;
+    this.deviceSpecificImageWidth = this.pixelRatio * this.screenWidth;
   }
 
   componentDidMount() {
@@ -95,7 +101,7 @@ class Project extends React.Component {
                 key={image}
                 onClick={e => this.setImageInFocus(image, e)}
                 inFocus={this.state.imageInFocus === image}
-                src={"/" + image}
+                src={"http:" + image + "?w=" + this.deviceSpecificImageWidth}
               />
             ))}
             <ProjectIntroAndBody>

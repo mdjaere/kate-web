@@ -43,7 +43,7 @@ const ProjectItem = (props) => {
     <ProjectItemContainer>
       <ProjectHeader>
         <ProjectTitle>
-          <Link to={`${match.url}/${project.urlTitle}`}>{project.headline}</Link>
+          <Link to={`${match.url}/${project.urlTitle}`}>{project.title}</Link>
         </ProjectTitle>
       </ProjectHeader>
       <ProjectImage src={project.coverImage} />
