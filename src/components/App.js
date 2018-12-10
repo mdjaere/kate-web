@@ -76,7 +76,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showOffline: true
+      showOffline: false
     };
     this.switchVersion = this.switchVersion.bind(this);
   }
