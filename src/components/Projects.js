@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import * as contentful from "contentful";
 import ProjectItem from "./ProjectItem";
-import projectList from "./projectList";
+// import projectList from "./projectList";
 
 import makeCancelable from "./makeCancelable";
 
@@ -22,7 +22,7 @@ class Projects extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      allPosts: [],
+      allPosts: this.props.projectList || [],
       loaded: false
     };
 
@@ -45,19 +45,21 @@ class Projects extends React.Component {
   componentDidMount() {
     const mode = this.props.offlineMode ? "Offline mode" : "Online mode";
     console.log(`Mounting Projects. ${mode}`);
-    // Fetching posts
-    this.cancelableContentFetching.promise
-      .then(response => {
-        // console.log("PROJECT RESPONSE: ", JSON.stringify(response, null, 4))
-        const allPosts = response.items.sort(this.sortPostsFunction);
-        this.setState({
-          allPosts: allPosts,
-          loaded: true,
-          postsLoaded: [allPosts[0]]
-        });
-        // this.props.setProjectList(allPosts)
-      })
-      .catch(error => console.error("Cannot fetch posts:", error));
+    if (!this.state.loaded) {
+      // Fetching posts
+      this.cancelableContentFetching.promise
+        .then(response => {
+          // console.log("PROJECT RESPONSE: ", JSON.stringify(response, null, 4))
+          const allPosts = response.items.sort(this.sortPostsFunction);
+          this.setState({
+            allPosts: allPosts,
+            loaded: true,
+            postsLoaded: [allPosts[0]]
+          });
+          // this.props.setProjectList(allPosts);
+        })
+        .catch(error => console.error("Cannot fetch posts:", error));
+    }
   }
 
   render() {

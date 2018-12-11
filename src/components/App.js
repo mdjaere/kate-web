@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import {
   BrowserRouter as Router,
   Switch,
@@ -72,109 +71,79 @@ const Footer = styled.div`
   bottom: 0;
 `;
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      offlineMode: true,
-      paintingList: [],
-      projectList: [],
-      activeProject: null
-    };
-    this.switchVersion = this.switchVersion.bind(this);
-    this.setPaintingList = this.setPaintingList.bind(this);
-    this.setProjectList = this.setProjectList.bind(this);
-    this.setActiveProject = this.setActiveProject.bind(this);
-  }
-
-  switchVersion() {
-    console.log("switching version");
-    this.setState({ offlineMode: !this.state.offlineMode });
-  }
-
-  setPaintingList(posts) {
-    console.log("Setting painting list");
-    this.setState({ paintingList: posts });
-  }
-
-  setActiveProject(project) {
-    console.log("Setting active project", project);
-    this.setState({ activeProject: project });
-  }
-
-  setProjectList(posts) {
-    console.log("Setting project list");
-    this.setState({ projectList: posts });
-  }
-
-  render() {
-    const MenuWithRouter = withRouter(Menu);
-    return (
-      <Router>
-        <RootContainer>
-          <Headerpanel>
-            <Header>
-              <Link style={{ color: "black" }} to="/">
-                Kate Warner
-              </Link>
-            </Header>
-            <MenuWithRouter />
-          </Headerpanel>
-          <ContentPanel>
-            <Switch>
-              <Route exact path="/">
-                <Redirect to={"/paintings"} />
-              </Route>
-              <Route
-                exact
-                path="/paintings"
-                component={props => {
-                  return (
-                    <Paintings
-                      {...props}
-                      offlineMode={this.state.offlineMode}
-                      paintingList={this.state.paintingList}
-                      setPaintingList={this.setPaintingList}
-                    />
-                  );
-                }}
-              />
-              <Route
-                exact
-                path="/projects"
-                component={props => (
-                  <Projects
+const App = function(props) {
+  const {
+    switchVersion,
+    setPaintingList,
+    setActiveProject,
+    setProjectList
+  } = props;
+  const { offlineMode, paintingList, projectList, activeProject } = props;
+  const MenuWithRouter = withRouter(Menu);
+  return (
+    <Router>
+      <RootContainer>
+        <Headerpanel>
+          <Header>
+            <Link style={{ color: "black" }} to="/">
+              Kate Warner
+            </Link>
+          </Header>
+          <MenuWithRouter />
+        </Headerpanel>
+        <ContentPanel>
+          <Switch>
+            <Route exact path="/">
+              <Redirect to={"/paintings"} />
+            </Route>
+            <Route
+              exact
+              path="/paintings"
+              component={props => {
+                return (
+                  <Paintings
                     {...props}
-                    offlineMode={this.state.offlineMode}
-                    projectList={this.state.projectList}
-                    setProjectList={this.setProjectList}
-                    setActiveProject={this.setActiveProject}
+                    offlineMode={offlineMode}
+                    paintingList={paintingList}
+                    setPaintingList={setPaintingList}
                   />
-                )}
-              />
-              <Route
-                path
-                path="/projects/:id"
-                component={props => (
-                  <Project
-                    {...props}
-                    project={this.state.activeProject}
-                    offlineMode={this.state.offlineMode}
-                  />
-                )}
-              />
-              <Route exact path="/bio" component={Bio} />
-              <Route exact path="/contact" component={Contact} />
-            </Switch>
-          </ContentPanel>
-          <Footer>
-            <p onClick={this.switchVersion}>Copyright 2018</p>
-          </Footer>
-        </RootContainer>
-      </Router>
-    );
-  }
-}
+                );
+              }}
+            />
+            <Route
+              exact
+              path="/projects"
+              component={props => (
+                <Projects
+                  {...props}
+                  offlineMode={offlineMode}
+                  projectList={projectList}
+                  setProjectList={setProjectList}
+                  setActiveProject={setActiveProject}
+                />
+              )}
+            />
+            <Route
+              path
+              path="/projects/:id"
+              component={props => (
+                <Project
+                  {...props}
+                  project={activeProject}
+                  offlineMode={offlineMode}
+                />
+              )}
+            />
+            <Route exact path="/bio" component={Bio} />
+            <Route exact path="/contact" component={Contact} />
+          </Switch>
+        </ContentPanel>
+        <Footer>
+          <p onClick={switchVersion}>Copyright 2018</p>
+        </Footer>
+      </RootContainer>
+    </Router>
+  );
+};
 
 export default App;
-ReactDOM.render(<App />, document.getElementById("app"));
