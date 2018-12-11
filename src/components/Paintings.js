@@ -42,7 +42,7 @@ class Paintings extends React.Component {
     this.pixelRatio = Math.round(this.pixelRatioRaw * 100) / 100;
     this.screenWidth = window.screen.width;
     this.deviceSpecificImageWidth = this.pixelRatio * this.screenWidth;
-    if (this.props.showOffline) {
+    if (this.props.offlineMode) {
       this.cancelableContentFetching = makeCancelable(promisedOfflineContent);
     } else {
       this.client = contentful.createClient({
@@ -68,7 +68,7 @@ class Paintings extends React.Component {
 
   componentDidMount() {
     // Fetching posts
-    const mode = this.props.showOffline ? "Offline mode" : "Online mode";
+    const mode = this.props.offlineMode ? "Offline mode" : "Online mode";
     console.log(`Mounting Artwork. ${mode}`);
     this.cancelableContentFetching.promise
       .then(response => {

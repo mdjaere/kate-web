@@ -23,8 +23,7 @@ class Projects extends React.Component {
     super(props);
     this.state = {
       allPosts: [],
-      loaded: false,
-      offlineMode: false
+      loaded: false
     };
 
     this.pixelRatioRaw = window.devicePixelRatio ? window.devicePixelRatio : 1;
@@ -32,7 +31,7 @@ class Projects extends React.Component {
     this.screenWidth = window.screen.width;
     this.deviceSpecificImageWidth = this.pixelRatio * this.screenWidth;
 
-    if (this.state.offlineMode) {
+    if (this.props.offlineMode) {
       this.cancelableContentFetching = makeCancelable(promisedOfflineContent);
     } else {
       this.client = contentful.createClient({
@@ -49,6 +48,8 @@ class Projects extends React.Component {
   }
 
   componentDidMount() {
+    const mode = this.props.offlineMode ? "Offline mode" : "Online mode";
+    console.log(`Mounting Projects. ${mode}`);
     // Fetching posts
     this.cancelableContentFetching.promise
       .then(response => {
@@ -64,11 +65,16 @@ class Projects extends React.Component {
   }
 
   render() {
+    const posts = this.state.allPosts;
     return (
       <ProjectsListContainer>
-        {projectList.map((project, i) => (
-          <ProjectItem key={i} project={project} match={this.props.match} />
-        ))}
+        {this.state.loaded ? (
+          posts.map((project) => (
+            <ProjectItem key={project.fields.urlTitle} project={project} match={this.props.match} />
+          ))
+        ) : (
+          <div>...</div>
+        )}
       </ProjectsListContainer>
     );
   }

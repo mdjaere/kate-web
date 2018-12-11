@@ -11,13 +11,9 @@ const ProjectItemContainer = styled.div`
 
 const ProjectHeader = styled.div``;
 
-const ProjectDate = styled.div`
+const ProjectDate = styled.div``;
 
-`;
-
-const ProjectIntroAndLink = styled.div`
-
-`;
+const ProjectIntroAndLink = styled.div``;
 
 const ProjectImage = styled.img`
   width: 300px;
@@ -37,20 +33,22 @@ const ProjectLink = styled.div`
   margin-top: 7px;
 `;
 
-const ProjectItem = (props) => {
+const ProjectItem = props => {
   const { match, project } = props;
+  const { fields } = project;
+  const coverImage = project.fields.coverImage;
   return (
     <ProjectItemContainer>
       <ProjectHeader>
         <ProjectTitle>
-          <Link to={`${match.url}/${project.urlTitle}`}>{project.title}</Link>
+          <Link to={`${match.url}/${fields.urlTitle}`}>{fields.title}</Link>
         </ProjectTitle>
       </ProjectHeader>
-      <ProjectImage src={project.coverImage} />
+      {coverImage && <ProjectImage src={coverImage.fields.file.url} />}
       <ProjectIntroAndLink>
-        <ProjectIntro> {project.intro} </ProjectIntro>
+        <ProjectIntro> {fields.intro} </ProjectIntro>
         <ProjectLink>
-          <Link to={`${match.url}/${project.urlTitle}`}> Read More </Link>{" "}
+          <Link to={`${match.url}/${fields.urlTitle}`}> Read More </Link>{" "}
         </ProjectLink>{" "}
       </ProjectIntroAndLink>
     </ProjectItemContainer>
