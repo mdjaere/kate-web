@@ -26,11 +26,6 @@ class Projects extends React.Component {
       loaded: false
     };
 
-    this.pixelRatioRaw = window.devicePixelRatio ? window.devicePixelRatio : 1;
-    this.pixelRatio = Math.round(this.pixelRatioRaw * 100) / 100;
-    this.screenWidth = window.screen.width;
-    this.deviceSpecificImageWidth = this.pixelRatio * this.screenWidth;
-
     if (this.props.offlineMode) {
       this.cancelableContentFetching = makeCancelable(promisedOfflineContent);
     } else {
@@ -60,6 +55,7 @@ class Projects extends React.Component {
           loaded: true,
           postsLoaded: [allPosts[0]]
         });
+        // this.props.setProjectList(allPosts)
       })
       .catch(error => console.error("Cannot fetch posts:", error));
   }
@@ -69,8 +65,13 @@ class Projects extends React.Component {
     return (
       <ProjectsListContainer>
         {this.state.loaded ? (
-          posts.map((project) => (
-            <ProjectItem key={project.fields.urlTitle} project={project} match={this.props.match} />
+          posts.map(project => (
+            <ProjectItem
+              key={project.fields.urlTitle}
+              project={project}
+              match={this.props.match}
+              setActiveProject={this.props.setActiveProject}
+            />
           ))
         ) : (
           <div>...</div>

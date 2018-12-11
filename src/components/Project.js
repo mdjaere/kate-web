@@ -71,11 +71,7 @@ class Project extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({
-      project: projectList.find(
-        item => item.urlTitle === this.props.match.params.id
-      )
-    });
+    this.setState({ project: this.props.project });
   }
 
   setImageInFocus(newImage, e) {
@@ -94,19 +90,24 @@ class Project extends React.Component {
         {project ? (
           <ProjectItemContainer>
             <ProjectHeader>
-              <ProjectTitle>{project.headline}</ProjectTitle>
+              <ProjectTitle>{project.fields.title}</ProjectTitle>
             </ProjectHeader>
-            {project.images.map(image => (
-              <ProjectImage
-                key={image}
-                onClick={e => this.setImageInFocus(image, e)}
-                inFocus={this.state.imageInFocus === image}
-                src={"http:" + image + "?w=" + this.deviceSpecificImageWidth}
-              />
-            ))}
+            {project.fields.images && project.fields.images.map(image => {
+              const url = this.props.offlineMode
+                ? `../${image.fields.file.url}`
+                : image.fields.file.url;
+              return (
+                <ProjectImage
+                  key={image.sys.id}
+                  onClick={e => this.setImageInFocus(image.sys.id, e)}
+                  inFocus={this.state.imageInFocus === image.sys.id}
+                  src={"http:" + url + "?w=" + this.deviceSpecificImageWidth}
+                />
+              );
+            })}
             <ProjectIntroAndBody>
-              <ProjectIntro> {project.intro} </ProjectIntro> <br />
-              <ProjectBody> {project.body} </ProjectBody>
+              <ProjectIntro> {project.fields.intro} </ProjectIntro> <br />
+              <ProjectBody> {project.fields.body} </ProjectBody>
             </ProjectIntroAndBody>
           </ProjectItemContainer>
         ) : (

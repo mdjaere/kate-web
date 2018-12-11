@@ -79,6 +79,7 @@ class Paintings extends React.Component {
           loaded: true,
           postsLoaded: [allPosts[0]]
         });
+        // this.props.setPaintingList(allPosts)
       })
       .catch(error => console.error("Cannot fetch posts:", error));
   }

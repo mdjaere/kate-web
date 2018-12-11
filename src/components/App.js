@@ -76,14 +76,35 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showOffline: false
+      offlineMode: true,
+      paintingList: [],
+      projectList: [],
+      activeProject: null
     };
     this.switchVersion = this.switchVersion.bind(this);
+    this.setPaintingList = this.setPaintingList.bind(this);
+    this.setProjectList = this.setProjectList.bind(this);
+    this.setActiveProject = this.setActiveProject.bind(this);
   }
 
   switchVersion() {
     console.log("switching version");
-    this.setState({ showOffline: !this.state.showOffline });
+    this.setState({ offlineMode: !this.state.offlineMode });
+  }
+
+  setPaintingList(posts) {
+    console.log("Setting painting list");
+    this.setState({ paintingList: posts });
+  }
+
+  setActiveProject(project) {
+    console.log("Setting active project", project);
+    this.setState({ activeProject: project });
+  }
+
+  setProjectList(posts) {
+    console.log("Setting project list");
+    this.setState({ projectList: posts });
   }
 
   render() {
@@ -111,13 +132,37 @@ class App extends React.Component {
                   return (
                     <Paintings
                       {...props}
-                      showOffline={this.state.showOffline}
+                      offlineMode={this.state.offlineMode}
+                      paintingList={this.state.paintingList}
+                      setPaintingList={this.setPaintingList}
                     />
                   );
                 }}
               />
-              <Route exact path="/projects" component={Projects} />
-              <Route path path="/projects/:id" component={Project} />
+              <Route
+                exact
+                path="/projects"
+                component={props => (
+                  <Projects
+                    {...props}
+                    offlineMode={this.state.offlineMode}
+                    projectList={this.state.projectList}
+                    setProjectList={this.setProjectList}
+                    setActiveProject={this.setActiveProject}
+                  />
+                )}
+              />
+              <Route
+                path
+                path="/projects/:id"
+                component={props => (
+                  <Project
+                    {...props}
+                    project={this.state.activeProject}
+                    offlineMode={this.state.offlineMode}
+                  />
+                )}
+              />
               <Route exact path="/bio" component={Bio} />
               <Route exact path="/contact" component={Contact} />
             </Switch>
