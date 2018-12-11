@@ -1,6 +1,13 @@
 import React from "react";
 import App from "./App";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import store from "../store/store";
+
+import * as actions from "../store/actions";
+
+store.subscribe(console.log);
+store.dispatch(actions.fetchPaintingList({offlineMode: true}));
 
 class AppContainer extends React.Component {
   constructor(props) {
@@ -35,13 +42,15 @@ class AppContainer extends React.Component {
 
   render() {
     return (
-      <App
-        {...this.state}
-        switchVersion={this.switchVersion.bind(this)}
-        setPaintingList={this.setPaintingList.bind(this)}
-        setActiveProject={this.setActiveProject.bind(this)}
-        setProjectList={this.setProjectList.bind(this)}
-      />
+      <Provider store={store}>
+        <App
+          {...this.state}
+          switchVersion={this.switchVersion.bind(this)}
+          setPaintingList={this.setPaintingList.bind(this)}
+          setActiveProject={this.setActiveProject.bind(this)}
+          setProjectList={this.setProjectList.bind(this)}
+        />
+      </Provider>
     );
   }
 }

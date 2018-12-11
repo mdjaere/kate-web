@@ -92,19 +92,20 @@ class Project extends React.Component {
             <ProjectHeader>
               <ProjectTitle>{project.fields.title}</ProjectTitle>
             </ProjectHeader>
-            {project.fields.images && project.fields.images.map(image => {
-              const url = this.props.offlineMode
-                ? `../${image.fields.file.url}`
-                : image.fields.file.url;
-              return (
-                <ProjectImage
-                  key={image.sys.id}
-                  onClick={e => this.setImageInFocus(image.sys.id, e)}
-                  inFocus={this.state.imageInFocus === image.sys.id}
-                  src={"http:" + url + "?w=" + this.deviceSpecificImageWidth}
-                />
-              );
-            })}
+            {project.fields.images &&
+              project.fields.images.map(image => {
+                const url = this.props.offlineMode
+                  ? `../${image.fields.file.url}`
+                  : image.fields.file.url;
+                return (
+                  <ProjectImage
+                    key={image.sys.id}
+                    onClick={e => this.setImageInFocus(image.sys.id, e)}
+                    inFocus={this.state.imageInFocus === image.sys.id}
+                    src={"http:" + url + "?w=" + this.deviceSpecificImageWidth}
+                  />
+                );
+              })}
             <ProjectIntroAndBody>
               <ProjectIntro> {project.fields.intro} </ProjectIntro> <br />
               <ProjectBody> {project.fields.body} </ProjectBody>
