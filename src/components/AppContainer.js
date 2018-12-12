@@ -8,6 +8,7 @@ import * as actions from "../store/actions";
 
 store.subscribe(console.log);
 store.dispatch(actions.fetchPaintingList({offlineMode: true}));
+store.dispatch(actions.fetchProjectList({offlineMode: true}));
 
 class AppContainer extends React.Component {
   constructor(props) {

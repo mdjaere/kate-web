@@ -8,8 +8,8 @@ import {
 } from "./actions";
 
 const defaultState = {
-  paintingList: [],
-  projectlist: []
+  paintingList: null,
+  projectList: null
 };
 
 const rootReducer = (state, action) => {

@@ -10,8 +10,8 @@ import {
 import Menu from "./Menu";
 import Bio from "./Bio";
 import Contact from "./Contact";
-import Paintings from "./Paintings";
-import Projects from "./Projects";
+import PaintingsContainer from "./PaintingsContainer";
+import ProjectsContainer from "./ProjectsContainer";
 import Project from "./Project";
 import styled from "styled-components";
 
@@ -96,33 +96,8 @@ const App = function(props) {
             <Route exact path="/">
               <Redirect to={"/paintings"} />
             </Route>
-            <Route
-              exact
-              path="/paintings"
-              component={props => {
-                return (
-                  <Paintings
-                    {...props}
-                    offlineMode={offlineMode}
-                    paintingList={paintingList}
-                    setPaintingList={setPaintingList}
-                  />
-                );
-              }}
-            />
-            <Route
-              exact
-              path="/projects"
-              component={props => (
-                <Projects
-                  {...props}
-                  offlineMode={offlineMode}
-                  projectList={projectList}
-                  setProjectList={setProjectList}
-                  setActiveProject={setActiveProject}
-                />
-              )}
-            />
+            <Route exact path="/paintings" component={PaintingsContainer} />
+            <Route exact path="/projects" component={ProjectsContainer} />
             <Route
               path
               path="/projects/:id"
