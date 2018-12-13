@@ -60,7 +60,6 @@ class Project extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      project: null,
       imageInFocus: null
     };
     this.setImageInFocus = this.setImageInFocus.bind(this);
@@ -68,10 +67,6 @@ class Project extends React.Component {
     this.pixelRatio = Math.round(this.pixelRatioRaw * 100) / 100;
     this.screenWidth = window.screen.width;
     this.deviceSpecificImageWidth = this.pixelRatio * this.screenWidth;
-  }
-
-  componentDidMount() {
-    this.setState({ project: this.props.project });
   }
 
   setImageInFocus(newImage, e) {
@@ -84,7 +79,7 @@ class Project extends React.Component {
   }
 
   render() {
-    const project = this.state.project;
+    const project = this.props.project;
     return (
       <div>
         {project ? (
@@ -94,9 +89,9 @@ class Project extends React.Component {
             </ProjectHeader>
             {project.fields.images &&
               project.fields.images.map(image => {
-                const url = this.props.offlineMode
-                  ? `../${image.fields.file.url}`
-                  : image.fields.file.url;
+                const url = image.fields.file.url.includes("ctfassets.net")
+                  ? image.fields.file.url
+                  : `../${image.fields.file.url}`;
                 return (
                   <ProjectImage
                     key={image.sys.id}

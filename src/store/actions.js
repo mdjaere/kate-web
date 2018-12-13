@@ -4,6 +4,7 @@ const FETCH_PAINTING_LIST_FAILURE = "FETCH_PAINTING_LIST_FAILURE";
 const FETCH_PROJECT_LIST_PENDING = "FETCH_PROJECT_LIST_PENDING";
 const FETCH_PROJECT_LIST_SUCCESS = "FETCH_PROJECT_LIST_SUCCESS";
 const FETCH_PROJECT_LIST_FAILURE = "FETCH_PROJECT_LIST_FAILURE";
+const SET_ACTIVE_PROJECT = "SET_ACTIVE_PROJECT";
 import contenfulClient from "../contentful/client";
 import paintingMockResponse from "../mockResponse/painting_local";
 import projectMockResponse from "../mockResponse/project_local";
@@ -15,7 +16,6 @@ const promisedPaintingContent = new Promise((resolve, reject) => {
 const promisedProjectContent = new Promise((resolve, reject) => {
   resolve(projectMockResponse);
 });
-
 
 const fetchPaintingList = (options = {}) => {
   const { offlineMode } = options;
@@ -63,6 +63,13 @@ const fetchProjectList = (options = {}) => {
   };
 };
 
+const setActiveProject = project => {
+  return {
+    type: SET_ACTIVE_PROJECT,
+    payload: { project }
+  };
+};
+
 export {
   FETCH_PAINTING_LIST_PENDING,
   FETCH_PAINTING_LIST_SUCCESS,
@@ -70,6 +77,8 @@ export {
   FETCH_PROJECT_LIST_PENDING,
   FETCH_PROJECT_LIST_SUCCESS,
   FETCH_PROJECT_LIST_FAILURE,
+  SET_ACTIVE_PROJECT,
   fetchPaintingList,
-  fetchProjectList
+  fetchProjectList,
+  setActiveProject
 };

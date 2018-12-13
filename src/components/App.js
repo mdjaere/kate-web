@@ -12,7 +12,7 @@ import Bio from "./Bio";
 import Contact from "./Contact";
 import PaintingsContainer from "./PaintingsContainer";
 import ProjectsContainer from "./ProjectsContainer";
-import Project from "./Project";
+import ProjectContainer from "./ProjectContainer";
 import styled from "styled-components";
 
 const RootContainer = styled.div`
@@ -72,13 +72,6 @@ const Footer = styled.div`
 `;
 
 const App = function(props) {
-  const {
-    switchVersion,
-    setPaintingList,
-    setActiveProject,
-    setProjectList
-  } = props;
-  const { offlineMode, paintingList, projectList, activeProject } = props;
   const MenuWithRouter = withRouter(Menu);
   return (
     <Router>
@@ -99,22 +92,15 @@ const App = function(props) {
             <Route exact path="/paintings" component={PaintingsContainer} />
             <Route exact path="/projects" component={ProjectsContainer} />
             <Route
-              path
               path="/projects/:id"
-              component={props => (
-                <Project
-                  {...props}
-                  project={activeProject}
-                  offlineMode={offlineMode}
-                />
-              )}
+              component={ProjectContainer}
             />
             <Route exact path="/bio" component={Bio} />
             <Route exact path="/contact" component={Contact} />
           </Switch>
         </ContentPanel>
         <Footer>
-          <p onClick={switchVersion}>Copyright 2018</p>
+          <p>Copyright 2018</p>
         </Footer>
       </RootContainer>
     </Router>
