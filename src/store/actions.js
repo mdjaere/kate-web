@@ -4,6 +4,7 @@ const FETCH_PAINTING_LIST_FAILURE = "FETCH_PAINTING_LIST_FAILURE";
 const FETCH_PROJECT_LIST_PENDING = "FETCH_PROJECT_LIST_PENDING";
 const FETCH_PROJECT_LIST_SUCCESS = "FETCH_PROJECT_LIST_SUCCESS";
 const FETCH_PROJECT_LIST_FAILURE = "FETCH_PROJECT_LIST_FAILURE";
+const INIT_SCREEN_WIDTH = "INIT_SCREEN_WIDTH";
 const SET_ACTIVE_PROJECT = "SET_ACTIVE_PROJECT";
 import contenfulClient from "../contentful/client";
 import paintingMockResponse from "../mockResponse/painting_local";
@@ -20,7 +21,10 @@ const promisedProjectContent = new Promise((resolve, reject) => {
 const fetchPaintingList = (options = {}) => {
   const { offlineMode } = options;
   return (dispatch, getState) => {
-    dispatch({ type: FETCH_PAINTING_LIST_PENDING });
+    dispatch({
+      type: FETCH_PAINTING_LIST_PENDING,
+      offlineMode: offlineMode ? true : false
+    });
     const query = offlineMode
       ? promisedPaintingContent
       : contenfulClient.getEntries({
@@ -35,6 +39,7 @@ const fetchPaintingList = (options = {}) => {
         });
       })
       .catch(error => {
+        console.log("ERROR FETCHING PROJECTS:", error);
         dispatch({ type: FETCH_PAINTING_LIST_FAILURE, payload: { error } });
       });
   };
@@ -43,7 +48,10 @@ const fetchPaintingList = (options = {}) => {
 const fetchProjectList = (options = {}) => {
   const { offlineMode } = options;
   return (dispatch, getState) => {
-    dispatch({ type: FETCH_PROJECT_LIST_PENDING });
+    dispatch({
+      type: FETCH_PROJECT_LIST_PENDING,
+      offlineMode: offlineMode ? true : false
+    });
     const query = offlineMode
       ? promisedProjectContent
       : contenfulClient.getEntries({
@@ -63,10 +71,17 @@ const fetchProjectList = (options = {}) => {
   };
 };
 
-const setActiveProject = project => {
-  return {
-    type: SET_ACTIVE_PROJECT,
-    payload: { project }
+const initialiseApp = (options = {}) => {
+  return (dispatch, getSTate) => {
+    const pixelRatioRaw = window.devicePixelRatio ? window.devicePixelRatio : 1;
+    const pixelRatio = Math.round(pixelRatioRaw * 100) / 100;
+    const screenWidth = window.screen.width;
+    const deviceSpecificImageWidth = pixelRatio * screenWidth;
+
+    dispatch({
+      type: INIT_SCREEN_WIDTH,
+      payload: { screenWidth: deviceSpecificImageWidth }
+    });
   };
 };
 
@@ -77,8 +92,9 @@ export {
   FETCH_PROJECT_LIST_PENDING,
   FETCH_PROJECT_LIST_SUCCESS,
   FETCH_PROJECT_LIST_FAILURE,
+  INIT_SCREEN_WIDTH,
   SET_ACTIVE_PROJECT,
   fetchPaintingList,
   fetchProjectList,
-  setActiveProject
+  initialiseApp
 };

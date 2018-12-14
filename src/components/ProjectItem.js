@@ -34,21 +34,21 @@ const ProjectLink = styled.div`
 `;
 
 const ProjectItem = props => {
-  const { match, project } = props;
+  const { project } = props;
   const { fields } = project;
   const coverImage = project.fields.coverImage;
   return (
     <ProjectItemContainer>
       <ProjectHeader>
         <ProjectTitle>
-          <Link to={`${match.url}/${fields.urlTitle}`}>{fields.title}</Link>
+          <Link to={`${fields.urlTitle}`}>{fields.title}</Link>
         </ProjectTitle>
       </ProjectHeader>
       {coverImage && <ProjectImage src={coverImage.fields.file.url} />}
       <ProjectIntroAndLink>
         <ProjectIntro> {fields.intro} </ProjectIntro>
         <ProjectLink>
-          <Link to={`${match.url}/${fields.urlTitle}`}> Read More </Link>{" "}
+          <Link to={`${fields.urlTitle}`}> Read More </Link>{" "}
         </ProjectLink>{" "}
       </ProjectIntroAndLink>
     </ProjectItemContainer>

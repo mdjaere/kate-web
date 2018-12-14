@@ -91,12 +91,12 @@ const App = function(props) {
             </Route>
             <Route exact path="/paintings" component={PaintingsContainer} />
             <Route exact path="/projects" component={ProjectsContainer} />
-            <Route
-              path="/projects/:id"
-              component={ProjectContainer}
-            />
             <Route exact path="/bio" component={Bio} />
             <Route exact path="/contact" component={Contact} />
+            <Route
+              path="/:id"
+              component={ProjectContainer}
+            />
           </Switch>
         </ContentPanel>
         <Footer>

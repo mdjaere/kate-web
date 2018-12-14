@@ -89,9 +89,8 @@ class Project extends React.Component {
             </ProjectHeader>
             {project.fields.images &&
               project.fields.images.map(image => {
-                const url = image.fields.file.url.includes("ctfassets.net")
-                  ? image.fields.file.url
-                  : `../${image.fields.file.url}`;
+                const url = image.fields.file.url;
+
                 return (
                   <ProjectImage
                     key={image.sys.id}

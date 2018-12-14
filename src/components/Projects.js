@@ -10,12 +10,10 @@ const ProjectsListContainer = styled.div`
 `;
 
 const Projects = props => {
-  const posts = props.projectList;
-  // console.log(posts)
   return (
     <ProjectsListContainer>
-      {posts ? (
-        posts.items.map(project => (
+      {props.projectList ? (
+        props.projectList.map(project => (
           <ProjectItem
             key={project.fields.urlTitle}
             project={project}

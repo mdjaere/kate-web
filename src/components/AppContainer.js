@@ -9,8 +9,9 @@ import * as actions from "../store/actions";
 const offlineMode = true;
 
 store.subscribe(console.log);
-store.dispatch(actions.fetchPaintingList({ offlineMode }));
-store.dispatch(actions.fetchProjectList({ offlineMode }));
+store.dispatch(actions.initialiseApp());
+store.dispatch(actions.fetchPaintingList({ offlineMode: offlineMode }));
+store.dispatch(actions.fetchProjectList({ offlineMode: offlineMode }));
 
 class AppContainer extends React.Component {
   render() {

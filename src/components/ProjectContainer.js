@@ -7,10 +7,14 @@ const ProjectContainer = props => {
 };
 
 const mapStateToProps = (state, ownProps) => {
-  const project = state.projectList.items.find(
-    item => item.fields.urlTitle == ownProps.match.params.id
-  );
-  return { project: project };
+  if (state.projectList) {
+    const project = state.projectList.find(
+      item => item.fields.urlTitle == ownProps.match.params.id
+    );
+    return { project: project };
+  } else {
+    return {project: null};
+  }
 };
 
 export default connect(mapStateToProps)(ProjectContainer);
