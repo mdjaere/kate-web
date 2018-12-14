@@ -1,8 +1,5 @@
 import React from "react";
-import * as contentful from "contentful";
 import styled from "styled-components";
-import { promisedPaintings } from "./paintingList.js";
-import makeCancelable from "./makeCancelable";
 
 const ArtworkContainer = styled.div`
   display: flex;
@@ -29,77 +26,27 @@ class Paintings extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      allPosts: [],
-      postsLoaded: [],
-      loaded: false
+      numberToLoad: 1,
+      deviceSpecificImageWidth: this.props.screenWidth
     };
 
-    this.pixelRatioRaw = window.devicePixelRatio ? window.devicePixelRatio : 1;
-    this.pixelRatio = Math.round(this.pixelRatioRaw * 100) / 100;
-    this.screenWidth = window.screen.width;
-    this.deviceSpecificImageWidth = this.pixelRatio * this.screenWidth;
-    if (this.props.showOffline) {
-      this.cancelableArtFetching = makeCancelable(promisedPaintings);
-    } else {
-      this.client = contentful.createClient({
-        space: "dlgxohln8q1h",
-        accessToken:
-          "207bd0790feb33520b6772a155fecdc0cc0f1399e3ae71d4a2962d236ec86c51"
-      });
-      this.cancelableArtFetching = makeCancelable(
-        this.client.getEntries({
-          content_type: "artwork"
-        })
-      );
-    }
-    this.loadAnotherPost = this.loadAnotherPost.bind(this)
-  }
-
-  sortPostsFunction(a, b) {
-    const aIndex = a.fields.displayOrder;
-    const bIndex = b.fields.displayOrder;
-    const sortValue = bIndex - aIndex;
-    return sortValue;
-  }
-
-  componentDidMount() {
-    // Fetching posts
-    const mode = this.props.showOffline ? "Offline mode" : "Online mode";
-    console.log(`Mounting Artwork. ${mode}`);
-    this.cancelableArtFetching.promise
-      .then(response => {
-        // console.log( JSON.stringify(response, null, 4))
-        const allPosts = response.items.sort(this.sortPostsFunction);
-        this.setState({
-          allPosts: allPosts,
-          loaded: true,
-          postsLoaded: [allPosts[0]]
-        });
-      })
-      .catch(error => console.error("Cannot fetch posts:", error));
+    this.loadAnotherPost = this.loadAnotherPost.bind(this);
   }
 
   loadAnotherPost() {
-    const allPostsNum = this.state.allPosts.length 
-    const allLoadedNum = this.state.postsLoaded.length
-    if ( allPostsNum !== allLoadedNum) {
-      this.setState({
-        postsLoaded: this.state.postsLoaded.concat( this.state.allPosts[allLoadedNum] )
-      });
+    if (
+      this.props.paintingList &&
+      this.props.paintingList.length > this.state.numberToLoad
+    ) {
+      this.setState({ numberToLoad: this.state.numberToLoad + 1 });
     }
   }
 
-  componentWillUnmount() {
-    console.log("Unmounting Artwork");
-    this.cancelableArtFetching.cancel();
-  }
-
   render() {
-    const posts = this.state.postsLoaded;
     return (
       <ArtworkContainer>
-        {this.state.loaded ? (
-          posts.map(({ fields }, i) => (
+        {this.props.paintingList ? (
+          this.props.paintingList.slice(0, this.state.numberToLoad).map(({ fields }, i) => (
             <ImageBox key={i}>
               {fields.images.map(({ fields }, i) => {
                 return (
@@ -110,7 +57,7 @@ class Paintings extends React.Component {
                         "http:" +
                         fields.file.url +
                         "?w=" +
-                        this.deviceSpecificImageWidth
+                        this.state.deviceSpecificImageWidth
                       }
                     />
                   </ImageItemContainer>

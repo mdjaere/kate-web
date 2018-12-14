@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
-import projectList from "./projectList";
+// import projectList from "./projectList";
 
 const ProjectItemContainer = styled.div`
+  max-width: 960px;
+  width: 100%;
   margin: 0px 0px 26px 0px;
 `;
 
@@ -58,18 +60,13 @@ class Project extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      project: null,
       imageInFocus: null
     };
     this.setImageInFocus = this.setImageInFocus.bind(this);
-  }
-
-  componentDidMount() {
-    this.setState({
-      project: projectList.find(
-        item => item.urlTitle === this.props.match.params.id
-      )
-    });
+    this.pixelRatioRaw = window.devicePixelRatio ? window.devicePixelRatio : 1;
+    this.pixelRatio = Math.round(this.pixelRatioRaw * 100) / 100;
+    this.screenWidth = window.screen.width;
+    this.deviceSpecificImageWidth = this.pixelRatio * this.screenWidth;
   }
 
   setImageInFocus(newImage, e) {
@@ -82,25 +79,30 @@ class Project extends React.Component {
   }
 
   render() {
-    const project = this.state.project;
+    const project = this.props.project;
     return (
       <div>
         {project ? (
           <ProjectItemContainer>
             <ProjectHeader>
-              <ProjectTitle>{project.headline}</ProjectTitle>
+              <ProjectTitle>{project.fields.title}</ProjectTitle>
             </ProjectHeader>
-            {project.images.map(image => (
-              <ProjectImage
-                key={image}
-                onClick={e => this.setImageInFocus(image, e)}
-                inFocus={this.state.imageInFocus === image}
-                src={"/" + image}
-              />
-            ))}
+            {project.fields.images &&
+              project.fields.images.map(image => {
+                const url = image.fields.file.url;
+
+                return (
+                  <ProjectImage
+                    key={image.sys.id}
+                    onClick={e => this.setImageInFocus(image.sys.id, e)}
+                    inFocus={this.state.imageInFocus === image.sys.id}
+                    src={"http:" + url + "?w=" + this.deviceSpecificImageWidth}
+                  />
+                );
+              })}
             <ProjectIntroAndBody>
-              <ProjectIntro> {project.intro} </ProjectIntro> <br />
-              <ProjectBody> {project.body} </ProjectBody>
+              <ProjectIntro> {project.fields.intro} </ProjectIntro> <br />
+              <ProjectBody> {project.fields.body} </ProjectBody>
             </ProjectIntroAndBody>
           </ProjectItemContainer>
         ) : (
