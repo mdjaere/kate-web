@@ -64,7 +64,10 @@ const Header = styled.div`
     text-decoration: none;
 `;
 
-const ContentPanel = styled.div``;
+const ContentPanel = styled.div`
+  width: 100%;
+  max-width: 960px;
+`;
 
 const Footer = styled.div`
   font-size: 0.7em;
@@ -93,10 +96,7 @@ const App = function(props) {
             <Route exact path="/projects" component={ProjectsContainer} />
             <Route exact path="/bio" component={Bio} />
             <Route exact path="/contact" component={Contact} />
-            <Route
-              path="/:id"
-              component={ProjectContainer}
-            />
+            <Route path="/:id" component={ProjectContainer} />
           </Switch>
         </ContentPanel>
         <Footer>

@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const ArtworkContainer = styled.div`
   display: flex;
@@ -7,18 +7,27 @@ const ArtworkContainer = styled.div`
   align-items: center;
 `;
 
-const ImageBox = styled.div``;
+const ArtworkItem = styled.div``;
 
 const ImageItemContainer = styled.div``;
 
 const ImageItem = styled.img`
-  max-width: 100%;
-  max-height: 80vh;
+  ${props =>
+    props.orientation === "landscape" &&
+    css`
+      width: 100%;
+      height: auto;
+    `}
+  ${props =>
+    props.orientation === "portraite" &&
+    css`
+      width: auto;
+      height: 80vh;
+    `}
 `;
 
 const ImageText = styled.div`
-  width: 100%;
-  font-size: 0.6em;
+  font-size: 0.7em;
   margin: 0px 0px 32px 0px;
 `;
 
@@ -46,34 +55,40 @@ class Paintings extends React.Component {
     return (
       <ArtworkContainer>
         {this.props.paintingList ? (
-          this.props.paintingList.slice(0, this.state.numberToLoad).map(({ fields }, i) => (
-            <ImageBox key={i}>
-              {fields.images.map(({ fields }, i) => {
-                return (
-                  <ImageItemContainer key={i}>
-                    <ImageItem
-                      onLoad={this.loadAnotherPost}
-                      src={
-                        "http:" +
-                        fields.file.url +
-                        "?w=" +
-                        this.state.deviceSpecificImageWidth
-                      }
-                    />
-                  </ImageItemContainer>
-                );
-              })}
-              {fields.title && (
-                <ImageText>
-                  {fields.title && <a>{fields.title}</a>}
-                  {fields.year && <a>, {fields.year}</a>}
-                  {fields.medium2 && <a>, {fields.medium2.toLowerCase()}</a>}
-                  {fields.dimensions && <a>, {fields.dimensions}</a>}
-                  {fields.project && <a>, {fields.project}</a>}
-                </ImageText>
-              )}
-            </ImageBox>
-          ))
+          this.props.paintingList
+            .slice(0, this.state.numberToLoad)
+            .map(({ fields }, i) => (
+              <ArtworkItem key={i}>
+                {fields.images.map(({ fields }, i) => {
+                  const { width, height } = fields.file.details.image;
+                  const orientation =
+                    width / height > 1 ? "landscape" : "portraite";
+                  return (
+                    <ImageItemContainer key={i}>
+                      <ImageItem
+                        onLoad={this.loadAnotherPost}
+                        orientation={orientation}
+                        src={
+                          "http:" +
+                          fields.file.url +
+                          "?w=" +
+                          this.state.deviceSpecificImageWidth
+                        }
+                      />
+                    </ImageItemContainer>
+                  );
+                })}
+                {fields.title && (
+                  <ImageText>
+                    {fields.title && <a>{fields.title}</a>}
+                    {fields.year && <a>, {fields.year}</a>}
+                    {fields.medium2 && <a>, {fields.medium2.toLowerCase()}</a>}
+                    {fields.dimensions && <a>, {fields.dimensions}</a>}
+                    {fields.project && <a>, {fields.project}</a>}
+                  </ImageText>
+                )}
+              </ArtworkItem>
+            ))
         ) : (
           <div>...</div>
         )}
@@ -83,4 +98,10 @@ class Paintings extends React.Component {
 }
 
 export default Paintings;
-export { ArtworkContainer, ImageBox, ImageItemContainer, ImageItem, ImageText };
+export {
+  ArtworkContainer,
+  ArtworkItem,
+  ImageItemContainer,
+  ImageItem,
+  ImageText
+};
