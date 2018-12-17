@@ -39,12 +39,12 @@ const ProjectItem = props => {
   const coverImage = project.fields.coverImage;
   return (
     <ProjectItemContainer>
-      <ProjectHeader>
-        <ProjectTitle>
-          <Link to={`${fields.urlTitle}`}>{fields.title}</Link>
-        </ProjectTitle>
-      </ProjectHeader>
-      {coverImage && <ProjectImage src={coverImage.fields.file.url} />}
+      <Link to={`${fields.urlTitle}`}>
+        <ProjectHeader>
+          <ProjectTitle>{fields.title}</ProjectTitle>
+        </ProjectHeader>
+        {coverImage && <ProjectImage src={coverImage.fields.file.url} />}
+      </Link>
       <ProjectIntroAndLink>
         <ProjectIntro> {fields.intro} </ProjectIntro>
         <ProjectLink>
