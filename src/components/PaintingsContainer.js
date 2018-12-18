@@ -14,10 +14,12 @@ const sortPostsFunction = (a, b) => {
 };
 
 const mapStateToProps = (state, ownProps) => {
+  const paintingList = state.paintingList
+    ? state.paintingList.sort(sortPostsFunction)
+    : null;
+
   return {
-    paintingList: state.paintingList
-      ? state.paintingList.sort(sortPostsFunction)
-      : null,
+    paintingList: paintingList,
     screenWidth: state.screenWidth
   };
 };
