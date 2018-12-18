@@ -13,7 +13,13 @@ const MenuContainer = styled.ul`
   cursor: pointer;
 `;
 
-const MenuItem = styled.li``;
+const MenuItem = styled.li`
+  ${props =>
+    props.isActive &&
+    css`
+      text-decoration: underline;
+    `}
+`;
 
 class Menu extends React.Component {
   constructor(props) {
@@ -22,31 +28,35 @@ class Menu extends React.Component {
       isOpen: false
     };
     this.toggleOpen = this.toggleOpen.bind(this);
+    this.isActive = this.isActive.bind(this);
   }
 
   toggleOpen() {
     this.setState({ isOpen: !this.state.isOpen });
   }
+
+  isActive(name) {
+    const currentLocation = this.props.history.location.pathname;
+    const isActive = currentLocation.split("/")[1] === name;
+    return isActive;
+  }
+
   render() {
     const isOpen = this.state.isOpen;
-    const activeLocation = this.props.history.location.pathname;
-    console.log(activeLocation);
     return isOpen ? (
       <MenuContainer className={this.props.className}>
-        <MenuItem>
         <img height={24} src={"/" + closeX} onClick={this.toggleOpen} />
-        </MenuItem>
 
-        <MenuItem>
+        <MenuItem isActive={this.isActive("paintings")}>
           <Link to="/paintings">Paintings</Link>
         </MenuItem>
-        <MenuItem>
+        <MenuItem isActive={this.isActive("projects")}>
           <Link to="/projects">Projects</Link>
         </MenuItem>
-        <MenuItem>
+        <MenuItem isActive={this.isActive("bio")}>
           <Link to="/bio">Bio</Link>
         </MenuItem>
-        <MenuItem>
+        <MenuItem isActive={this.isActive("contact")}>
           <Link to="/contact">Contact</Link>
         </MenuItem>
       </MenuContainer>
