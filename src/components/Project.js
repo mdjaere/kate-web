@@ -95,7 +95,7 @@ class Project extends React.Component {
                 return (
                   <ProjectImage
                     key={image.sys.id}
-                    onClick={e => this.setImageInFocus(image.sys.id, e)}
+                    onClick={() => this.setImageInFocus(image.sys.id)}
                     inFocus={this.state.imageInFocus === image.sys.id}
                     src={"http:" + url + "?w=" + this.deviceSpecificImageWidth}
                   />
