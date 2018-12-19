@@ -5,6 +5,22 @@ import hamburger from "../assets/Hamburger_icon.svg";
 import closeX from "../assets/Close_x.svg";
 
 const MenuContainer = styled.ul`
+  a:link {
+    text-decoration: none;
+    color: #666;
+  }
+  a:active {
+    text-decoration: none;
+    color: #666;
+  }
+  a:visited {
+    text-decoration: none;
+    color: #666;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: #666;
+  }
   list-style: none;
   display: flex;
   flex-direction: column;

@@ -7,6 +7,22 @@ const ProjectItemContainer = styled.div`
   padding: 0px 0px 0px 0px;
   margin: 0px 5px 26px 5px;
   overflow-x: hidden;
+  a:link {
+    text-decoration: none;
+    color: #666;
+  }
+  a:active {
+    text-decoration: none;
+    color: #666;
+  }
+  a:visited {
+    text-decoration: none;
+    color: #666;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: #666;
+  }
 `;
 
 const ProjectHeader = styled.div``;
@@ -37,20 +53,25 @@ const ProjectItem = props => {
   const { project } = props;
   const { fields } = project;
   const coverImage = project.fields.coverImage;
+  const projectLink = `/projects/${fields.urlTitle}`;
   return (
     <ProjectItemContainer>
-      <Link to={`${fields.urlTitle}`}>
+      <Link to={projectLink}>
         <ProjectHeader>
           <ProjectTitle>{fields.title}</ProjectTitle>
         </ProjectHeader>
-        {coverImage && <ProjectImage src={coverImage.fields.file.url} />}
+        {coverImage && (
+          <ProjectImage
+            src={
+              "http:" + coverImage.fields.file.url + "?w=" + props.screenWidth
+            }
+          />
+        )}
       </Link>
-      <ProjectIntroAndLink>
-        <ProjectIntro> {fields.intro} </ProjectIntro>
-        <ProjectLink>
-          <Link to={`${fields.urlTitle}`}> Read More </Link>{" "}
-        </ProjectLink>{" "}
-      </ProjectIntroAndLink>
+      <ProjectIntro> {fields.intro} </ProjectIntro>
+      <Link to={projectLink}>
+        <ProjectLink> Read More </ProjectLink>
+      </Link>
     </ProjectItemContainer>
   );
 };

@@ -7,14 +7,13 @@ const ProjectContainer = props => {
 };
 
 const mapStateToProps = (state, ownProps) => {
-  if (state.projectList) {
-    const project = state.projectList.find(
-      item => item.fields.urlTitle == ownProps.match.params.id
-    );
-    return { project: project };
-  } else {
-    return {project: null};
-  }
+  const project = state.projectList
+    ? state.projectList.find(
+        item => item.fields.urlTitle == ownProps.match.params.id
+      )
+    : null;
+
+  return { project: project, screenWidth: state.screenWidth };
 };
 
 export default connect(mapStateToProps)(ProjectContainer);

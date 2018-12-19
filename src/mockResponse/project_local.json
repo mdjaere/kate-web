@@ -68,7 +68,7 @@
             "title": "PCGE Exhibition UNADJUSTEDRAW",
             "description": "PGCE Exhibition 1",
             "file": {
-              "url": "assets/PCGE_Exhibition_UNADJUSTEDRAW.jpg",
+              "url": "../assets/PCGE_Exhibition_UNADJUSTEDRAW.jpg",
               "details": {
                 "size": 101473,
                 "image": {
@@ -109,7 +109,7 @@
               "title": "PCGE Exhibition UNADJUSTEDRAW",
               "description": "PGCE Exhibition 1",
               "file": {
-                "url": "assets/PCGE_Exhibition_UNADJUSTEDRAW.jpg",
+                "url": "../assets/PCGE_Exhibition_UNADJUSTEDRAW.jpg",
                 "details": {
                   "size": 101473,
                   "image": {
@@ -228,7 +228,7 @@
             "title": "dsc8639 Kate",
             "description": "Kate in Cowhouse Studios (By Frank)",
             "file": {
-              "url": "assets/dsc8639_Kate.jpg",
+              "url": "../assets/dsc8639_Kate.jpg",
               "details": {
                 "size": 246712,
                 "image": {
@@ -269,7 +269,7 @@
               "title": "dsc8639 Mothership Vest",
               "description": "Nora's vest srying at Cowhouse studios",
               "file": {
-                "url": "assets/dsc8639_Mothership_Vest.jpg",
+                "url": "../assets/dsc8639_Mothership_Vest.jpg",
                 "details": {
                   "size": 174454,
                   "image": {
@@ -309,7 +309,7 @@
               "title": "dsc8639 Kate",
               "description": "Kate in Cowhouse Studios (By Frank)",
               "file": {
-                "url": "assets/dsc8639_Kate.jpg",
+                "url": "../assets/dsc8639_Kate.jpg",
                 "details": {
                   "size": 246712,
                   "image": {
@@ -357,7 +357,7 @@
           "title": "PCGE Exhibition UNADJUSTEDRAW",
           "description": "PGCE Exhibition 1",
           "file": {
-            "url": "assets/PCGE_Exhibition_UNADJUSTEDRAW.jpg",
+            "url": "../assets/PCGE_Exhibition_UNADJUSTEDRAW.jpg",
             "details": {
               "size": 101473,
               "image": {
@@ -397,7 +397,7 @@
           "title": "dsc8639 Kate",
           "description": "Kate in Cowhouse Studios (By Frank)",
           "file": {
-            "url": "assets/dsc8639_Kate.jpg",
+            "url": "../assets/dsc8639_Kate.jpg",
             "details": {
               "size": 246712,
               "image": {
@@ -437,7 +437,7 @@
           "title": "dsc8639 Mothership Vest",
           "description": "Nora's vest srying at Cowhouse studios",
           "file": {
-            "url": "assets/dsc8639_Mothership_Vest.jpg",
+            "url": "../assets/dsc8639_Mothership_Vest.jpg",
             "details": {
               "size": 174454,
               "image": {

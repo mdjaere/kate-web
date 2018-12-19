@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 
 const ArtworkContainer = styled.div`
   display: flex;
@@ -12,6 +13,7 @@ const ArtworkItem = styled.div``;
 const ImageItemContainer = styled.div``;
 
 const ImageItem = styled.img`
+  cursor: default ;
   ${props =>
     props.orientation === "landscape" &&
     css`
@@ -36,7 +38,6 @@ class Paintings extends React.Component {
     super(props);
     this.state = {
       numberToLoad: 1,
-      deviceSpecificImageWidth: this.props.screenWidth
     };
 
     this.loadAnotherPost = this.loadAnotherPost.bind(this);
@@ -57,24 +58,27 @@ class Paintings extends React.Component {
         {this.props.paintingList ? (
           this.props.paintingList
             .slice(0, this.state.numberToLoad)
-            .map(({ fields }, i) => (
+            .map(({ fields, sys }, i) => (
               <ArtworkItem key={i}>
                 {fields.images.map(({ fields }, i) => {
                   const { width, height } = fields.file.details.image;
                   const orientation =
                     width / height > 1 ? "landscape" : "portraite";
+                  const paintingLink = `/paintings/${sys.id}`;
                   return (
                     <ImageItemContainer key={i}>
-                      <ImageItem
-                        onLoad={this.loadAnotherPost}
-                        orientation={orientation}
-                        src={
-                          "http:" +
-                          fields.file.url +
-                          "?w=" +
-                          this.state.deviceSpecificImageWidth
-                        }
-                      />
+                      <Link to={paintingLink}>
+                        <ImageItem
+                          onLoad={this.loadAnotherPost}
+                          orientation={orientation}
+                          src={
+                            "http:" +
+                            fields.file.url +
+                            "?w=" +
+                            this.props.screenWidth
+                          }
+                        />
+                      </Link>
                     </ImageItemContainer>
                   );
                 })}

@@ -29,7 +29,7 @@ const ProjectImage = styled.img`
   width: 250px;
   height: auto;
   margin: 10px 10px 10px 10px;
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
   cursor: pointer;
   ${props =>
     props.inFocus &&
@@ -63,20 +63,12 @@ class Project extends React.Component {
     this.state = {
       imageInFocus: null
     };
-    this.setImageInFocus = this.setImageInFocus.bind(this);
-    this.pixelRatioRaw = window.devicePixelRatio ? window.devicePixelRatio : 1;
-    this.pixelRatio = Math.round(this.pixelRatioRaw * 100) / 100;
-    this.screenWidth = window.screen.width;
-    this.deviceSpecificImageWidth = this.pixelRatio * this.screenWidth;
   }
 
   setImageInFocus(newImage, e) {
-    this.setState(
-      {
-        imageInFocus: newImage !== this.state.imageInFocus ? newImage : null
-      },
-      () => console.log("New image in focus: ", this.state.imageInFocus)
-    );
+    this.setState({
+      imageInFocus: newImage !== this.state.imageInFocus ? newImage : null
+    });
   }
 
   render() {
@@ -97,14 +89,13 @@ class Project extends React.Component {
                     key={image.sys.id}
                     onClick={() => this.setImageInFocus(image.sys.id)}
                     inFocus={this.state.imageInFocus === image.sys.id}
-                    src={"http:" + url + "?w=" + this.deviceSpecificImageWidth}
+                    src={"http:" + url + "?w=" + this.props.screenWidth}
                   />
                 );
               })}
             <ProjectIntroAndBody>
               <ProjectIntro> {project.fields.intro} </ProjectIntro> <br />
               <ProjectBody>
-                {" "}
                 <Markdown source={project.fields.body} />
               </ProjectBody>
             </ProjectIntroAndBody>

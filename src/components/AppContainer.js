@@ -6,7 +6,7 @@ import store from "../store/store";
 
 import * as actions from "../store/actions";
 
-const offlineMode = false;
+const offlineMode = true;
 
 store.subscribe(console.log);
 store.dispatch(actions.initialiseApp());

@@ -11,6 +11,7 @@ import Menu from "./Menu";
 import Bio from "./Bio";
 import Contact from "./Contact";
 import PaintingsContainer from "./PaintingsContainer";
+import PaintingContainer from "./PaintingContainer";
 import ProjectsContainer from "./ProjectsContainer";
 import ProjectContainer from "./ProjectContainer";
 import styled from "styled-components";
@@ -22,22 +23,6 @@ const RootContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  a:link {
-    text-decoration: none;
-    color: #666;
-  }
-  a:active {
-    text-decoration: none;
-    color: #666;
-  }
-  a:visited {
-    text-decoration: none;
-    color: #666;
-  }
-  a:hover {
-    text-decoration: underline;
-    color: #666;
-  }
 `;
 
 const Headerpanel = styled.div`
@@ -74,8 +59,9 @@ const Footer = styled.div`
   bottom: 0;
 `;
 
+const MenuWithRouter = withRouter(Menu);
+
 const App = function(props) {
-  const MenuWithRouter = withRouter(Menu);
   return (
     <Router>
       <RootContainer>
@@ -93,10 +79,11 @@ const App = function(props) {
               <Redirect to={"/paintings"} />
             </Route>
             <Route exact path="/paintings" component={PaintingsContainer} />
+            <Route exact path="/paintings/:id" component={PaintingContainer} />
             <Route exact path="/projects" component={ProjectsContainer} />
             <Route exact path="/bio" component={Bio} />
             <Route exact path="/contact" component={Contact} />
-            <Route path="/:id" component={ProjectContainer} />
+            <Route exact path="/projects/:id" component={ProjectContainer} />
           </Switch>
         </ContentPanel>
         <Footer>

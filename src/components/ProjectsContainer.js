@@ -9,6 +9,7 @@ const ProjectsContainer = props => {
 const mapStateToProps = (state, ownProps) => {
   return {
     projectList: state.projectList,
+    screenWidth: state.screenWidth
   };
 };
 

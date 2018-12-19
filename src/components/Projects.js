@@ -19,6 +19,7 @@ const Projects = props => {
             project={project}
             match={props.match}
             setActiveProject={props.setActiveProject}
+            screenWidth={props.screenWidth}
           />
         ))
       ) : (
