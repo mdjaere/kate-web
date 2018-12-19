@@ -25,7 +25,8 @@ const PaintingIntroAndBody = styled.div`
 `;
 
 const PaintingImage = styled.img`
-  width: 100%;
+  max-width: 100%;
+  max-height: 80vh;
   margin: 10px 0px 10px 0px;
 `;
 
