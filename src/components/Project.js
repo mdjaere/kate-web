@@ -34,8 +34,8 @@ const ProjectImage = styled.img`
   ${props =>
     props.inFocus &&
     css`
-      width: 80vw;
       height: auto;
+      width: 100%;
     `}
 `;
 

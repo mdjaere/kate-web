@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import Project from "./Project";
 
 const ProjectContainer = props => {
-  return <Project project={props.project} />;
+  return <Project {...props} />;
 };
 
 const mapStateToProps = (state, ownProps) => {

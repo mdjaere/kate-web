@@ -61,7 +61,7 @@ class Menu extends React.Component {
     const isOpen = this.state.isOpen;
     return isOpen ? (
       <MenuContainer className={this.props.className}>
-        <img height={24} src={"/" + closeX} onClick={this.toggleOpen} />
+        <img height={24} src={closeX} onClick={this.toggleOpen} />
 
         <MenuItem isActive={this.isActive("paintings")}>
           <Link to="/paintings">Paintings</Link>
@@ -79,7 +79,7 @@ class Menu extends React.Component {
     ) : (
       <MenuContainer className={this.props.className}>
         <MenuItem>
-          <img height={24} src={"/" + hamburger} onClick={this.toggleOpen} />
+          <img height={24} src={hamburger} onClick={this.toggleOpen} />
         </MenuItem>
       </MenuContainer>
     );

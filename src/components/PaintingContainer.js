@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import Painting from "./Painting";
 
 const PaintingContainer = props => {
-  return <Painting painting={props.painting} />;
+  return <Painting {...props}/>;
 };
 
 const mapStateToProps = (state, ownProps) => {
