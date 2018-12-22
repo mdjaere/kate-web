@@ -7,11 +7,17 @@ const ProjectContainer = props => {
 };
 
 const mapStateToProps = (state, ownProps) => {
-  const project = state.projectList
-    ? state.projectList.find(
-        item => item.fields.urlTitle == ownProps.match.params.id
-      )
-    : null;
+  let project;
+
+  if (state.projectList) {
+    project = state.projectList.find(item => {
+      return (
+        ownProps.match.params.id === item.fields.urlTitle ||
+        ownProps.match.params.id === item.sys.id
+      );
+    });
+  }
+
 
   return { project: project, screenWidth: state.screenWidth };
 };

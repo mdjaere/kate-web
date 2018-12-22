@@ -13,7 +13,7 @@ const ArtworkItem = styled.div``;
 const ImageItemContainer = styled.div``;
 
 const ImageItem = styled.img`
-  cursor: default ;
+  cursor: default;
   ${props =>
     props.orientation === "landscape" &&
     css`
@@ -37,7 +37,7 @@ class Paintings extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      numberToLoad: 1,
+      numberToLoad: 1
     };
 
     this.loadAnotherPost = this.loadAnotherPost.bind(this);
@@ -58,41 +58,46 @@ class Paintings extends React.Component {
         {this.props.paintingList ? (
           this.props.paintingList
             .slice(0, this.state.numberToLoad)
-            .map(({ fields, sys }, i) => (
-              <ArtworkItem key={i}>
-                {fields.images.map(({ fields }, i) => {
-                  const { width, height } = fields.file.details.image;
-                  const orientation =
-                    width / height > 1 ? "landscape" : "portraite";
-                  const paintingLink = `/paintings/${sys.id}`;
-                  return (
-                    <ImageItemContainer key={i}>
-                      <Link to={paintingLink}>
-                        <ImageItem
-                          onLoad={this.loadAnotherPost}
-                          orientation={orientation}
-                          src={
-                            "http:" +
-                            fields.file.url +
-                            "?w=" +
-                            this.props.screenWidth
-                          }
-                        />
-                      </Link>
-                    </ImageItemContainer>
-                  );
-                })}
-                {fields.title && (
-                  <ImageText>
-                    {fields.title && <a>{fields.title}</a>}
-                    {fields.year && <a>, {fields.year}</a>}
-                    {fields.medium2 && <a>, {fields.medium2.toLowerCase()}</a>}
-                    {fields.dimensions && <a>, {fields.dimensions}</a>}
-                    {fields.project && <a>, {fields.project}</a>}
-                  </ImageText>
-                )}
-              </ArtworkItem>
-            ))
+            .map(({ fields, sys }, i) => {
+              const linkId = fields.urlTitle || sys.id;
+              const paintingLink = `/paintings/${linkId}`;
+              return (
+                <ArtworkItem key={i}>
+                  {fields.images.map(image => {
+                    const { width, height } = image.fields.file.details.image;
+                    const orientation =
+                      width / height > 1 ? "landscape" : "portraite";
+                    return (
+                      <ImageItemContainer key={image.sys.id}>
+                        <Link to={paintingLink}>
+                          <ImageItem
+                            onLoad={this.loadAnotherPost}
+                            orientation={orientation}
+                            src={
+                              "http:" +
+                              image.fields.file.url +
+                              "?w=" +
+                              this.props.screenWidth
+                            }
+                          />
+                        </Link>
+                      </ImageItemContainer>
+                    );
+                  })}
+                  {fields.title && (
+                    <ImageText>
+                      {fields.title && <a>{fields.title}</a>}
+                      {fields.year && <a>, {fields.year}</a>}
+                      {fields.medium2 && (
+                        <a>, {fields.medium2.toLowerCase()}</a>
+                      )}
+                      {fields.dimensions && <a>, {fields.dimensions}</a>}
+                      {fields.project && <a>, {fields.project}</a>}
+                    </ImageText>
+                  )}
+                </ArtworkItem>
+              );
+            })
         ) : (
           <div>...</div>
         )}

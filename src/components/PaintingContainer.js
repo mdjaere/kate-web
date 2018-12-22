@@ -3,19 +3,22 @@ import { connect } from "react-redux";
 import Painting from "./Painting";
 
 const PaintingContainer = props => {
-  return <Painting {...props}/>;
+  return <Painting {...props} />;
 };
 
 const mapStateToProps = (state, ownProps) => {
+  let painting;
 
-  const painting = state.paintingList
-    ? state.paintingList.find(
-        item => item.sys.id == ownProps.match.params.id
-      )
-    : null;
+  if (state.paintingList) {
+    painting = state.paintingList.find(item => {
+      return (
+        ownProps.match.params.id === item.fields.urlTitle ||
+        ownProps.match.params.id === item.sys.id
+      );
+    });
+  }
 
   return { painting: painting, screenWidth: state.screenWidth };
-
 };
 
 export default connect(mapStateToProps)(PaintingContainer);
