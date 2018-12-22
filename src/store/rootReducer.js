@@ -5,13 +5,15 @@ import {
   FETCH_PROJECT_LIST_PENDING,
   FETCH_PROJECT_LIST_SUCCESS,
   FETCH_PROJECT_LIST_FAILURE,
+  ALL_PAINTINGS_LOADED,
   INIT_SCREEN_WIDTH
 } from "./actions";
 
 const defaultState = {
   paintingList: null,
   projectList: null,
-  screenWidth: 1024
+  screenWidth: 1024,
+  allPaintingsLoaded: false
 };
 
 const rootReducer = (state, action) => {
@@ -29,6 +31,8 @@ const rootReducer = (state, action) => {
       return Object.assign({}, state, {
         screenWidth: action.payload.screenWidth
       });
+    case ALL_PAINTINGS_LOADED:
+      return Object.assign({}, state, {allPaintingsLoaded: action.payload})
     default:
       return state;
   }

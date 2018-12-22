@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import Paintings from "./Paintings";
+import { setAllPaintingsLoaded } from "../store/actions";
 
 const PaintingsContainer = props => {
   return <Paintings {...props} />;
@@ -20,8 +21,19 @@ const mapStateToProps = (state, ownProps) => {
 
   return {
     paintingList: paintingList,
-    screenWidth: state.screenWidth
+    screenWidth: state.screenWidth,
+    allPaintingsLoaded: state.allPaintingsLoaded
   };
 };
 
-export default connect(mapStateToProps)(PaintingsContainer);
+const mapDispatchToProps = dispatch => {
+  return {
+    setAllPaintingsLoaded: (isLoaded = true) =>
+      dispatch(setAllPaintingsLoaded(isLoaded))
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(PaintingsContainer);

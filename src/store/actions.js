@@ -4,6 +4,7 @@ const FETCH_PAINTING_LIST_FAILURE = "FETCH_PAINTING_LIST_FAILURE";
 const FETCH_PROJECT_LIST_PENDING = "FETCH_PROJECT_LIST_PENDING";
 const FETCH_PROJECT_LIST_SUCCESS = "FETCH_PROJECT_LIST_SUCCESS";
 const FETCH_PROJECT_LIST_FAILURE = "FETCH_PROJECT_LIST_FAILURE";
+const ALL_PAINTINGS_LOADED = "ALL_PAINTINGS_LOADED";
 const INIT_SCREEN_WIDTH = "INIT_SCREEN_WIDTH";
 const SET_ACTIVE_PROJECT = "SET_ACTIVE_PROJECT";
 import contenfulClient from "../contentful/client";
@@ -71,6 +72,10 @@ const fetchProjectList = (options = {}) => {
   };
 };
 
+const setAllPaintingsLoaded = (isLoaded = true) => {
+  return { type: ALL_PAINTINGS_LOADED, payload: isLoaded };
+};
+
 const initialiseApp = (options = {}) => {
   return (dispatch, getSTate) => {
     const pixelRatioRaw = window.devicePixelRatio ? window.devicePixelRatio : 1;
@@ -92,9 +97,11 @@ export {
   FETCH_PROJECT_LIST_PENDING,
   FETCH_PROJECT_LIST_SUCCESS,
   FETCH_PROJECT_LIST_FAILURE,
+  ALL_PAINTINGS_LOADED,
   INIT_SCREEN_WIDTH,
   SET_ACTIVE_PROJECT,
   fetchPaintingList,
   fetchProjectList,
+  setAllPaintingsLoaded,
   initialiseApp
 };

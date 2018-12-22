@@ -54,6 +54,7 @@ class Painting extends React.Component {
     this.state = {
       imageInFocus: null
     };
+    window.scrollTo(0, 0);
   }
 
   render() {

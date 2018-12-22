@@ -37,18 +37,28 @@ class Paintings extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      numberToLoad: 1
+      numberToLoad: this.props.allPaintingsLoaded
+        ? this.props.paintingList.length
+        : 1
     };
 
     this.loadAnotherPost = this.loadAnotherPost.bind(this);
   }
 
   loadAnotherPost() {
-    if (
+    if (this.props.allPaintingsLoaded) {
+      return;
+    } else if (
       this.props.paintingList &&
       this.props.paintingList.length > this.state.numberToLoad
     ) {
       this.setState({ numberToLoad: this.state.numberToLoad + 1 });
+    } else if (
+      this.props.paintingList &&
+      this.props.allPaintingsLoaded === false &&
+      this.props.paintingList.length <= this.state.numberToLoad
+    ) {
+      this.props.setAllPaintingsLoaded(true);
     }
   }
 
