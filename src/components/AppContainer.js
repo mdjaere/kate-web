@@ -13,14 +13,12 @@ store.dispatch(actions.initialiseApp());
 store.dispatch(actions.fetchPaintingList({ offlineMode: offlineMode }));
 store.dispatch(actions.fetchProjectList({ offlineMode: offlineMode }));
 
-class AppContainer extends React.Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <App />
-      </Provider>
-    );
-  }
+function AppContainer() {
+  return (
+    <Provider store={store}>
+      <App />
+    </Provider>
+  );
 }
 
 export default AppContainer;
