@@ -1,2 +1,2 @@
-import App from "./components/App";
+import AppContainer from "./components/AppContainer";
 import style from "./main.css";

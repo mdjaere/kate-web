@@ -1,34 +1,126 @@
 import React from "react";
-import paintingList from "./paintingList.js";
+import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 
-const style = {
-  imagesContainer: {
-    backgroundColor: "white"
-  },
-  imageBox: {
-    margin: ["9px", "20px", "32px", "0px"]
-  },
-  painting: {
-    height: "auto",
-    width: "100%"
-  },
-  imageText: {
-    fontSize: "1em"
+const ArtworkContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const ArtworkItem = styled.div``;
+
+const ImageItemContainer = styled.div``;
+
+const ImageItem = styled.img`
+  cursor: default;
+  ${props =>
+    props.orientation === "landscape" &&
+    css`
+      width: 100%;
+      height: auto;
+    `}
+  ${props =>
+    props.orientation === "portraite" &&
+    css`
+      width: auto;
+      height: 80vh;
+    `}
+`;
+
+const ImageText = styled.div`
+  font-size: 0.7em;
+  margin: 0px 0px 32px 0px;
+`;
+
+class Paintings extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      numberToLoad: this.props.allPaintingsLoaded
+        ? this.props.paintingList.length
+        : 1
+    };
+
+    this.loadAnotherPost = this.loadAnotherPost.bind(this);
   }
-};
 
-const Paintings = props => {
-  return (
-    <div style={style.imagesContainer}>
-      {paintingList.map(item => (
-        <div style={style.imageBox} key={item.src}>
-          <img style={style.painting} src={item.src} />
-          <br />
-          <span style={style.imageText}> {item.text}</span>
-        </div>
-      ))}
-    </div>
-  );
-};
+  loadAnotherPost() {
+    if (this.props.allPaintingsLoaded) {
+      return;
+    } else if (
+      this.props.paintingList &&
+      this.props.paintingList.length > this.state.numberToLoad
+    ) {
+      this.setState({ numberToLoad: this.state.numberToLoad + 1 });
+    } else if (
+      this.props.paintingList &&
+      this.props.allPaintingsLoaded === false &&
+      this.props.paintingList.length <= this.state.numberToLoad
+    ) {
+      this.props.setAllPaintingsLoaded(true);
+    }
+  }
+
+  render() {
+    return (
+      <ArtworkContainer>
+        {this.props.paintingList ? (
+          this.props.paintingList
+            .slice(0, this.state.numberToLoad)
+            .map(({ fields, sys }, i) => {
+              const linkId = fields.urlTitle || sys.id;
+              const paintingLink = `/paintings/${linkId}`;
+              return (
+                <ArtworkItem key={i}>
+                  {fields.images.map(image => {
+                    const { width, height } = image.fields.file.details.image;
+                    const orientation =
+                      width / height > 1 ? "landscape" : "portraite";
+                    return (
+                      <ImageItemContainer key={image.sys.id}>
+                        <Link to={paintingLink}>
+                          <ImageItem
+                            onLoad={this.loadAnotherPost}
+                            orientation={orientation}
+                            src={
+                              "http:" +
+                              image.fields.file.url +
+                              "?w=" +
+                              this.props.screenWidth
+                            }
+                          />
+                        </Link>
+                      </ImageItemContainer>
+                    );
+                  })}
+                  {fields.title && (
+                    <ImageText>
+                      {fields.title && <a>{fields.title}</a>}
+                      {fields.year && <a>, {fields.year}</a>}
+                      {fields.medium2 && (
+                        <a>, {fields.medium2.toLowerCase()}</a>
+                      )}
+                      {fields.dimensions && <a>, {fields.dimensions}</a>}
+                      {fields.project && <a>, {fields.project}</a>}
+                    </ImageText>
+                  )}
+                </ArtworkItem>
+              );
+            })
+        ) : (
+          <div>...</div>
+        )}
+      </ArtworkContainer>
+    );
+  }
+}
 
 export default Paintings;
+export {
+  ArtworkContainer,
+  ArtworkItem,
+  ImageItemContainer,
+  ImageItem,
+  ImageText
+};

@@ -1,15 +1,16 @@
-FROM node:9
+FROM node:11-alpine
 
 ADD src /app/src
-ADD .babelrc /app
-ADD package.json /app
-ADD package-lock.json /app
-ADD webpack.config.js /app
-ADD server.js /app
+ADD .babelrc \
+    package.json \
+    package-lock.json \
+    webpack.config.js \
+    server.js \
+    /app/
 
 WORKDIR /app
 
-RUN npm install
+RUN npm ci
 RUN npm run build
 
 EXPOSE 8080
