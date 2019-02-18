@@ -29,7 +29,8 @@ const fetchPaintingList = (options = {}) => {
     const query = offlineMode
       ? promisedPaintingContent
       : contenfulClient.getEntries({
-          content_type: "artwork"
+          content_type: "artwork",
+          order: "-fields.displayOrder"
         });
     query
       .then(response => {
