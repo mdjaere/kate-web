@@ -39,22 +39,42 @@ class Paintings extends React.Component {
     this.state = {
       numberToLoad: this.props.allArtworkLoaded
         ? this.props.artworkList.length
-        : 1
+        : 5
     };
-
     this.loadAnotherPost = this.loadAnotherPost.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
   }
 
-  loadAnotherPost() {
+  loadAnotherPost(numberOfPostsToAdd = 1) {
+    const totalNumber = this.props.artworkList.length;
+    const numberToLoad = this.state.numberToLoad;
     if (this.props.allArtworkLoaded) {
       return;
-    } else if (
-      this.props.artworkList &&
-      this.props.artworkList.length > this.state.numberToLoad
-    ) {
-      this.setState({ numberToLoad: this.state.numberToLoad + 1 });
+    } else if (this.props.artworkList && totalNumber > numberToLoad) {
+      let newNumberToLoad = numberToLoad + numberOfPostsToAdd;
+      if (newNumberToLoad >= totalNumber) {
+        newNumberToLoad = totalNumber;
+      }
+      this.setState({ numberToLoad: newNumberToLoad });
     } else {
       this.props.setAllArtworkLoaded(true);
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  handleScroll() {
+    if (
+      window.innerHeight + document.documentElement.scrollTop ===
+      document.documentElement.offsetHeight
+    ) {
+      this.loadAnotherPost(3);
     }
   }
 
@@ -76,7 +96,6 @@ class Paintings extends React.Component {
                       <ImageItemContainer key={image.sys.id}>
                         <Link to={`/work/${linkId}`}>
                           <ImageItem
-                            onLoad={this.loadAnotherPost}
                             orientation={orientation}
                             src={
                               "http:" +
