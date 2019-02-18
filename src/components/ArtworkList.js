@@ -71,8 +71,8 @@ class Paintings extends React.Component {
 
   handleScroll() {
     if (
-      window.innerHeight + document.documentElement.scrollTop ===
-      document.documentElement.offsetHeight
+        document.documentElement.offsetHeight
+        - (window.innerHeight + document.documentElement.scrollTop) > 30
     ) {
       this.loadAnotherPost(3);
     }
