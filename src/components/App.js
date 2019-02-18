@@ -10,9 +10,9 @@ import {
 import Menu from "./Menu";
 import Bio from "./Bio";
 import Contact from "./Contact";
-import PaintingsContainer from "./PaintingsContainer";
-import PaintingContainer from "./PaintingContainer";
-import ProjectsContainer from "./ProjectsContainer";
+import ArtworkListContainer from "./ArtworkListContainer";
+import ArtworkContainer from "./ArtworkContainer";
+import ProjectListContainer from "./ProjectListContainer";
 import ProjectContainer from "./ProjectContainer";
 import styled from "styled-components";
 
@@ -75,12 +75,10 @@ const App = function(props) {
         </Headerpanel>
         <ContentPanel>
           <Switch>
-            <Route exact path="/">
-              <Redirect to={"/paintings"} />
-            </Route>
-            <Route exact path="/paintings" component={PaintingsContainer} />
-            <Route exact path="/paintings/:id" component={PaintingContainer} />
-            <Route exact path="/projects" component={ProjectsContainer} />
+            <Route exact path="/" component={ArtworkListContainer} />
+            <Route exact path="/work" component={ArtworkListContainer} />
+            <Route exact path="/work/:id" component={ArtworkContainer} />
+            <Route exact path="/projects" component={ProjectListContainer} />
             <Route exact path="/bio" component={Bio} />
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/projects/:id" component={ProjectContainer} />

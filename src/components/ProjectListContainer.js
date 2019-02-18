@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import Projects from "./Projects";
+import ProjectList from "./ProjectList";
 
-const ProjectsContainer = props => {
-  return <Projects {...props} />;
+const ProjectListContainer = props => {
+  return <ProjectList {...props} />;
 };
 
 const mapStateToProps = (state, ownProps) => {
@@ -13,4 +13,4 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-export default connect(mapStateToProps)(ProjectsContainer);
+export default connect(mapStateToProps)(ProjectListContainer);

@@ -1,27 +1,27 @@
 import {
-  FETCH_PAINTING_LIST_PENDING,
-  FETCH_PAINTING_LIST_SUCCESS,
-  FETCH_PAINTING_LIST_FAILURE,
+  FETCH_ARTWORK_LIST_PENDING,
+  FETCH_ARTWORK_LIST_SUCCESS,
+  FETCH_ARTWORK_LIST_FAILURE,
   FETCH_PROJECT_LIST_PENDING,
   FETCH_PROJECT_LIST_SUCCESS,
   FETCH_PROJECT_LIST_FAILURE,
-  ALL_PAINTINGS_LOADED,
+  ALL_ARTWORK_LOADED,
   INIT_SCREEN_WIDTH
 } from "./actions";
 
 const defaultState = {
-  paintingList: null,
+  artworkList: null,
   projectList: null,
   screenWidth: 1024,
-  allPaintingsLoaded: false
+  allArtworkLoaded: false
 };
 
 const rootReducer = (state, action) => {
   state = state || defaultState;
   switch (action.type) {
-    case FETCH_PAINTING_LIST_SUCCESS:
+    case FETCH_ARTWORK_LIST_SUCCESS:
       return Object.assign({}, state, {
-        paintingList: action.payload.response.items
+        artworkList: action.payload.response.items
       });
     case FETCH_PROJECT_LIST_SUCCESS:
       return Object.assign({}, state, {
@@ -31,8 +31,8 @@ const rootReducer = (state, action) => {
       return Object.assign({}, state, {
         screenWidth: action.payload.screenWidth
       });
-    case ALL_PAINTINGS_LOADED:
-      return Object.assign({}, state, {allPaintingsLoaded: action.payload})
+    case ALL_ARTWORK_LOADED:
+      return Object.assign({}, state, {allArtworkLoaded: action.payload})
     default:
       return state;
   }

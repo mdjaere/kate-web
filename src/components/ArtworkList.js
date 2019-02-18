@@ -37,8 +37,8 @@ class Paintings extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      numberToLoad: this.props.allPaintingsLoaded
-        ? this.props.paintingList.length
+      numberToLoad: this.props.allArtworkLoaded
+        ? this.props.artworkList.length
         : 1
     };
 
@@ -46,31 +46,26 @@ class Paintings extends React.Component {
   }
 
   loadAnotherPost() {
-    if (this.props.allPaintingsLoaded) {
+    if (this.props.allArtworkLoaded) {
       return;
     } else if (
-      this.props.paintingList &&
-      this.props.paintingList.length > this.state.numberToLoad
+      this.props.artworkList &&
+      this.props.artworkList.length > this.state.numberToLoad
     ) {
       this.setState({ numberToLoad: this.state.numberToLoad + 1 });
-    } else if (
-      this.props.paintingList &&
-      this.props.allPaintingsLoaded === false &&
-      this.props.paintingList.length <= this.state.numberToLoad
-    ) {
-      this.props.setAllPaintingsLoaded(true);
+    } else {
+      this.props.setAllArtworkLoaded(true);
     }
   }
 
   render() {
     return (
       <ArtworkContainer>
-        {this.props.paintingList ? (
-          this.props.paintingList
+        {this.props.artworkList ? (
+          this.props.artworkList
             .slice(0, this.state.numberToLoad)
             .map(({ fields, sys }, i) => {
               const linkId = fields.urlTitle || sys.id;
-              const paintingLink = `/paintings/${linkId}`;
               return (
                 <ArtworkItem key={i}>
                   {fields.images.map(image => {
@@ -79,7 +74,7 @@ class Paintings extends React.Component {
                       width / height > 1 ? "landscape" : "portraite";
                     return (
                       <ImageItemContainer key={image.sys.id}>
-                        <Link to={paintingLink}>
+                        <Link to={`/work/${linkId}`}>
                           <ImageItem
                             onLoad={this.loadAnotherPost}
                             orientation={orientation}
