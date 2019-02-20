@@ -4,6 +4,7 @@ const FETCH_ARTWORK_LIST_FAILURE = "FETCH_ARTWORK_LIST_FAILURE";
 const FETCH_PROJECT_LIST_PENDING = "FETCH_PROJECT_LIST_PENDING";
 const FETCH_PROJECT_LIST_SUCCESS = "FETCH_PROJECT_LIST_SUCCESS";
 const FETCH_PROJECT_LIST_FAILURE = "FETCH_PROJECT_LIST_FAILURE";
+const SET_ARTWORK_TO_LOAD = "SET_ARTWORK_TO_LOAD";
 const ALL_ARTWORK_LOADED = "ALL_ARTWORK_LOADED";
 const INIT_SCREEN_WIDTH = "INIT_SCREEN_WIDTH";
 const SET_ACTIVE_PROJECT = "SET_ACTIVE_PROJECT";
@@ -73,6 +74,10 @@ const fetchProjectList = (options = {}) => {
   };
 };
 
+const setArtworkToLoad = (numberToLoad) => {
+  return { type: SET_ARTWORK_TO_LOAD, payload: numberToLoad };
+};
+
 const setAllArtworkLoaded = (isLoaded = true) => {
   return { type: ALL_ARTWORK_LOADED, payload: isLoaded };
 };
@@ -98,11 +103,13 @@ export {
   FETCH_PROJECT_LIST_PENDING,
   FETCH_PROJECT_LIST_SUCCESS,
   FETCH_PROJECT_LIST_FAILURE,
+  SET_ARTWORK_TO_LOAD,
   ALL_ARTWORK_LOADED,
   INIT_SCREEN_WIDTH,
   SET_ACTIVE_PROJECT,
   fetchArtworkList,
   fetchProjectList,
+  setArtworkToLoad,
   setAllArtworkLoaded,
   initialiseApp
 };

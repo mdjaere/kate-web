@@ -36,18 +36,13 @@ const ImageText = styled.div`
 class Paintings extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      numberToLoad: this.props.allArtworkLoaded
-        ? this.props.artworkList.length
-        : 5
-    };
     this.loadAnotherPost = this.loadAnotherPost.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
   }
 
   loadAnotherPost(numberOfPostsToAdd = 1) {
     const totalNumber = this.props.artworkList.length;
-    const numberToLoad = this.state.numberToLoad;
+    const numberToLoad = this.props.artworkToLoad;
     if (this.props.allArtworkLoaded) {
       return;
     } else if (this.props.artworkList && totalNumber > numberToLoad) {
@@ -55,7 +50,7 @@ class Paintings extends React.Component {
       if (newNumberToLoad >= totalNumber) {
         newNumberToLoad = totalNumber;
       }
-      this.setState({ numberToLoad: newNumberToLoad });
+      this.props.setArtworkToLoad(newNumberToLoad);
     } else {
       this.props.setAllArtworkLoaded(true);
     }
@@ -71,8 +66,9 @@ class Paintings extends React.Component {
 
   handleScroll() {
     if (
-        document.documentElement.offsetHeight
-        - (window.innerHeight + document.documentElement.scrollTop) < 20
+      document.documentElement.offsetHeight -
+        (window.innerHeight + document.documentElement.scrollTop) <
+      20
     ) {
       this.loadAnotherPost(3);
     }
@@ -83,7 +79,7 @@ class Paintings extends React.Component {
       <ArtworkContainer>
         {this.props.artworkList ? (
           this.props.artworkList
-            .slice(0, this.state.numberToLoad)
+            .slice(0, this.props.artworkToLoad)
             .map(({ fields, sys }, i) => {
               const linkId = fields.urlTitle || sys.id;
               return (
