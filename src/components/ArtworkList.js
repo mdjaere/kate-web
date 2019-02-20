@@ -93,6 +93,7 @@ class Paintings extends React.Component {
                         <Link to={`/work/${linkId}`}>
                           <ImageItem
                             orientation={orientation}
+                            title={`${fields.title} ${fields.year} (${fields.displayOrder})`}
                             src={
                               "http:" +
                               image.fields.file.url +
