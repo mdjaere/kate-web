@@ -1,20 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import ProjectItem from "./ProjectItem";
+import ProjectListItem from "./ProjectListItem";
 
-const ProjectsListContainer = styled.div`
+const ProjectListStyled = styled.div`
   max-width: 960px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 `;
 
-const Projects = props => {
+const ProjectList = props => {
   return (
-    <ProjectsListContainer>
+    <ProjectListStyled>
       {props.projectList ? (
         props.projectList.map(project => (
-          <ProjectItem
+          <ProjectListItem
             key={project.fields.urlTitle}
             project={project}
             match={props.match}
@@ -25,8 +25,8 @@ const Projects = props => {
       ) : (
         <div>...</div>
       )}
-    </ProjectsListContainer>
+    </ProjectListStyled>
   );
 };
 
-export default Projects;
+export default ProjectList;

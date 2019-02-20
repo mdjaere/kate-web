@@ -63,8 +63,8 @@ class Menu extends React.Component {
       <MenuContainer className={this.props.className}>
         <img height={24} src={closeX} onClick={this.toggleOpen} />
 
-        <MenuItem isActive={this.isActive("paintings")}>
-          <Link to="/paintings">Paintings</Link>
+        <MenuItem isActive={this.isActive("work")}>
+          <Link to="/work">Work</Link>
         </MenuItem>
         <MenuItem isActive={this.isActive("projects")}>
           <Link to="/projects">Projects</Link>

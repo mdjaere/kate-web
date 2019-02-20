@@ -36,41 +36,52 @@ const ImageText = styled.div`
 class Paintings extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      numberToLoad: this.props.allPaintingsLoaded
-        ? this.props.paintingList.length
-        : 1
-    };
-
     this.loadAnotherPost = this.loadAnotherPost.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
   }
 
-  loadAnotherPost() {
-    if (this.props.allPaintingsLoaded) {
+  loadAnotherPost(numberOfPostsToAdd = 1) {
+    const totalNumber = this.props.artworkList.length;
+    const numberToLoad = this.props.artworkToLoad;
+    if (this.props.allArtworkLoaded) {
       return;
-    } else if (
-      this.props.paintingList &&
-      this.props.paintingList.length > this.state.numberToLoad
+    } else if (this.props.artworkList && totalNumber > numberToLoad) {
+      let newNumberToLoad = numberToLoad + numberOfPostsToAdd;
+      if (newNumberToLoad >= totalNumber) {
+        newNumberToLoad = totalNumber;
+      }
+      this.props.setArtworkToLoad(newNumberToLoad);
+    } else {
+      this.props.setAllArtworkLoaded(true);
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  handleScroll() {
+    if (
+      document.documentElement.offsetHeight -
+        (window.innerHeight + document.documentElement.scrollTop) <
+      20
     ) {
-      this.setState({ numberToLoad: this.state.numberToLoad + 1 });
-    } else if (
-      this.props.paintingList &&
-      this.props.allPaintingsLoaded === false &&
-      this.props.paintingList.length <= this.state.numberToLoad
-    ) {
-      this.props.setAllPaintingsLoaded(true);
+      this.loadAnotherPost(3);
     }
   }
 
   render() {
     return (
       <ArtworkContainer>
-        {this.props.paintingList ? (
-          this.props.paintingList
-            .slice(0, this.state.numberToLoad)
+        {this.props.artworkList ? (
+          this.props.artworkList
+            .slice(0, this.props.artworkToLoad)
             .map(({ fields, sys }, i) => {
               const linkId = fields.urlTitle || sys.id;
-              const paintingLink = `/paintings/${linkId}`;
               return (
                 <ArtworkItem key={i}>
                   {fields.images.map(image => {
@@ -79,9 +90,8 @@ class Paintings extends React.Component {
                       width / height > 1 ? "landscape" : "portraite";
                     return (
                       <ImageItemContainer key={image.sys.id}>
-                        <Link to={paintingLink}>
+                        <Link to={`/work/${linkId}`}>
                           <ImageItem
-                            onLoad={this.loadAnotherPost}
                             orientation={orientation}
                             src={
                               "http:" +

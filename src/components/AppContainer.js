@@ -4,23 +4,25 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import store from "../store/store";
 
-import * as actions from "../store/actions";
+import {
+  initialiseApp,
+  fetchArtworkList,
+  fetchProjectList
+} from "../store/actions";
 
 const offlineMode = false;
 
 store.subscribe(console.log);
-store.dispatch(actions.initialiseApp());
-store.dispatch(actions.fetchPaintingList({ offlineMode: offlineMode }));
-store.dispatch(actions.fetchProjectList({ offlineMode: offlineMode }));
+store.dispatch(initialiseApp());
+store.dispatch(fetchArtworkList({ offlineMode: offlineMode }));
+store.dispatch(fetchProjectList({ offlineMode: offlineMode }));
 
-class AppContainer extends React.Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <App />
-      </Provider>
-    );
-  }
+function AppContainer() {
+  return (
+    <Provider store={store}>
+      <App />
+    </Provider>
+  );
 }
 
 export default AppContainer;

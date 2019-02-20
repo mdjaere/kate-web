@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-const ProjectItemContainer = styled.div`
+const ProjectListItemStyled = styled.div`
   width: 300px;
   padding: 0px 0px 0px 0px;
   margin: 0px 5px 26px 5px;
@@ -49,13 +49,13 @@ const ProjectLink = styled.div`
   margin-top: 7px;
 `;
 
-const ProjectItem = props => {
+const ProjectListItem = props => {
   const { project } = props;
   const { fields } = project;
   const coverImage = project.fields.coverImage;
   const projectLink = `/projects/${fields.urlTitle}`;
   return (
-    <ProjectItemContainer>
+    <ProjectListItemStyled>
       <Link to={projectLink}>
         <ProjectHeader>
           <ProjectTitle>{fields.title}</ProjectTitle>
@@ -72,8 +72,8 @@ const ProjectItem = props => {
       <Link to={projectLink}>
         <ProjectLink> Read More </ProjectLink>
       </Link>
-    </ProjectItemContainer>
+    </ProjectListItemStyled>
   );
 };
 
-export default ProjectItem;
+export default ProjectListItem;
