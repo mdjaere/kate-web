@@ -63,7 +63,7 @@ const ProjectListItem = props => {
         {coverImage && (
           <ProjectImage
             src={
-              "http:" + coverImage.fields.file.url + "?w=" + props.screenWidth
+              "https:" + coverImage.fields.file.url + "?w=" + props.screenWidth
             }
           />
         )}

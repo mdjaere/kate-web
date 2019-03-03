@@ -95,7 +95,7 @@ class Paintings extends React.Component {
                             orientation={orientation}
                             title={`${fields.title} ${fields.year} (${fields.displayOrder})`}
                             src={
-                              "http:" +
+                              "https:" +
                               image.fields.file.url +
                               "?w=" +
                               this.props.screenWidth

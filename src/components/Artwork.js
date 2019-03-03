@@ -77,7 +77,7 @@ class Artwork extends React.Component {
                 return (
                   <ArtworkImage
                     key={image.sys.id}
-                    src={"http:" + url + "?w=" + this.props.screenWidth}
+                    src={"https:" + url + "?w=" + this.props.screenWidth}
                   />
                 );
               })}
