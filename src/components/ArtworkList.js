@@ -33,6 +33,57 @@ const ImageText = styled.div`
   margin: 0px 0px 32px 0px;
 `;
 
+const ShowMore = styled.div`
+  font-size: 0.7em;
+  cursor: pointer;
+`;
+
+function ListOfArtworkItems(props) {
+  const artworks = props.artworkList
+    .slice(0, props.artworkToLoad)
+    .map(({ fields, sys }, i) => {
+      const linkId = fields.urlTitle || sys.id;
+      return (
+        <ArtworkItem key={i}>
+          {fields.images.map(image => {
+            const { width, height } = image.fields.file.details.image;
+            const orientation = width / height > 1 ? "landscape" : "portraite";
+            return (
+              <ImageItemContainer key={image.sys.id}>
+                <Link to={`/work/${linkId}`}>
+                  <ImageItem
+                    orientation={orientation}
+                    width={width}
+                    height={height}
+                    title={`${fields.title} ${fields.year} (${
+                      fields.displayOrder
+                    })`}
+                    src={
+                      "https:" +
+                      image.fields.file.url +
+                      "?w=" +
+                      props.screenWidth
+                    }
+                  />
+                </Link>
+              </ImageItemContainer>
+            );
+          })}
+          {fields.title && (
+            <ImageText>
+              {fields.title && <a>{fields.title}</a>}
+              {fields.year && <a>, {fields.year}</a>}
+              {fields.medium2 && <a>, {fields.medium2.toLowerCase()}</a>}
+              {fields.dimensions && <a>, {fields.dimensions}</a>}
+              {fields.project && <a>, {fields.project}</a>}
+            </ImageText>
+          )}
+        </ArtworkItem>
+      );
+    });
+  return <React.Fragment>{artworks}</React.Fragment>;
+}
+
 class Paintings extends React.Component {
   constructor(props) {
     super(props);
@@ -77,59 +128,23 @@ class Paintings extends React.Component {
   }
 
   render() {
-    return (
-      <ArtworkContainer>
-        {this.props.artworkList ? (
-          this.props.artworkList
-            .slice(0, this.props.artworkToLoad)
-            .map(({ fields, sys }, i) => {
-              const linkId = fields.urlTitle || sys.id;
-              return (
-                <ArtworkItem key={i}>
-                  {fields.images.map(image => {
-                    const { width, height } = image.fields.file.details.image;
-                    const orientation =
-                      width / height > 1 ? "landscape" : "portraite";
-                    return (
-                      <ImageItemContainer key={image.sys.id}>
-                        <Link to={`/work/${linkId}`}>
-                          <ImageItem
-                            orientation={orientation}
-                            title={`${fields.title} ${fields.year} (${fields.displayOrder})`}
-                            src={
-                              "https:" +
-                              image.fields.file.url +
-                              "?w=" +
-                              this.props.screenWidth
-                            }
-                          />
-                        </Link>
-                      </ImageItemContainer>
-                    );
-                  })}
-                  {fields.title && (
-                    <ImageText>
-                      {fields.title && <a>{fields.title}</a>}
-                      {fields.year && <a>, {fields.year}</a>}
-                      {fields.medium2 && (
-                        <a>, {fields.medium2.toLowerCase()}</a>
-                      )}
-                      {fields.dimensions && <a>, {fields.dimensions}</a>}
-                      {fields.project && <a>, {fields.project}</a>}
-                    </ImageText>
-                  )}
-                </ArtworkItem>
+    const allArtworkLoaded = this.props.allArtworkLoaded;
 
-              );
-            })
-{!this.props.allArtworkLoaded && 
-                    <div onClick={()=>this.loadAnotherPost(3)}>Show more</div>
-                }
-        ) : (
-          <div>...</div>
-        )}
-      </ArtworkContainer>
-    );
+    if (this.props.artworkList) {
+      return (
+        <ArtworkContainer>
+          <ListOfArtworkItems
+            artworkList={this.props.artworkList}
+            artworkToLoad={this.props.artworkToLoad}
+            screenWidth={this.props.screenWidth}
+          />
+          {!allArtworkLoaded && (
+            <ShowMore onClick={() => this.loadAnotherPost(3)}>Show more</ShowMore>
+          )}
+        </ArtworkContainer>
+      );
+    }
+    return <ArtworkContainer>...</ArtworkContainer>;
   }
 }
 
