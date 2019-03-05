@@ -58,10 +58,12 @@ class Paintings extends React.Component {
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener("mousewheel", this.handleScroll);
   }
 
   componentWillUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener("mousewheel", this.handleScroll);
   }
 
   handleScroll() {
