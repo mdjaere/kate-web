@@ -118,7 +118,7 @@ class Paintings extends React.Component {
                   )}
                 </ArtworkItem>
                 {!this.props.allArtworkLoaded && 
-                    <div onClick={()=>this.loadAnotherPost(3)}>Load more</div>
+                    <div onClick={()=>this.loadAnotherPost(3)}>Show more</div>
                 }
               );
             })
