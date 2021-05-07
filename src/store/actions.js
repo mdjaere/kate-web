@@ -87,7 +87,7 @@ const initialiseApp = (options = {}) => {
     const pixelRatioRaw = window.devicePixelRatio ? window.devicePixelRatio : 1;
     const pixelRatio = Math.round(pixelRatioRaw * 100) / 100;
     const screenWidth = window.screen.width;
-    const deviceSpecificImageWidth = pixelRatio * screenWidth;
+    const deviceSpecificImageWidth = Math.floor(pixelRatio * screenWidth);
 
     dispatch({
       type: INIT_SCREEN_WIDTH,
