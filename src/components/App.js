@@ -92,7 +92,7 @@ const App = function(props) {
           </Switch>
         </ContentPanel>
         <Footer>
-          <p>Copyright 2021</p>
+          <p>© 2022</p>
         </Footer>
       </RootContainer>
     </Router>
