@@ -81,22 +81,22 @@ const App = function (props) {
             <Route exact path="/">
               <ArtworkListContainer />
             </Route>
-            <Route path="/work/:id">
+            <Route exact path="/work/:id">
               <ArtworkContainer />
             </Route>
-            <Route path="/work">
+            <Route exact path="/work">
               <ArtworkListContainer />
             </Route>
-            <Route path="/projects/:id">
+            <Route exact path="/projects/:id">
               <ProjectContainer />
             </Route>
-            <Route path="/projects">
+            <Route exact path="/projects">
               <ProjectListContainer />
             </Route>
-            <Route path="/bio">
+            <Route exact path="/bio">
               <Bio />
             </Route>
-            <Route path="/contact">
+            <Route exact path="/contact">
               <Contact />
             </Route>
           </Switch>
