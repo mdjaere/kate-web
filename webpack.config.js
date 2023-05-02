@@ -1,23 +1,38 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin")
 const path = require("path");
+var webpack = require('webpack');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-module.exports = {
-  entry: './src/index.js',
+const isProduction = process.env.NODE_ENV == "production";
+
+const config = {
+  entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js',
-    publicPath: '/'
+    path: path.resolve(__dirname, "dist"),
   },
+  devServer: {
+    open: true,
+    port: 8080,
+    host: "localhost",
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      filename: "./index.html"
+    }),
+    new webpack.ProvidePlugin({
+      // Make a global `process` variable that points to the `process` package,
+      // because a package might expect there to be a global variable named `process`.
+      // Thanks to https://stackoverflow.com/a/65018686/14239942
+      process: 'process/browser.js'
+    })
+    // Add your plugins here
+    // Learn more about plugins from https://webpack.js.org/configuration/plugins/
+  ],
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
+        test: /\.(js|jsx)$/i,
+        loader: "babel-loader",
       },
       {
         test: /\.html$/,
@@ -29,38 +44,24 @@ module.exports = {
         ]
       },
       {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"]
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(jpg|png|gif|svg|pdf|ico)$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "Kate_Warner_[name].[ext]"
-            }
-          }
-        ]
-      }
-    ]
+        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+        type: "asset",
+      },
+      // Add your rules for custom modules here
+      // Learn more about loaders from https://webpack.js.org/loaders/
+    ],
   },
-  plugins: [
-    new HtmlWebPackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html"
-    }),
-    new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css"
-    }),
-    new CopyWebpackPlugin([{ from: "src/assets", to: "./assets" }])
-  ],
-  devServer: {
-    contentBase: path.join(__dirname, "dist"),
-    compress: true,
-    port: 8080,
-    historyApiFallback: true,
-    open: true
+};
+
+module.exports = () => {
+  if (isProduction) {
+    config.mode = "production";
+  } else {
+    config.mode = "development";
   }
+  return config;
 };

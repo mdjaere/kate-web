@@ -95,7 +95,7 @@ class Artwork extends React.Component {
               </ArtworkIntro>
               <ArtworkIntro> {artwork.fields.intro} </ArtworkIntro> <br />
               <ArtworkBody>
-                <Markdown source={artwork.fields.body} />
+                <Markdown children={artwork.fields.body} />
               </ArtworkBody>
             </ArtworkIntroAndBody>
           </ArtworkItemContainer>

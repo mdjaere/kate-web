@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 import hamburger from "../assets/Hamburger_icon.svg";
 import closeX from "../assets/Close_x.svg";
+import { useLocation } from "react-router-dom";
 
 const MenuContainer = styled.ul`
   a:link {
@@ -37,53 +38,44 @@ const MenuItem = styled.li`
     `}
 `;
 
-class Menu extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isOpen: false
-    };
-    this.toggleOpen = this.toggleOpen.bind(this);
-    this.isActive = this.isActive.bind(this);
+function Menu(props) {
+  const [isOpen, setIsOpen] = useState(false)
+  const location = useLocation()
+
+  function toggleOpen() {
+    setIsOpen(!isOpen);
   }
 
-  toggleOpen() {
-    this.setState({ isOpen: !this.state.isOpen });
-  }
-
-  isActive(name) {
-    const currentLocation = this.props.history.location.pathname;
+  function isActive(name) {
+    const currentLocation = location.pathname;
     const isActive = currentLocation.split("/")[1] === name;
     return isActive;
   }
 
-  render() {
-    const isOpen = this.state.isOpen;
-    return isOpen ? (
-      <MenuContainer className={this.props.className}>
-        <img height={24} src={closeX} onClick={this.toggleOpen} />
+  return isOpen ? (
+    <MenuContainer className={props.className}>
+      <img height={24} src={closeX} onClick={toggleOpen} alt="Close menu icon" />
 
-        <MenuItem isActive={this.isActive("work")}>
-          <Link to="/work">Work</Link>
-        </MenuItem>
-        <MenuItem isActive={this.isActive("projects")}>
-          <Link to="/projects">Projects</Link>
-        </MenuItem>
-        <MenuItem isActive={this.isActive("bio")}>
-          <Link to="/bio">Bio</Link>
-        </MenuItem>
-        <MenuItem isActive={this.isActive("contact")}>
-          <Link to="/contact">Contact</Link>
-        </MenuItem>
-      </MenuContainer>
-    ) : (
-      <MenuContainer className={this.props.className}>
-        <MenuItem>
-          <img height={24} src={hamburger} onClick={this.toggleOpen} />
-        </MenuItem>
-      </MenuContainer>
-    );
-  }
+      <MenuItem isActive={isActive("work")}>
+        <Link to="/work">Work</Link>
+      </MenuItem>
+      <MenuItem isActive={isActive("projects")}>
+        <Link to="/projects">Projects</Link>
+      </MenuItem>
+      <MenuItem isActive={isActive("bio")}>
+        <Link to="/bio">Bio</Link>
+      </MenuItem>
+      <MenuItem isActive={isActive("contact")}>
+        <Link to="/contact">Contact</Link>
+      </MenuItem>
+    </MenuContainer>
+  ) : (
+    <MenuContainer className={props.className}>
+      <MenuItem>
+        <img height={24} src={hamburger} onClick={toggleOpen} alt="Open menu icon" />
+      </MenuItem>
+    </MenuContainer>
+  );
 }
 
 export default Menu;

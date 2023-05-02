@@ -1,24 +1,26 @@
 import React from "react";
 import { connect } from "react-redux";
 import Artwork from "./Artwork";
+import { useParams } from "react-router-dom";
 
 const ArtworkContainer = props => {
-  return <Artwork {...props} />;
+  const { id } = useParams()
+
+  let artwork = props.artworkList.find(item => {
+    return (
+      id === item.fields.urlTitle ||
+      id === item.sys.id
+    );
+  });
+
+  return <Artwork {...props} artwork={artwork} />;
 };
 
 const mapStateToProps = (state, ownProps) => {
-  let artwork;
-
-  if (state.artworkList) {
-    artwork = state.artworkList.find(item => {
-      return (
-        ownProps.match.params.id === item.fields.urlTitle ||
-        ownProps.match.params.id === item.sys.id
-      );
-    });
-  }
-
-  return { artwork, screenWidth: state.screenWidth };
+  return {
+    artworkList: state.artworkList || [],
+    screenWidth: state.screenWidth
+  };
 };
 
 export default connect(mapStateToProps)(ArtworkContainer);

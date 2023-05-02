@@ -73,41 +73,45 @@ class Project extends React.Component {
 
   render() {
     const project = this.props.project;
-    return (
+    return project ? (
       <div>
-        {project ? (
-          <ProjectItemContainer>
-            <ProjectHeader>
-              <ProjectTitle>{project.fields.title}</ProjectTitle>
-            </ProjectHeader>
-            {project.fields.images &&
-              project.fields.images.map(image => {
-                const url = image.fields.file.url;
+        <ProjectItemContainer>
+          <ProjectHeader>
+            <ProjectTitle>{project.fields.title}</ProjectTitle>
+          </ProjectHeader>
+          {project.fields.images &&
+            project.fields.images.map(image => {
+              const url = image.fields.file.url;
 
-                return (
-                  <ProjectImage
-                    key={image.sys.id}
-                    onClick={() => this.setImageInFocus(image.sys.id)}
-                    inFocus={this.state.imageInFocus === image.sys.id}
-                    src={"https:" + url + "?w=" + this.props.screenWidth}
-                  />
-                );
-              })}
-            <ProjectIntroAndBody>
-              <ProjectIntro> {project.fields.intro} </ProjectIntro> <br />
-              <ProjectBody>
-                <Markdown source={project.fields.body} />
-              </ProjectBody>
-            </ProjectIntroAndBody>
-          </ProjectItemContainer>
-        ) : (
-          <div>Loading...</div>
-        )}
+              return (
+                <ProjectImage
+                  key={image.sys.id}
+                  onClick={() => this.setImageInFocus(image.sys.id)}
+                  inFocus={this.state.imageInFocus === image.sys.id}
+                  src={"https:" + url + "?w=" + this.props.screenWidth}
+                />
+              );
+            })}
+          <ProjectIntroAndBody>
+            <ProjectIntro> {project.fields.intro} </ProjectIntro> <br />
+            <ProjectBody>
+              <Markdown children={project.fields.body} />
+            </ProjectBody>
+          </ProjectIntroAndBody>
+        </ProjectItemContainer>
         <BackLink>
           <Link to="/projects"> Back to all projects</Link>
         </BackLink>
       </div>
-    );
+    ) : (
+      <div>
+        <div>Loading...</div>
+        <BackLink>
+          <Link to="/projects"> Back to all projects</Link>
+        </BackLink>
+      </div>
+    )
+      ;
   }
 }
 

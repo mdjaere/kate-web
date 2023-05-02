@@ -1,11 +1,9 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Switch,
-  Redirect,
   Route,
-  Link,
-  withRouter
+  Link
 } from "react-router-dom";
 import Menu from "./Menu";
 import Bio from "./Bio";
@@ -66,11 +64,9 @@ const Footer = styled.div`
   bottom: 0;
 `;
 
-const MenuWithRouter = withRouter(Menu);
-
-const App = function(props) {
+const App = function (props) {
   return (
-    <Router>
+    <BrowserRouter>
       <RootContainer>
         <Headerpanel>
           <Header>
@@ -78,24 +74,38 @@ const App = function(props) {
               Kate Warner
             </Link>
           </Header>
-          <MenuWithRouter />
+          <Menu />
         </Headerpanel>
         <ContentPanel>
           <Switch>
-            <Route exact path="/" component={ArtworkListContainer} />
-            <Route exact path="/work" component={ArtworkListContainer} />
-            <Route exact path="/work/:id" component={ArtworkContainer} />
-            <Route exact path="/projects" component={ProjectListContainer} />
-            <Route exact path="/bio" component={Bio} />
-            <Route exact path="/contact" component={Contact} />
-            <Route exact path="/projects/:id" component={ProjectContainer} />
+            <Route exact path="/">
+              <ArtworkListContainer />
+            </Route>
+            <Route path="/work/:id">
+              <ArtworkContainer />
+            </Route>
+            <Route path="/work">
+              <ArtworkListContainer />
+            </Route>
+            <Route path="/projects/:id">
+              <ProjectContainer />
+            </Route>
+            <Route path="/projects">
+              <ProjectListContainer />
+            </Route>
+            <Route path="/bio">
+              <Bio />
+            </Route>
+            <Route path="/contact">
+              <Contact />
+            </Route>
           </Switch>
         </ContentPanel>
         <Footer>
           <p>© 2023</p>
         </Footer>
       </RootContainer>
-    </Router>
+    </BrowserRouter>
   );
 };
 

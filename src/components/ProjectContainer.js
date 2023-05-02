@@ -1,25 +1,26 @@
 import React from "react";
 import { connect } from "react-redux";
 import Project from "./Project";
+import { useParams } from "react-router-dom";
 
 const ProjectContainer = props => {
-  return <Project {...props} />;
+  let { id } = useParams()
+
+  let project = props.projectList.find(item => {
+    return (
+      id === item.fields.urlTitle ||
+      id === item.sys.id
+    );
+  });
+
+  return <Project {...props} project={project} />;
 };
 
 const mapStateToProps = (state, ownProps) => {
-  let project;
-
-  if (state.projectList) {
-    project = state.projectList.find(item => {
-      return (
-        ownProps.match.params.id === item.fields.urlTitle ||
-        ownProps.match.params.id === item.sys.id
-      );
-    });
-  }
-
-
-  return { project: project, screenWidth: state.screenWidth };
+  return {
+    projectList: state.projectList || [],
+    screenWidth: state.screenWidth
+  };
 };
 
 export default connect(mapStateToProps)(ProjectContainer);
