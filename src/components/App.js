@@ -1,7 +1,7 @@
 import React from "react";
 import {
   BrowserRouter,
-  Switch,
+  Routes,
   Route,
   Link
 } from "react-router-dom";
@@ -77,29 +77,15 @@ const App = function (props) {
           <Menu />
         </Headerpanel>
         <ContentPanel>
-          <Switch>
-            <Route exact path="/">
-              <ArtworkListContainer />
-            </Route>
-            <Route exact path="/work/:id">
-              <ArtworkContainer />
-            </Route>
-            <Route exact path="/work">
-              <ArtworkListContainer />
-            </Route>
-            <Route exact path="/projects/:id">
-              <ProjectContainer />
-            </Route>
-            <Route exact path="/projects">
-              <ProjectListContainer />
-            </Route>
-            <Route exact path="/bio">
-              <Bio />
-            </Route>
-            <Route exact path="/contact">
-              <Contact />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route path="/" element={<ArtworkListContainer />} />
+            <Route path="/work" element={<ArtworkListContainer />} />
+            <Route path="/work/:id" element={<ArtworkContainer />} />
+            <Route path="/projects" element={<ProjectListContainer />} />
+            <Route path="/projects/:id" element={<ProjectContainer />} />
+            <Route path="/bio" element={<Bio />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
         </ContentPanel>
         <Footer>
           <p>© 2023</p>
