@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
-import * as Markdown from "react-markdown";
+import ReactMarkdown from "react-markdown";
 
 const ArtworkItemContainer = styled.div`
   max-width: 960px;
@@ -95,7 +95,7 @@ class Artwork extends React.Component {
               </ArtworkIntro>
               <ArtworkIntro> {artwork.fields.intro} </ArtworkIntro> <br />
               <ArtworkBody>
-                <Markdown children={artwork.fields.body} />
+                <ReactMarkdown children={artwork.fields.body} />
               </ArtworkBody>
             </ArtworkIntroAndBody>
           </ArtworkItemContainer>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
-import * as Markdown from "react-markdown";
+import ReactMarkdown from "react-markdown";
 // import projectList from "./projectList";
 
 const ProjectItemContainer = styled.div`
@@ -95,7 +95,7 @@ class Project extends React.Component {
           <ProjectIntroAndBody>
             <ProjectIntro> {project.fields.intro} </ProjectIntro> <br />
             <ProjectBody>
-              <Markdown children={project.fields.body} />
+              <ReactMarkdown children={project.fields.body} />
             </ProjectBody>
           </ProjectIntroAndBody>
         </ProjectItemContainer>
