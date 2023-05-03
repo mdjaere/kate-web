@@ -1,6 +1,7 @@
 import React from "react";
 import App from "./App";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 import { Provider } from "react-redux";
 import store from "../store/store";
 
@@ -12,7 +13,6 @@ import {
 
 const offlineMode = false;
 
-store.subscribe(console.log);
 store.dispatch(initialiseApp());
 store.dispatch(fetchArtworkList({ offlineMode: offlineMode }));
 store.dispatch(fetchProjectList({ offlineMode: offlineMode }));
@@ -24,7 +24,10 @@ function AppContainer() {
     </Provider>
   );
 }
-
 export default AppContainer;
 
-ReactDOM.render(<AppContainer />, document.getElementById("app"));
+const container = document.getElementById('app');
+const root = createRoot(container);
+root.render(<AppContainer />);
+
+
