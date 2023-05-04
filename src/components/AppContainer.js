@@ -8,7 +8,8 @@ import store from "../store/store";
 import {
   initialiseApp,
   fetchArtworkList,
-  fetchProjectList
+  fetchProjectList,
+  fetchBioList
 } from "../store/actions";
 
 const offlineMode = false;
@@ -16,6 +17,7 @@ const offlineMode = false;
 store.dispatch(initialiseApp());
 store.dispatch(fetchArtworkList({ offlineMode: offlineMode }));
 store.dispatch(fetchProjectList({ offlineMode: offlineMode }));
+store.dispatch(fetchBioList({ offlineMode: offlineMode }));
 
 function AppContainer() {
   return (

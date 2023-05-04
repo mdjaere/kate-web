@@ -4,6 +4,9 @@ const FETCH_ARTWORK_LIST_FAILURE = "FETCH_ARTWORK_LIST_FAILURE";
 const FETCH_PROJECT_LIST_PENDING = "FETCH_PROJECT_LIST_PENDING";
 const FETCH_PROJECT_LIST_SUCCESS = "FETCH_PROJECT_LIST_SUCCESS";
 const FETCH_PROJECT_LIST_FAILURE = "FETCH_PROJECT_LIST_FAILURE";
+const FETCH_BIO_LIST_PENDING = "FETCH_BIO_LIST_PENDING";
+const FETCH_BIO_LIST_SUCCESS = "FETCH_BIO_LIST_SUCCESS";
+const FETCH_BIO_LIST_FAILURE = "FETCH_BIO_LIST_FAILURE";
 const SET_ARTWORK_TO_LOAD = "SET_ARTWORK_TO_LOAD";
 const ALL_ARTWORK_LOADED = "ALL_ARTWORK_LOADED";
 const INIT_SCREEN_WIDTH = "INIT_SCREEN_WIDTH";
@@ -74,6 +77,30 @@ const fetchProjectList = (options = {}) => {
   };
 };
 
+const fetchBioList = (options = {}) => {
+  const { offlineMode } = options;
+  return (dispatch, getState) => {
+    dispatch({
+      type: FETCH_BIO_LIST_PENDING,
+      offlineMode: offlineMode ? true : false
+    });
+    const query = contenfulClient.getEntries({
+          content_type: "about"
+        });
+    query
+      .then(response => {
+        dispatch({
+          type: FETCH_BIO_LIST_SUCCESS,
+          payload: { response },
+          offlineMode: offlineMode ? true : false
+        });
+      })
+      .catch(error => {
+        dispatch({ type: FETCH_BIO_LIST_FAILURE, payload: { error } });
+      });
+  };
+};
+
 const setArtworkToLoad = (numberToLoad) => {
   return { type: SET_ARTWORK_TO_LOAD, payload: numberToLoad };
 };
@@ -103,12 +130,16 @@ export {
   FETCH_PROJECT_LIST_PENDING,
   FETCH_PROJECT_LIST_SUCCESS,
   FETCH_PROJECT_LIST_FAILURE,
+  FETCH_BIO_LIST_PENDING,
+  FETCH_BIO_LIST_SUCCESS,
+  FETCH_BIO_LIST_FAILURE,
   SET_ARTWORK_TO_LOAD,
   ALL_ARTWORK_LOADED,
   INIT_SCREEN_WIDTH,
   SET_ACTIVE_PROJECT,
   fetchArtworkList,
   fetchProjectList,
+  fetchBioList,
   setArtworkToLoad,
   setAllArtworkLoaded,
   initialiseApp

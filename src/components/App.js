@@ -6,7 +6,7 @@ import {
   Link
 } from "react-router-dom";
 import Menu from "./Menu";
-import Bio from "./Bio";
+import BioContainer from "./BioContainer";
 import Contact from "./Contact";
 import ArtworkListContainer from "./ArtworkListContainer";
 import ArtworkContainer from "./ArtworkContainer";
@@ -83,7 +83,7 @@ const App = function (props) {
             <Route path="/work/:id" element={<ArtworkContainer />} />
             <Route path="/projects" element={<ProjectListContainer />} />
             <Route path="/projects/:id" element={<ProjectContainer />} />
-            <Route path="/bio" element={<Bio />} />
+            <Route path="/bio" element={<BioContainer />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </ContentPanel>
