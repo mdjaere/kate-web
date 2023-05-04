@@ -8,6 +8,9 @@ import {
   FETCH_BIO_LIST_PENDING,
   FETCH_BIO_LIST_SUCCESS,
   FETCH_BIO_LIST_FAILURE,
+  FETCH_CONTACT_LIST_PENDING,
+  FETCH_CONTACT_LIST_SUCCESS,
+  FETCH_CONTACT_LIST_FAILURE,
   SET_ARTWORK_TO_LOAD,
   ALL_ARTWORK_LOADED,
   INIT_SCREEN_WIDTH,
@@ -18,6 +21,7 @@ const defaultState = {
   artworkList: null,
   projectList: null,
   bioList: null,
+  contactList: null,
   screenWidth: 1024,
   artworkToLoad: 5,
   allArtworkLoaded: false
@@ -45,6 +49,18 @@ const rootReducer = (state, action) => {
       })
       return Object.assign({}, state, {
         bioList: bioListForMarkdown
+      });
+    case FETCH_CONTACT_LIST_SUCCESS:
+      const contactList = action.payload.response.items
+      const contactListSorted = contactList.sort((a, b) => a.fields.sortOrder - b.fields.sortOrder)
+      const contactListForMarkdown = contactListSorted.map(item => {
+        const markdown = { ...item }
+        // This will fix the lack of line breaks from the default /n, by adding two additional space at the end of each line.
+        markdown.fields.text = markdown.fields.text.replaceAll("\n", "  \n")
+        return markdown
+      })
+      return Object.assign({}, state, {
+        contactList: contactListForMarkdown
       });
     case INIT_SCREEN_WIDTH:
       return Object.assign({}, state, {

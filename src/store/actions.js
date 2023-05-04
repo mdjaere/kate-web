@@ -7,6 +7,9 @@ const FETCH_PROJECT_LIST_FAILURE = "FETCH_PROJECT_LIST_FAILURE";
 const FETCH_BIO_LIST_PENDING = "FETCH_BIO_LIST_PENDING";
 const FETCH_BIO_LIST_SUCCESS = "FETCH_BIO_LIST_SUCCESS";
 const FETCH_BIO_LIST_FAILURE = "FETCH_BIO_LIST_FAILURE";
+const FETCH_CONTACT_LIST_PENDING = "FETCH_CONTACT_LIST_PENDING"
+const FETCH_CONTACT_LIST_SUCCESS = "FETCH_CONTACT_LIST_SUCCESS"
+const FETCH_CONTACT_LIST_FAILURE = "FETCH_CONTACT_LIST_FAILURE"
 const SET_ARTWORK_TO_LOAD = "SET_ARTWORK_TO_LOAD";
 const ALL_ARTWORK_LOADED = "ALL_ARTWORK_LOADED";
 const INIT_SCREEN_WIDTH = "INIT_SCREEN_WIDTH";
@@ -33,9 +36,9 @@ const fetchArtworkList = (options = {}) => {
     const query = offlineMode
       ? promisedArtworkMockResponse
       : contenfulClient.getEntries({
-          content_type: "artwork",
-          order: "-fields.displayOrder"
-        });
+        content_type: "artwork",
+        order: "-fields.displayOrder"
+      });
     query
       .then(response => {
         dispatch({
@@ -61,8 +64,8 @@ const fetchProjectList = (options = {}) => {
     const query = offlineMode
       ? promisedProjectMockResponse
       : contenfulClient.getEntries({
-          content_type: "project"
-        });
+        content_type: "project"
+      });
     query
       .then(response => {
         dispatch({
@@ -85,8 +88,8 @@ const fetchBioList = (options = {}) => {
       offlineMode: offlineMode ? true : false
     });
     const query = contenfulClient.getEntries({
-          content_type: "about"
-        });
+      content_type: "about"
+    });
     query
       .then(response => {
         dispatch({
@@ -97,6 +100,29 @@ const fetchBioList = (options = {}) => {
       })
       .catch(error => {
         dispatch({ type: FETCH_BIO_LIST_FAILURE, payload: { error } });
+      });
+  };
+};
+const fetchContactList = (options = {}) => {
+  const { offlineMode } = options;
+  return (dispatch, getState) => {
+    dispatch({
+      type: FETCH_CONTACT_LIST_PENDING,
+      offlineMode: offlineMode ? true : false
+    });
+    const query = contenfulClient.getEntries({
+      content_type: "contactNews"
+    });
+    query
+      .then(response => {
+        dispatch({
+          type: FETCH_CONTACT_LIST_SUCCESS,
+          payload: { response },
+          offlineMode: offlineMode ? true : false
+        });
+      })
+      .catch(error => {
+        dispatch({ type: FETCH_CONTACT_LIST_FAILURE, payload: { error } });
       });
   };
 };
@@ -133,6 +159,9 @@ export {
   FETCH_BIO_LIST_PENDING,
   FETCH_BIO_LIST_SUCCESS,
   FETCH_BIO_LIST_FAILURE,
+  FETCH_CONTACT_LIST_PENDING,
+  FETCH_CONTACT_LIST_SUCCESS,
+  FETCH_CONTACT_LIST_FAILURE,
   SET_ARTWORK_TO_LOAD,
   ALL_ARTWORK_LOADED,
   INIT_SCREEN_WIDTH,
@@ -140,6 +169,7 @@ export {
   fetchArtworkList,
   fetchProjectList,
   fetchBioList,
+  fetchContactList,
   setArtworkToLoad,
   setAllArtworkLoaded,
   initialiseApp
