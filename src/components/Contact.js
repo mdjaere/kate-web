@@ -24,12 +24,11 @@ const Contact = props => {
     props.contactList.map(item => {
       const url = item.fields.image.fields.file.url
       return <React.Fragment key={item.sys.id}>
-        <Backdrop src={"https:" + url + "?w=" + props.screenWidth} />
+        <Backdrop src={"https:" + url} />
         <ReactMarkdown children={item.fields.text} />
       </React.Fragment>
     }) : null
   return <ContentContainer>
-
     {contactFields}
   </ContentContainer>
 

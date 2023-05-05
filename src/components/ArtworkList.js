@@ -55,9 +55,8 @@ function ListOfArtworkItems(props) {
                     orientation={orientation}
                     width={width}
                     height={height}
-                    title={`${fields.title} ${fields.year} (${
-                      fields.displayOrder
-                    })`}
+                    title={`${fields.title} ${fields.year} (${fields.displayOrder
+                      })`}
                     src={
                       "https:" +
                       image.fields.file.url +
@@ -84,7 +83,7 @@ function ListOfArtworkItems(props) {
   return <React.Fragment>{artworks}</React.Fragment>;
 }
 
-class Paintings extends React.Component {
+class Artworklist extends React.Component {
   constructor(props) {
     super(props);
     this.loadAnotherPost = this.loadAnotherPost.bind(this);
@@ -120,7 +119,7 @@ class Paintings extends React.Component {
   handleScroll() {
     if (
       document.documentElement.offsetHeight -
-        (window.innerHeight + document.documentElement.scrollTop) <
+      (window.innerHeight + document.documentElement.scrollTop) <
       20
     ) {
       this.loadAnotherPost(3);
@@ -148,7 +147,7 @@ class Paintings extends React.Component {
   }
 }
 
-export default Paintings;
+export default Artworklist;
 export {
   ArtworkContainer,
   ArtworkItem,
