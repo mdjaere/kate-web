@@ -59,9 +59,7 @@ function ListOfArtworkItems(props) {
                       })`}
                     src={
                       "https:" +
-                      image.fields.file.url +
-                      "?w=" +
-                      props.screenWidth
+                      image.fields.file.url
                     }
                   />
                 </Link>

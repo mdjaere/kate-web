@@ -88,7 +88,7 @@ class Project extends React.Component {
                   key={image.sys.id}
                   onClick={() => this.setImageInFocus(image.sys.id)}
                   inFocus={this.state.imageInFocus === image.sys.id}
-                  src={"https:" + url + "?w=" + this.props.screenWidth}
+                  src={"https:" + url}
                 />
               );
             })}
