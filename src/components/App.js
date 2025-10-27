@@ -88,7 +88,7 @@ const App = function (props) {
           </Routes>
         </ContentPanel>
         <Footer>
-          <p>© 2024</p>
+          <p>© 2025</p>
         </Footer>
       </RootContainer>
     </BrowserRouter>
